@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/style.css">
 
   <!-- Latest compiled and minified CSS -->
   <!-- Classic -->
@@ -16,39 +15,42 @@
   <!-- Font awesome -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
+  <!-- Override -->
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<div class="container">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="navbar-brand" href="#">Sm2g</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="#certifications">Certifications <span class="sr-only">(current)</span></a></li>
+        <li><a href="#international">International</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiences">Experiences</a></li>
       </ul>
     </div>
   </div>
 </nav>
+</br>
+
+<div class="container">
 
 
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="page-header">
+    <h1>Sm2g</br>
+      <small>DevOps 4 DBA.</small></h1>
+  </div>
+
 
 <div class="jumbotron">
   <h1>Jumbotron</h1>
@@ -58,7 +60,7 @@
 <!-- Blog -->
 
 
-<h2><i class="fa fa-certificate"></i> Diplomas and certifications</h2>
+<a name="certifications"><h2><i class="fa fa-certificate"></i> Diplomas and certifications</h2></a>
 <ul>
 <li>Oracle Certified Associate  DBA2 (1Z0-043)</li>
 <li>DBA1 (1Z0-042)</li>
@@ -72,7 +74,7 @@
 </ul>
 
 
-<h2><i class="fa fa-globe"></i> International</h2>
+<a name="international"><h2><i class="fa fa-globe"></i> International</h2></a>
 <ul>
 <li>French, native language.</li>
 <li>English, fluent <b>TOEIC score: 960/990</b></li>
@@ -80,7 +82,7 @@
 </ul>
 
 
-<h2><i class="fa fa-tachometer"></i> Skills</h2>
+<a name="skills"><h2><i class="fa fa-tachometer"></i> Skills</h2></a>
 <ul>
 <li>Database Administration</li>
   <ul>
@@ -96,15 +98,86 @@
 <li>Professionnal writing.</li>
 </ul>
 
-<h2><i class="fa fa-road"></i> Experiences</h2>
+<a name="experiences"><h2><i class="fa fa-road"></i> Experiences</h2></a>
 
 
 
-<h2><i class="fa fa-connectdevelop"></i> To keep in touch</h2>
+<a name="keepintouch"><h2><i class="fa fa-connectdevelop"></i> To keep in touch</h2></a>
 
-
-
-<div class="well">Contact me, footer?</div>
+<form class="form-horizontal col-md-5">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
+            Option one is this
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+            Option two can be something else
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Selects</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <select multiple="" class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-12">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</br>
+<div class="well col-lg-10 col-lg-offset-2">Contact me, footer?</div>
 </div>
 
 </body>
