@@ -2,10 +2,16 @@
 
 Personnal blog and presentation based on [Jekyll](http://jekyllrb.com/), [Bootstrap](http://getbootstrap.com/) and [jQuery](http://jquery.com/).
 
-## Presentation
+## Site
 
-Here's the [stuff](https://sm2g.github.io/about)
+Here's the [site](https://sm2g.github.io) divided into 4 pages:
+
++ index.html
++ projects.html
++ intro.html
++ contact.html
 
 ## Blog
 
-I'll post about various subjects, FR for personal opinion views, EN for more technical stuff.
+There's also a blog section where I'll post about various subjects.
+FR for personal opinion views, EN for more technical stuff.
