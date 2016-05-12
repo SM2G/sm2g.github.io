@@ -1,13 +1,17 @@
-Grayscale Jekyll theme
-=========================
+# Personal blog and presentation
 
-Jekyll theme based on [Grayscale bootstrap theme ](http://ironsummitmedia.github.io/startbootstrap-grayscale/)
+Personnal blog and presentation based on [Jekyll](http://jekyllrb.com/), [Bootstrap](http://getbootstrap.com/) and [jQuery](http://jquery.com/).
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/grayscale-theme)
+## Site
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/grayscale-theme/master/screenshot.png)
+Here's the [site](https://sm2g.github.io) divided into 4 pages:
 
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
++ index.html
++ projects.html
++ intro.html
++ contact.html
+
+## Blog
+
+There's also a blog section where I'll post about various subjects.
+FR for personal opinion views, EN for more technical stuff.
