@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-  <div class="container">
+<div class="container">
   {% include navbar.html %}
-  <h1>{{ post.title }}</h1>
-  {{ content }}
-  <div class="container text-right">
+
+  <div class="col-md-3">
+    {% include sidebar.html %}
+  </div>
+  <div class="col-md-9">
+    <h1>{{ post.title }}</h1>
+    {{ content }}
+  </div>
+</div>
+
+<div class="container text-right">
   <a href="{{ site.url }}"> <i class="fa fa-home fa-3x" aria-hidden="true"></i> </a>
 </div>
-</div>
-  {% include footer.html %}
-  {% include js.html %}
-  </body>
+{% include footer.html %}
+{% include js.html %}
+</body>
 </html>
