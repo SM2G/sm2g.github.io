@@ -1,102 +1,141 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <!--<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Work in progress</title>
+    <title>SM2G</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="News from the front">
-    <link rel="canonical" href="http://localhost:4000/">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+    <link rel="canonical" href="http://sm2g.github.io/">
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS - ->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- Optional theme -->
+    <!-- Optional theme - ->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Ib5WUYOh/fqe9wT9MDBX+VgUWQuUf8oDH3yuR9Kr+6Y5ejq92KR8LEuCbRiGZpG" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="http://localhost:4000/css/style.css">
+    <!-- Custom CSS - ->
+    <link rel="stylesheet" href="http://sm2g.github.io/css/style.css">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome - ->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
+</head>-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>SM2G</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://sm2g.github.io/">
+  <link rel="alternate" type="application/atom+xml" title="SM2G" href="http://sm2g.github.io/feed.xml" />
+  <script src="/scripts/jquery-1.11.2.min.js"></script>
+  <script src="/scripts/pithy.js"></script>
 </head>
 
-<div class="container">
-  <!-- Navbar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://localhost:4000">Work in progress</a>
+
+  <body>
+    <header class="header">
+	<div class="header-container">
+		<div class="nav">
+			
+			<span class="title">
+				<li>
+					<a href="/index.html">home</a>
+				</li>
+			</span>			
+			
+			
+				<li>
+					<a href="/archive.html">archive</a>
+				</li>			
+			
+			
+				<li>
+					<a href="/category.html">category</a>
+				</li>			
+			
+			
+				<li>
+					<a href="/about.html">about</a>
+				</li>			
+			
+		</div>
+		<div class="description"> Your motto </div>		
+		<ul class="social-links">
+			<li>
+				<a href="https://github.com/sm2g" title="Github">
+					<img width="19px" height="19px" src="/images/github.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="/feed.xml" title="RSS">
+					<img width="19px" height="19px" src="/images/rss.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/sm2g" title="Twitter">
+					<img width="19px" height="19px" src="/images/twitter.png"/>
+				</a>
+			</li>
+		</ul>		
+	</div>
+</header>
+
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+  <ul class="post-list">
+    
+      <li>
+        <br>
+        <h3>
+          <a class="post-link" href="/2012/01/10/I-have-an-idea.html">Second post</a>
+        </h3>
+        <span class="post-meta">Jan 10, 2012 00:01</span>
+        <hr id="line">
+		<div class="content">
+		<p>This will read in blog/index.html, send it each pagination page in Liquid as paginator and write the output to blog/page:num/, where :num is the pagination page number, starting with 2. If a site has 12 posts and specifies paginate: 5, Jekyll will write blog/index.html with the first 5 posts, blog/page2/index.html with the next 5 posts and blog/page3/index.html with the last 2 posts into the destination directory.</p>
+
+        </div>
+		<br>
+      </li>
+    
+      <li>
+        <br>
+        <h3>
+          <a class="post-link" href="/2011/12/31/new-years-eve-is-awesome.html">First post</a>
+        </h3>
+        <span class="post-meta">Dec 31, 2011 00:12</span>
+        <hr id="line">
+		<div class="content">
+		<p>The number should be the maximum number of Posts you’d like to be displayed per-page in the generated site.</p>
+
+
+        </div>
+		<br>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
     </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav">
-        <li><a href="http://localhost:4000">Blog</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="">Intro</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <div class="col-md-3">
-    <!-- Sidebar -->
-
-<div class="well well-lg">
-  Look, I'm in a large well!
-</div>
-
-  </div>
-  <div class="col-md-9">
-    <!-- Blog Section -->
-<ul>
-  
-    <li>
-      10 January 2012 <a href="/2012/01/10/I-have-an-idea/">  Second post</a></br>
-      <p>This will read in blog/index.html, send it each pagination page in Liquid as paginator and write the output to blog/page:num/, where :num is the pagination page number, starting with 2. If a site has 12 posts and specifies paginate: 5, Jekyll will write blog/index.html with the first 5 posts, blog/page2/index.html with the next 5 posts and blog/page3/index.html with the last 2 posts into the destination directory.</p>
-<a href="/2012/01/10/I-have-an-idea/"> Read more </a>
-    </li>
-  
-    <li>
-      31 December 2011 <a href="/2011/12/31/new-years-eve-is-awesome/">  First post</a></br>
-      <p>The number should be the maximum number of Posts you’d like to be displayed per-page in the generated site.</p>
-
-<a href="/2011/12/31/new-years-eve-is-awesome/"> Read more </a>
-    </li>
-  
-</ul>
-</div>
-
-  </div>
-</div>
-<!-- Footer -->
-<footer>
-  <div class="container text-center">
-    <!--<p>Copyright &copy; SM2G 2016</p>-->
-
-    
-      <a href="https://github.com/sm2g" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">github</span></a>
-    
-      <a href="https://twitter.com/SM2G" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">twitter</span></a>
-    
-
-  </div>
+    <footer class="footer">
+  <div id="gotop">^</div>
+  <br>
+	@2015 Pithy Theme by Pawpaw.
 </footer>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-</body>
+  </body>
+
 </html>
