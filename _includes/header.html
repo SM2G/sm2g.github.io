@@ -6,63 +6,63 @@
 				<li>
 					<a href="/index.html">home</a>
 				</li>
-			</span>			
+			</span>
 			{% else %}
 				<li>
 					<a href="/index.html">home</a>
-				</li>			
+				</li>
 			{% endif %}
 			{% if page.path == "archive.html" %}
 			<span class="title">
 				<li>
 					<a href="/archive.html">archive</a>
 				</li>
-			</span>			
+			</span>
 			{% else %}
 				<li>
 					<a href="/archive.html">archive</a>
-				</li>			
+				</li>
 			{% endif %}
 			{% if page.path == "category.html" %}
 			<span class="title">
 				<li>
 					<a href="/category.html">category</a>
 				</li>
-			</span>			
+			</span>
 			{% else %}
 				<li>
 					<a href="/category.html">category</a>
-				</li>			
+				</li>
 			{% endif %}
 			{% if page.path == "about.html" %}
 			<span class="title">
 				<li>
 					<a href="/about.html">about</a>
 				</li>
-			</span>			
+			</span>
 			{% else %}
 				<li>
 					<a href="/about.html">about</a>
-				</li>			
+				</li>
 			{% endif %}
 		</div>
-		<div class="description"> {{ site.motto }} </div>		
+		<div class="description"> {{ site.motto }} </div>
 		<ul class="social-links">
 			<li>
 				<a href="https://github.com/{{ site.github_username }}" title="Github">
-					<img width="19px" height="19px" src="/images/github.png"/>
+					<i class="fa fa-3x fa-fw fa-github" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li>
 				<a href="/feed.xml" title="RSS">
-					<img width="19px" height="19px" src="/images/rss.png"/>
+					<i class="fa fa-3x fa-fw fa-rss" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li>
 				<a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
-					<img width="19px" height="19px" src="/images/twitter.png"/>
+					<i class="fa fa-3x fa-fw fa-twitter" aria-hidden="true"></i>
 				</a>
 			</li>
-		</ul>		
+		</ul>
 	</div>
 </header>
