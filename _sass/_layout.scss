@@ -18,14 +18,11 @@ html,body {
 .nav {
 	color: #707070;
 	text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 600;
     font-family: "Montserrat",sans-serif;
     display:inline;
 }
 
 .nav li {
-    padding-right: 20px;
     display: inline-block;
     line-height: 1;
 }
@@ -57,23 +54,40 @@ li {
     text-decoration: none;
 }
 
-.title li a {
+.current li a {
     color: #FFF;
 }
 
-.title li a:link {
+.current li a:link {
     color: #FFF;
 }
 
-.title li a:visited {
+.current li a:visited {
     opacity: 1;
     transition: all 0.15s linear 0s;
-    text-decoration: none;
 }
 
-.title li a:hover {
+.current li a:hover {
     opacity: 1;
     color: #FFF;
+}
+
+.not_current li a {
+    color: #F2F;
+}
+
+.not_current li a:link {
+    color: #F2F;
+}
+
+.not_current li a:visited {
+    opacity: 1;
+    transition: all 0.15s linear 0s;
+}
+
+.not_current li a:hover {
+    opacity: 1;
+    color: #F2F;
 }
 
 .description {
@@ -132,7 +146,7 @@ li {
 }
 
 .post-list li a {
-	color: #000;	
+	color: #000;
 }
 
 #line {
@@ -167,7 +181,7 @@ li {
  */
  .category-box {
 	font-weight:bold;
-	font-size: 16px; 	
+	font-size: 16px;
  }
 
 
@@ -175,7 +189,7 @@ li {
  * About
  */
 .about {
-	color: #666;	
+	color: #666;
 }
 
 /**
@@ -190,8 +204,8 @@ li {
 #gotop {
     position: fixed;
     right: 20px;
-    bottom: 20px;    
-    padding: 10px 15px;    
+    bottom: 20px;
+    padding: 10px 15px;
     font-size: 20px;
     background: #515865;
     color: white;
