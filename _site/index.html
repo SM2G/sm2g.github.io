@@ -19,9 +19,6 @@
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Ib5WUYOh/fqe9wT9MDBX+VgUWQuUf8oDH3yuR9Kr+6Y5ejq92KR8LEuCbRiGZpG" crossorigin="anonymous">-->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <script src="/scripts/pithy.js"></script>
@@ -29,12 +26,21 @@
 </head>
 
   <body>
-    <header class="header">
+    <nav class="navbar navbar-default">
 	<div class="container">
-		<div class="row">
-			<div class="nav">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Brand</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
 				
-					<li><a href="/index.html" class="btn btn-primary">home</a></li>
+				<li><a href="/index.html" class="btn btn-primary">home</a></li>
 				
 				
 				<li><a href="/archive.html" class="btn btn-default">archive</a></li>
@@ -45,28 +51,17 @@
 				
 				<li><a href="/about.html" class="btn btn-default">about</a></li>
 				
-			</div>
-			<div class="description"> Concieve. Believe. Achieve. </div>
-			<ul class="social-links">
-				<li>
-					<a href="https://github.com/sm2g" title="Github">
-						<i class="fa fa-3x fa-fw fa-github" aria-hidden="true"></i>
-					</a>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="https://github.com/sm2g" title="Github"><i class="fa fa-2x fa-fw fa-github" aria-hidden="true"></i></a>
 				</li>
-				<li>
-					<a href="/feed.xml" title="RSS">
-						<i class="fa fa-3x fa-fw fa-rss" aria-hidden="true"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/sm2g" title="Twitter">
-						<i class="fa fa-3x fa-fw fa-twitter" aria-hidden="true"></i>
-					</a>
+				<li><a href="/feed.xml" title="RSS"><i class="fa fa-2x fa-fw fa-rss" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/sm2g" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter" aria-hidden="true"></i></a>
 				</li>
 			</ul>
 		</div>
 	</div>
-</header>
+</nav>
 
     <br>
     <div class="container">
