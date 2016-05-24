@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<div class="container">
 <div class="well">
 {%for post in site.posts %}
     {% unless post.next %}
@@ -19,4 +20,5 @@ layout: default
     <li><span>{{ post.date | date: "%b %d" }}</span>» <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+</div>
 </div>
