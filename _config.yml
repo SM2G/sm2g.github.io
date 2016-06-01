@@ -13,3 +13,6 @@ github_username:  sm2g
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+gems:
+  - jemoji

@@ -2,6 +2,7 @@
 title: Check all tables on Mysql
 layout: post
 category: aaa
+tags: [mysql, database]
 ---
 
 Check all tables on MySQL

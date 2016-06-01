@@ -9,13 +9,16 @@ layout: default
     <h3>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h3>
+        <div class="well well-sm">
+
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y %H:%m" }}</span>
     <hr id="line">
     <div class="content">
       {{ post.excerpt }}
     </div>
     <br>
-  </li>
+</div>
+</li>
   {% endfor %}
 </ul>
 
