@@ -30,4 +30,4 @@ highlighter:         rouge
 permalink:           none
 gems:                [jekyll-paginate]
 
-theme: jekyll-theme-tactile
+theme: jekyll-theme-midnight
