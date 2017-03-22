@@ -1,0 +1,33 @@
+# Site Settings
+title:               Samy Gejzenblozen
+tagline:             Data Engineer
+description:
+#baseurl:            "/Baseurl"
+#url:                "https://sm2g.github.io"
+#github:
+#  url:               "https://sm2g.github.io"
+author:
+  name:              "Samy Gejzenblozen"
+  email:             "samy.gejz@gmail.com"
+  twitter:           "sm2g"
+  instagram:         "sm2g"
+  github:            "sm2g"
+  linkedin:          "samy.gejzenblozen"
+navigation:
+- title: About
+  url: /about
+- title: Blog
+  url: /blog
+- title: Contact
+  url: /contact
+
+paginate:            5
+disqus:              #"disqus"
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]
+
+theme: jekyll-theme-tactile
