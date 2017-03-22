@@ -2,16 +2,17 @@
 title:               Samy Gejzenblozen
 tagline:             Data Engineer
 description:
-#baseurl:            "/Baseurl"
-#url:                "https://sm2g.github.io"
-#github:
-#  url:               "https://sm2g.github.io"
+baseurl:            "/site"
+url:                "https://sm2g.github.io"
+github:
+  url:              "https://sm2g.github.io/site"
 author:
   name:              "Samy Gejzenblozen"
   email:             "samy.gejz@gmail.com"
   twitter:           "sm2g"
   instagram:         "sm2g"
   github:            "sm2g"
+  facebook:          "samy.gejzenblozen"
   linkedin:          "samy.gejzenblozen"
 navigation:
 - title: About
@@ -29,3 +30,8 @@ markdown:            kramdown
 highlighter:         rouge
 permalink:           none
 gems:                [jekyll-paginate]
+
+
+# Site Settings
+title:               Lagrange
+tagline:             a minimalist Jekyll theme
