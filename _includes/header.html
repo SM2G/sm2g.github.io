@@ -1,46 +1,7 @@
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-			<a class="navbar-brand" href="/index.html"> <i class="fa fa-database fa-fw"></i> SM2G</a>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-
-				{% if page.path == "archive.html" %}
-				<li class="active"><a href="/archive.html"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Archive</a></li>
-				{% else %}
-				<li><a href="/archive.html"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Archive</a></li>
-				{% endif %}
-
-				{% if page.path == "tags.html" %}
-				<li class="active"><a href="/tags.html"><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags</a></li>
-				{% else %}
-				<li><a href="/tags.html"><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags</a></li>
-				{% endif %}
-
-				{% if page.path == "about.html" %}
-				<li class="active"><a href="/about.html"><i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> About</a></li>
-				{% else %}
-				<li><a href="/about.html"><i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> About</a></li>
-				{% endif %}
-			</ul>
-
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input class="form-control" placeholder="Search" type="text">
-
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-			<ul class="nav navbar-nav navbar-right">
-			</ul>
-		</div>
-	</div>
-</nav>
+<header class="masthead">
+  <h3 class="masthead-title">
+    <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    <small class="masthead-subtitle">{{ site.tagline }}</small>
+    {% include menu.html %}
+  </h3>
+</header>
