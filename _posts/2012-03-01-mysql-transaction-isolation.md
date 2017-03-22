@@ -1,12 +1,13 @@
 ---
 title: Mysql transaction isolation
 layout: post
-category: aaa
+category: journal
 tags: [mysql, database]
 ---
-Vous pouvez connaître les niveaux d'isolation de transaction de session et global avec ces commandes :
+You can get session-level and global transaction isolation levels using these commands :
 
 ~~~SQL
+
 SELECT @@global.tx_isolation;
 SELECT @@tx_isolation;
 SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL

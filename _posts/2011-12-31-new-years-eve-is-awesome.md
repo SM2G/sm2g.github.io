@@ -1,7 +1,7 @@
 ---
 title: First post
 layout: post
-category: aaa
+category: journal
 tags: [idea, github-pages]
 ---
 

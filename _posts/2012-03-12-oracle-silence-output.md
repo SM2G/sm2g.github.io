@@ -1,7 +1,7 @@
 ---
 title: Sqlplus silence output
 layout: post
-category: aaa
+category: journal
 tags: [oracle, sqlplus, database]
 ---
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.
