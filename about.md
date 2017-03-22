@@ -86,4 +86,3 @@ Preparation of course materials (Word and Powerpoint) for all the trining progra
 + Microsoft MCP
   + Windows XP (MS 70-270)
 
-{% endmarkdown %}
