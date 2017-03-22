@@ -2,10 +2,10 @@
 title:               Samy Gejzenblozen
 tagline:             Data Engineer
 description:
-baseurl:            #"/Baseurl"
-url:                "https://sm2g.github.io"
-github:
-  url:               #"https://sm2g.github.io"
+#baseurl:            "/Baseurl"
+#url:                "https://sm2g.github.io"
+#github:
+#  url:               "https://sm2g.github.io"
 author:
   name:              "Samy Gejzenblozen"
   email:             "samy.gejz@gmail.com"
