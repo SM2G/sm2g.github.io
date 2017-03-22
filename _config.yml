@@ -1,11 +1,11 @@
 # Site Settings
-title:               Samy Gejzenblozen
-tagline:             Data Engineer
+title:               "Samy Gejzenblozen"
+tagline:             "Data Engineer"
 description:
-baseurl:            "" # the subpath of your site, e.g. /blog/
-url:                "http://sm2g.github.io" # the base hostname & protocol for your site
+baseurl:            #""
+url:                #"https://sm2g.github.io"
 github:
-  url:              "https://sm2g.github.io/site"
+  url:               #"https://sm2g.github.io"
 author:
   name:              "Samy Gejzenblozen"
   email:             "samy.gejz@gmail.com"
@@ -17,19 +17,16 @@ author:
 navigation:
 - title: About
   url: /about
-- title: Blog
-  url: /blog
+- title: Writing
+  url: /writing
 - title: Contact
   url: /contact
 
 paginate:            5
-#disqus:              #"disqus"
+disqus:              #"your-disqus"
 
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
 permalink:           none
-gems:
-  - jemoji
-  - jekyll-paginate
-  - github-pages
+gems:                [jekyll-paginate]
