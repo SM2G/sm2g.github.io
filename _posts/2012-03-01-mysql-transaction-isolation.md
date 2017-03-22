@@ -1,9 +1,15 @@
 ---
-title: Mysql transaction isolation
 layout: post
-category: journal
+title: "Mysql transaction isolation"
+categories: journal
 tags: [mysql, database]
+image:
+  feature: bag.jpg
+  teaser: bag-teaser.jpg
+  credit:
+  creditlink:
 ---
+
 You can get session-level and global transaction isolation levels using these commands :
 
 ~~~SQL

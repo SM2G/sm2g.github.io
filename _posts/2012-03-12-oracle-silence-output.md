@@ -1,9 +1,15 @@
 ---
-title: Sqlplus silence output
 layout: post
-category: journal
+title: "Oracle sqlplus silence output"
+categories: journal
 tags: [oracle, sqlplus, database]
+image:
+  feature: bag.jpg
+  teaser: bag-teaser.jpg
+  credit:
+  creditlink:
 ---
+
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.
 
 ~~~SQL
