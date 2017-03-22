@@ -22,7 +22,7 @@ navigation:
   url: /contact
 
 paginate:            5
-disqus:              #"disqus"
+#disqus:              #"disqus"
 
 # Build settings
 markdown:            kramdown
