@@ -4,8 +4,8 @@ title: "Chack all tables on MySQL"
 categories: journal
 tags: [mysql]
 image:
-  feature: mountains.jpg
-  teaser: mountains-teaser.jpg
+  feature: macbook-lights.jpg
+  teaser: macbook-lights-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
