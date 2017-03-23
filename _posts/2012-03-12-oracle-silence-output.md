@@ -4,8 +4,8 @@ title: "Oracle sqlplus silence output"
 categories: journal
 tags: [oracle, sqlplus, database]
 image:
-  feature: mountains.jpg
-  teaser: mountains-teaser.jpg
+  feature: valve.jpg
+  teaser: valve-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
