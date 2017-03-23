@@ -4,8 +4,8 @@ title: "MySQL transaction isolation"
 categories: journal
 tags: [mysql, database]
 image:
-  feature: mountains.jpg
-  teaser: mountains-teaser.jpg
+  feature: grey-wall.jpg
+  teaser: grey-wall-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
