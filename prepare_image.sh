@@ -11,10 +11,10 @@ keyword=$2
 # Images were designed to be 1024x600 pixels, with teaser images being 1024x380 pixels.
 
 echo "Generating ${keyword}.jpg image..."
-convert ${image} -scale 1024x600 images/${keyword}.jpg
+convert ${image} -resize 1024x600^ -gravity center -extent 1024x600 images/${keyword}.jpg
 
 echo "Generating ${keyword}-teaser.jpg image..."
-convert ${image} -scale 1024x380 images/${keyword}-teaser.jpg
+convert ${image} -resize 1024x300^ -gravity center -extent 1024x380 images/${keyword}-teaser.jpg
 
-#echo "Cleanup."
-#rm ${image}
+echo "Cleanup."
+rm ${image}
