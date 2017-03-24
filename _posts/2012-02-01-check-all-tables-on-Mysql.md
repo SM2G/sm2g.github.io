@@ -10,9 +10,9 @@ image:
   creditlink: ""
 ---
 
-Check all tables on MySQL
-Petite commande sympa pour checker et réparer toutes les tables de toutes les bases de données de MySql :
+Data corruption is every DBA's worst nightmare and can happen anytime. 
+Use this command to check and repair all tables on a MySQL database :
 
-~~~SQL
+```SQL
 mysqlcheck -u root -p --auto-repair --check --optimize --all-databases
-~~~
+```

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: CV
 ---
 
 > The projects I successfully carried through allowed me to underline a heightened sense
