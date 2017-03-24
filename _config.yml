@@ -15,12 +15,12 @@ author:
   facebook:          "samy.gejzenblozen"
   linkedin:          "samy.gejzenblozen"
 navigation:
+- title: About
+  url: /about
 - title: Blog
   url: /blog
 - title: Contact
   url: /contact
-- title: About
-  url: /about
 
 paginate:            5
 disqus:              #"your-disqus"
