@@ -6,7 +6,7 @@ title: CV
 > The projects I successfully carried through allowed me to underline a heightened sense
 > of **responsibilities**, a good **teamwork** capability and a particular taste for **innovation**.
 
-***#Oracle #Mysql #Couchbase #DevOps #UNIX #Git #Python #Blockchain***
+***#Oracle #MySQL #Couchbase #DevOps #UNIX #Git #Python #Blockchain***
 
 ----
 
@@ -93,7 +93,7 @@ Technical Experience
     Created a Bitcoin trading bot in Python.
 
 **Blockchain**
-:   Interest in blockchain protocol and distributed ledger technologies. 
+:   Interest in blockchain protocol and distributed ledger technologies.
 
     Attended conferences about blockchain, Bitcoin and crypto-currencies.
 
@@ -109,4 +109,3 @@ Technical Experience
 :   Beginner
 
 ----
-

@@ -1,6 +1,6 @@
 # Site Settings
-title:               "Samy Gejzenblozen"
-tagline:             "Data Engineer"
+title:               "SM2G"
+tagline:             "Tips and tricks of a Data Engineer"
 description:
 baseurl:            #""
 url:                #"https://sm2g.github.io"
