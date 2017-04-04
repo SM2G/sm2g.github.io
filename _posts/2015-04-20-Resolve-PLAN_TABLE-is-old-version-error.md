@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resolving "PLAN_TABLE is old version" error"
+title: "Resolve PLAN_TABLE is old version error"
 categories: journal
 tags: [documentation,sample]
 image:
