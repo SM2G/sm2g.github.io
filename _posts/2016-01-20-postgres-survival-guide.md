@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Postgres Survival Guide"
+title: "PostgreSQL Survival Guide"
 categories: journal
 tags: [documentation,sample]
 image:
@@ -28,6 +28,7 @@ Quick remainder of some mainly used PostgreSQL datatypes:
 | bigserial        | 8 octets     | Big integer with auto-increment      |
 
 * List all users
+
 ``` SQL
 sam=# Select rolname, rolcanlogin, rolpassword, rolvaliduntil from pg_roles;
  rolname | rolcanlogin | rolpassword | rolvaliduntil
@@ -45,6 +46,7 @@ sam=# \du
 ```
 
 * List all databases
+
 ``` SQL
 sam-# \l
                                 List of databases
@@ -60,18 +62,21 @@ sam-# \l
 ```
 
 * Create a database
+
 ``` SQL
 sam=# Create database some_db;
 CREATE DATABASE
 ```
 
 * Connect to a database
+
 ``` SQL
 sam=# \c some_db;
 You are now connected to database "some_db" as user "sam".
 ```
 
 * List all tables
+
 ``` SQL
 some_db=# \dt
        List of relations
@@ -82,6 +87,7 @@ some_db=# \dt
 ```
 
 * Create a table with a PK index and describe structure
+
 ``` SQL
 some_db=# Create table test (test_col INTEGER PRIMARY KEY);
 CREATE TABLE
@@ -111,6 +117,7 @@ some_db=# \di
 Note that the maximum name length for a table name is 64, which is much more comfortable than the 30 character limit in Oracle.
 
 * SQL operations, explain plan and quit
+
 ``` SQL 
 sam=# Select * from produits;
  no_produit |   nom   | prix
