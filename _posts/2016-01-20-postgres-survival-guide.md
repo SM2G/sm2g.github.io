@@ -142,4 +142,5 @@ sam=# \q
 ```
 
 SQL operations are quite familiar if you already know your way on an Oracle or a MySQL database.
-Anyway, if you're stuck you can use *\?* for psql help or *\h* for a complete in-depth command-line help.
+
+Anyway, if you're stuck you can use **\?** for psql help or **\h** for a complete in-depth command-line help.
