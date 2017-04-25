@@ -27,7 +27,7 @@ As we can see in my example above:
 
 2031753 - 2031624 = 129
 
-So the errors comes from this: 2031625 + 128 > 2031624
+So the error comes from this: **2031625 + 128 > 2031624**
 
 As we can see that the extent is 129 bytes longer, and therefore it's not created by Oracle to avoid any data corruption. To fix this, you need to rebuild the extent management bitmap associated to the tablespace.
 
