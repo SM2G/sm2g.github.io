@@ -12,7 +12,7 @@ image:
 
 Should you need to perform a large data export and import on different Oracle databases, you'll need to make sure that the tablespace configuration matches your export and import parameters.
 
-Wether you keep the same tablespace configuration, or should you decide to change it. Here's how to get the DDL necessary to check or create nex tablespaces on the database you'll perform the import operation.
+Whether you keep the same tablespace configuration, or should you decide to change it. Here's how to get the DDL necessary to check the structure or eventually create new tablespaces on the database where you'll perform the import operation.
 
 ``` SQL
 set heading off
