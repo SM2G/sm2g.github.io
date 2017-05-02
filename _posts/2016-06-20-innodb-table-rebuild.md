@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INNODB table rebuild"
+title: "InnoDB table rebuild"
 categories: journal
 tags: [documentation,sample]
 image:
