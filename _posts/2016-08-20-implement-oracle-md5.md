@@ -16,7 +16,6 @@ A few days ago, I was looking for a way to get an **MD5sum function** to work di
 CREATE OR REPLACE FUNCTION USER.md5hash (str IN VARCHAR2)
 	RETURN VARCHAR2
 	IS v_checksum VARCHAR2(32);
-
 	BEGIN
 		v_checksum := LOWER( RAWTOHEX( UTL_RAW.CAST_TO_RAW( sys.dbms_obfuscation_toolkit.md5(input_string => str) ) ) );
 		RETURN v_checksum;
@@ -40,7 +39,6 @@ FROM dual;
 
 ! md5 -s 'foo'
 MD5 ("foo") = acbd18db4cc2f85cedef654fccc4a4d8
-
 ```
 
 Both commands return **acbd18db4cc2f85cedef654fccc4a4d8**, which is the MD5 result we were expecting.
