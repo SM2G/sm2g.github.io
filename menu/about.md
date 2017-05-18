@@ -15,7 +15,8 @@ Professional Experience
 
 2016/12 - 2017/05
 :   **ING Direct - Data Architect**
-  Defnition of data models on **Oracle (11g R2)** for new banking projects. SQL scripts review and testing. Created a Python program to track structure changes between databases.
+
+  Data model definition on **Oracle (11g R2)** for new banking projects. SQL scripts review and testing. Created a Python program to track structure changes between databases.
 
   Attended **Cassandra** training course and deployed test environments for developers.
 
