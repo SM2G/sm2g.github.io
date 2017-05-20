@@ -17,15 +17,16 @@ Note that you can also make this static list a dynamically generated list.
 ``` SQL
 set serveroutput on
 
-declare
+DECLARE
     type nt_type is table of VARCHAR2(30);
     nt nt_type := nt_type ('Choice_1', 'Choice_2'
     , 'Choice_3', 'Choice_4'
     , 'Choice_5', 'Choice_6');
-begin
-  for i in 1..nt.count loop
+BEGIN
+  FOR i IN 1..nt.count
+  LOOP
     dbms_output.put_line(nt(i));
-  end loop;
-end;
+  END LOOP;
+END;
 /
 ```

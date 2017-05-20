@@ -13,16 +13,28 @@ image:
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.
 
 ~~~SQL
-set echo off
-set feedback off
-set linesize 100
-set pagesize 0
-set sqlprompt ''
-set trimspool on
+SET autocommit off;
+SET echo       off;
+SET feedback   off;
+SET head       off;
+SET heading    off;
+SET linesize   0;
+SET newpage    none;
+SET newpage    none;
+SET pagesize   0;
+SET sqlprompt  '';
+SET sqlnumber  off;
+SET sqlbl      off;
+SET trimspool  on;
+SET verify     off;
+SET TRIMSPOOL  on;
+SET underline  off;
+
 spool test.csv
 
-select usr_type_code||','|| identifier from  td_usr_type_code;
+select type_code||', '|| identifier from  my_table;
+
 spool off
+
 exit
-/
 ~~~
