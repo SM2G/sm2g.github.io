@@ -23,10 +23,10 @@ or you can include a time-stamp as well.
 SQL> execute sys.dbms_system.ksdwrt(2,to_char(sysdate)|| ' -- ');
 ```
 
-The first parameter can be 1, 2 or 3.
+The first parameter can be **1**, **2** or **3**.
 
-1. Writes to the alert log
+1. Writes to the **alert log**.
 
-2. Writes to the trace file
+2. Writes to the **trace file**.
 
-3. Writes to both
+3. Writes to **both**.
