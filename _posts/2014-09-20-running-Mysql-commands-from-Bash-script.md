@@ -2,7 +2,7 @@
 layout: post
 title: "Running Mysql commands from Bash script"
 categories: journal
-tags: [documentation,sample]
+tags: [mysql,sample]
 image:
   feature: command.jpg
   teaser: command-teaser.jpg

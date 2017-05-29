@@ -2,7 +2,7 @@
 layout: post
 title: "Data export/import on MySQL"
 categories: journal
-tags: [documentation,sample]
+tags: [mysql,sample]
 image:
   feature: import.jpg
   teaser: import-teaser.jpg
@@ -31,7 +31,7 @@ mysqldump -u user DB_NAME TABLE_NAME > /tmp/fle.sql
 
 ### To export a portion of table data
 
-It’s also possible to export data based on a sql criteria, like using a “where” clause on a sql query. 
+It’s also possible to export data based on a sql criteria, like using a “where” clause on a sql query.
 The following command shows how to export table data having an ID lower than 100:
 
 ``` SQL

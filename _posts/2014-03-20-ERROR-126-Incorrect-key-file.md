@@ -2,7 +2,7 @@
 layout: post
 title: "Resolving the “ERROR 126 Incorrect key file” error"
 categories: journal
-tags: [documentation,sample]
+tags: [mysql,sample]
 image:
   feature: key-file.jpg
   teaser: key-file-teaser.jpg
@@ -46,4 +46,3 @@ JOIN (SELECT id
 In the first example, filesort will operate over all the selected data (including the huge text field). In the second example, the temporary table will only contain the id column, and the outer query will fetch the text chunks.
 
 This article has been tested on MySQL 5.1.
-
