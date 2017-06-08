@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using SCP with file compression"
-categories: post
+categories: journal
 tags: [mysql, database]
 image:
   feature: compress.jpg

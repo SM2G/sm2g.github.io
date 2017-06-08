@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compress a Whole Linux or UNIX Directory"
-categories: post
+categories: journal
 tags: [linux,sample]
 image:
   feature: IMAGE.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shared pool purge"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: oil-pump.jpg

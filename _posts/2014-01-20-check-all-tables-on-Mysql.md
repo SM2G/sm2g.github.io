@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chack all tables on MySQL"
-categories: post
+categories: journal
 tags: [mysql]
 image:
   feature: macbook-lights.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resolve PLAN_TABLE is old version error"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: old-table.jpg

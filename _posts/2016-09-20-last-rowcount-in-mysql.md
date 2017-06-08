@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Last rowcount in MySQL"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: pile-books.jpg

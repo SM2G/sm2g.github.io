@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Change the default temporary tablespace"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: stainless-clock.jpg

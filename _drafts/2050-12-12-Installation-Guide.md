@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installation Guide"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: computer.jpg

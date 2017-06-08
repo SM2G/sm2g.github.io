@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Index managment"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: drill-tools.jpg

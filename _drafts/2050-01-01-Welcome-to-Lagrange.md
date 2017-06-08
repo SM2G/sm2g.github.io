@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to Lagrange!"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: mountains.jpg

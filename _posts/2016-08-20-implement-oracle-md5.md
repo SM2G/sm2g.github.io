@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Implement an MD5sum function in Oracle"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: old-typewriter.jpg

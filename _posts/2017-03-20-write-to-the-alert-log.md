@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to write to the alert log"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: red-keyboard.jpg

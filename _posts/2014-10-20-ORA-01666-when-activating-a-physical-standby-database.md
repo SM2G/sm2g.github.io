@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ORA-01666 When Activating a Physical Standby Database"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: archive-room.jpg

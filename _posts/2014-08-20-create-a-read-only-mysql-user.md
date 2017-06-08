@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create a read-only MySQL user"
-categories: post
+categories: journal
 tags: [mysql,sample]
 image:
   feature: dark-fence.jpg

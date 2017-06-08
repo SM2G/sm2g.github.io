@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Transfer multiple files simultaneously using SCP"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: cable-car.jpg

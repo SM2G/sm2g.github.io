@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Working With Lagrange"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: room.jpg

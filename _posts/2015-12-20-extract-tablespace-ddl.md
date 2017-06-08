@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Extract tablespace DDL"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: cathedral-structure.jpg

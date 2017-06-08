@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Archive log files based on date"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: clean-water.jpg

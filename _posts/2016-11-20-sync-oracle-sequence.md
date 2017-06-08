@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sync Oracle sequences"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: grey-cogs.jpg

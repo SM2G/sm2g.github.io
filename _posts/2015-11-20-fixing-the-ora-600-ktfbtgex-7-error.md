@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fixing the ORA-00600: [ktfbtgex-7] error"
-categories: post
+categories: journal
 tags: [documentation,sample]
 image:
   feature: container-jump.jpg
