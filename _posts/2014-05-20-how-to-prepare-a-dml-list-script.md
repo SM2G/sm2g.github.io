@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to prepare a DML list script"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: vintage-gun.jpg

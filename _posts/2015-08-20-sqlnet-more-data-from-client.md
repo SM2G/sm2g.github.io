@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SQL*Net more data from client"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: traffic-blur.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Forcing ASMM component to shrink"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: IMAGE.jpg

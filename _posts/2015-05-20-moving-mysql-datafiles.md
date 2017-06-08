@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moving MySQL datafiles"
-categories: journal
+categories: post
 tags: [mysql,sample]
 image:
   feature: mini-van.jpg

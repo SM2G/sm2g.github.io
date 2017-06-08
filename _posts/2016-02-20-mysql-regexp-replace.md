@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL regexp Replace"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: two-cars.jpg

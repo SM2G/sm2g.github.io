@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Math and Code Formatting"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: sewing.jpg

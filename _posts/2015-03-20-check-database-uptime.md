@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Check database uptime"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: cockpit-sunset.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kill locked sessions"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: kill-gun.jpg

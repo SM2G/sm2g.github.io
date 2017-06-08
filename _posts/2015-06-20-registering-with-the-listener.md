@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Registering with the listener"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: black-earphones.jpg

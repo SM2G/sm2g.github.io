@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Text Formatting"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: spools.jpg

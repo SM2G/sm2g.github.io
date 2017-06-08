@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Enable parallel DML"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: highway-night.jpg

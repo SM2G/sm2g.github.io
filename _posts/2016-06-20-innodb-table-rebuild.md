@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "InnoDB table rebuild"
-categories: journal
+categories: post
 tags: [documentation,sample]
 image:
   feature: dark-crane.jpg
