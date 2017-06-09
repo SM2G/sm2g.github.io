@@ -2,7 +2,7 @@
 layout: post
 title: "SQL*Net more data from client"
 categories: journal
-tags: [documentation,sample]
+tags: [oracle, network]
 image:
   feature: traffic-blur.jpg
   teaser: traffic-blur-teaser.jpg

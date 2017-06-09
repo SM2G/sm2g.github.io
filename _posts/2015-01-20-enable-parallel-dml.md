@@ -2,7 +2,7 @@
 layout: post
 title: "Enable parallel DML"
 categories: journal
-tags: [documentation,sample]
+tags: [oracle, sql]
 image:
   feature: highway-night.jpg
   teaser: highway-night-teaser.jpg

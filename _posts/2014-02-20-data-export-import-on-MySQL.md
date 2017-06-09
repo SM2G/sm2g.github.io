@@ -2,7 +2,7 @@
 layout: post
 title: "Data export/import on MySQL"
 categories: journal
-tags: [mysql,sample]
+tags: [mysql, import, export]
 image:
   feature: import.jpg
   teaser: import-teaser.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Kill locked sessions"
 categories: journal
-tags: [documentation,sample]
+tags: [oracle]
 image:
   feature: kill-gun.jpg
   teaser: kill-gun-teaser.jpg

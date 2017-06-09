@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL partial import"
 categories: journal
-tags: [documentation,sample]
+tags: [mysql, import]
 image:
   feature: stormtrooper-disk.jpg
   teaser: stormtrooper-disk-teaser.jpg

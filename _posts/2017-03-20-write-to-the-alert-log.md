@@ -2,7 +2,7 @@
 layout: post
 title: "How to write to the alert log"
 categories: journal
-tags: [documentation,sample]
+tags: [oracle]
 image:
   feature: red-keyboard.jpg
   teaser: red-keyboard-teaser.jpg

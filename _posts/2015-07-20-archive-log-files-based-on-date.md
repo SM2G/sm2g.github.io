@@ -2,7 +2,7 @@
 layout: post
 title: "Archive log files based on date"
 categories: journal
-tags: [documentation,sample]
+tags: [linux]
 image:
   feature: clean-water.jpg
   teaser: clean-water-teaser.jpg

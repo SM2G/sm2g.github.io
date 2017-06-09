@@ -2,7 +2,7 @@
 layout: post
 title: "Using SCP with file compression"
 categories: journal
-tags: [mysql, database]
+tags: [mysql, linux]
 image:
   feature: compress.jpg
   teaser: compress-teaser.jpg
@@ -26,15 +26,15 @@ ssh new_serv "cat /tmp/backup.sql | gzip -c1" | gunzip -c > backup.sql
 
 ``` Bash
 time gzip --fast -c /home/oracle/oradata/SID/FILE01.dbf | ssh -oCompression=no  oracle@new_serv  "gunzip -c > /home/oracle/FILE01.dat"
-``` 
+```
 
-### SCP with online transfer compression 
+### SCP with online transfer compression
 
 This solution achieves network compression only.
 
 ``` Bash
 scp -C new_serv:/tmp/backup.sql /path/to/backup.sql
- 
+
 scp -C /home/oracle/oradata/SID/file01.dbf   \
        /home/oracle/oradata/SID/file02.dbf   \
        /home/oracle/oradata/SID/file03.dbf   oracle@new_serv:/path/to/.

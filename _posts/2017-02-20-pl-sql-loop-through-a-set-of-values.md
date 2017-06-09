@@ -2,7 +2,7 @@
 layout: post
 title: "PL/SQL loop through a set of values"
 categories: journal
-tags: [documentation,sample]
+tags: [oracle, plsql]
 image:
   feature: hallway-loop.jpg
   teaser: hallway-loop-teaser.jpg

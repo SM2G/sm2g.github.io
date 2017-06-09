@@ -2,7 +2,7 @@
 layout: post
 title: "PostgreSQL Survival Guide"
 categories: journal
-tags: [documentation,sample]
+tags: [postgres]
 image:
   feature: survival-stove.jpg
   teaser: survival-stove-teaser.jpg
