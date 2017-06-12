@@ -12,7 +12,7 @@ image:
 
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.
 
-~~~SQL
+``` SQL
 SET autocommit off;
 SET echo       off;
 SET feedback   off;
@@ -37,4 +37,4 @@ select type_code||', '|| identifier from  my_table;
 spool off
 
 exit
-~~~
+```
