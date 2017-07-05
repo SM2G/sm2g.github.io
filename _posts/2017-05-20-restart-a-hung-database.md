@@ -4,8 +4,8 @@ title: "Restart a hung database"
 categories: journal
 tags: [documentation,sample]
 image:
-  feature: IMAGE.jpg
-  teaser: IMAGE-teaser.jpg
+  feature: hanging-lights.jpg
+  teaser: hanging-lights-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
