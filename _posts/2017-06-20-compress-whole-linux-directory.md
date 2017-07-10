@@ -4,14 +4,14 @@ title: "Compress a Whole Linux or UNIX Directory"
 categories: journal
 tags: [linux,sample]
 image:
-  feature: IMAGE.jpg
-  teaser: IMAGE-teaser.jpg
+  feature: blur-drops.jpg
+  teaser: blur-drops-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
 
-Ok, that's a simple one, but it's the kind of manipulations where you always need a quick syntax remainder.
-So, here's the best way to compress a whole directory under Linux / UNIX using a shell prompt.
+Ok, that's a simple one, but it's always nice to have a quick syntax remainder.
+So, here's the best way to compress a whole directory under Linux/UNIX using a shell prompt.
 
 This technique is often used to backup files or to move data using a compressed archive. The GNU *tar* command is best for this work.
 This command does two things for you:
