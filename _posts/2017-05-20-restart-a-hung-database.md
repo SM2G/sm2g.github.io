@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Restart a hung database"
+title: "Restart a hung Oracle database"
 categories: journal
 tags: [documentation,sample]
 image:
