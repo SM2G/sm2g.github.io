@@ -27,3 +27,31 @@ do
     echo " (${kb_orig}kb ==> ${kb_after}kb) DONE - ${pct_gain}%."
 done
 ```
+
+To generate highly compressed **thumbnails**.
+``` Bash
+#!/bin/bash
+
+# Thumbnail generator
+
+MEDIA_DIR="/path"
+
+cd ${MEDIA_DIR}
+
+# CONVERT
+for f in ${MEDIA_DIR}/*
+do
+    complete_filename=$(basename "$f")
+    extension="${f##*.}"
+    full_filename="${f%.*}"
+    #echo $complete_filename $full_filename $extension
+    echo -ne "Converting ${complete_filename} ... "
+    kb_orig=`du -k "${f}" | cut -f1`
+    convert -define peg:size=500x500 ${f} \
+        -auto-orient -thumbnail 500x500 -unsharp 0x.5 ${full_filename}_thumb.gif
+    kb_after=`du -k "${full_filename}_thumb.gif" | cut -f1`
+    pct_gain=`expr 100 - ${kb_after} \* 100 / ${kb_orig}`
+    echo -e "(${kb_orig}kb ==> ${kb_after}kb) \033[96m${pct_gain}\033[39m%."
+done
+```
+
