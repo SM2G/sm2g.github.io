@@ -1,7 +1,7 @@
 
 
 if [[ $# != 2 ]]
-    then echo "Usage: $0  [image] [keyword]"
+    then echo "Usage: $0  \"[image URL]\" [keyword]"
     exit
 fi
 
