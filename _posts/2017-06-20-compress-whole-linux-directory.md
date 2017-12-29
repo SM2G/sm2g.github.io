@@ -42,7 +42,7 @@ tar -zxvf backup-2017.tar.gz
 ```
 With,
 
-- x: To extract files
+- **x**: To extract files
 
 If you wish to extract files in particular directory, for example in /tmp then you need to use following command:
 ``` Bash
