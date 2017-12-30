@@ -16,3 +16,11 @@
 	data-throttle="0.1">
 	<em>Loading...</em>
 </div>
+
+<p>And for classic anonymous donations:</p>
+<ul>
+{% for currency in site.donations %}
+  <li>{{ currency.code }} {{ currency.public_key }}</li>
+{% endfor %}
+</ul>
+Thank you.

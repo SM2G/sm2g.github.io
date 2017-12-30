@@ -21,7 +21,11 @@ navigation:
   url: /blog
 - title: Mining
   url: /mining
-
+donations:
+- code: "BTC - ฿"
+  public_key: "36XvwAsrA63cETKN3rHvTqyyUE7Spvof9T"
+- code: "ETH - Ξ"
+  public_key: "0xf05080371075b00C6643B38aCd16De7F5948343E"
 paginate:            5
 disqus:              #"your-disqus"
 

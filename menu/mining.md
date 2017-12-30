@@ -7,5 +7,3 @@ Welcome to my mining page. Has any of the tips provided in my blog saved your li
 
 The miner script on this page mines **XMR** and is provided by [Coinhive](https://coinhive.com).
 {% include miner.html %}
-
-And for classic anonymous donations:
