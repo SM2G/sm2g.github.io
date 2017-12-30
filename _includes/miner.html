@@ -1,6 +1,6 @@
 
 <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
-<div class="coinhive-miner miner"
+<div class="coinhive-miner animated fadeInLeft"
 	style="width: 256px; height: 310px;
         -webkit-box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow:    4px 6px 12px 0px rgba(0, 0, 0, 0.75);
@@ -20,7 +20,7 @@
 <p>And for classic anonymous donations:</p>
 <ul>
 {% for currency in site.donations %}
-  <li>{{ currency.code }} {{ currency.public_key }}</li>
+  <li>{{ currency.code }} <span style="color: #FF6600">{{ currency.symbol }}</span> {{ currency.public_key }}</li>
 {% endfor %}
 </ul>
 Thank you.
