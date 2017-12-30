@@ -1,6 +1,6 @@
 # Site Settings
 title:               "SM2G"
-tagline:             "Tips and tricks of a Data Engineer"
+tagline:             "Amat Victoria Curam"
 description:
 baseurl:            #""
 url:                #"https://sm2g.github.io"
@@ -19,8 +19,8 @@ navigation:
   url: /about
 - title: Blog
   url: /blog
-- title: Contact
-  url: /contact
+- title: Mining
+  url: /mining
 
 paginate:            5
 disqus:              #"your-disqus"
