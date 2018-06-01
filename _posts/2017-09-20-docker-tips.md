@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker cleanup"
+title: "Docker tips"
 categories: journal
 tags: [documentation,sample]
 image:
@@ -10,7 +10,7 @@ image:
   creditlink: ""
 ---
 
-Recently, I started working with Docker on various projects. 
+Recently, I started working with Docker on various projects.
 So here's just a bunch of commands I've found to be quite helpful while troubleshooting errors with Docker.
 
 ```$xslt
@@ -44,4 +44,9 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 ```
 
-I'll add more helpful commands as I'll go along working with Docker.
+You can also start a Docker container in `--privileged` mode to unlock some advanced options, such as creating new network interfaces for a VPN, for example. Here's how to check if a container is started in privileged mode:
+
+```
+docker inspect --format='{{.HostConfig.Privileged}}' 618d47113878
+false
+```
