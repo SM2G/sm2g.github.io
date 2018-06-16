@@ -43,10 +43,27 @@ docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
 ```
+## Privileged mode
 
 You can also start a Docker container in `--privileged` mode to unlock some advanced options, such as creating new network interfaces for a VPN, for example. Here's how to check if a container is started in privileged mode:
 
 ```
 docker inspect --format='{{.HostConfig.Privileged}}' 618d47113878
 false
+```
+
+## Useful tips
+
+* Tail logs from a running container
+
+```
+docker ps
+docker logs -f [container_name]
+```
+
+ * To spawn a shell into a running container
+
+```
+docker ps
+docker exec -it [container_name] /bin/bash
 ```
