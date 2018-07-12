@@ -20,9 +20,9 @@ wget https://dl.eff.org/certbot-auto
 chmod a+x certbot-auto
 ```
 
-Then, cut all NGINX or other process using port 80 and request your certificate.
+Then, cut all NGINX or other process using port 80 and request your certificate. Be careful of API calls limit on Let's Encrypt servers.
 ```
-./certbot-auto certonly --standalone -d [www.mydomain.com]
+./certbot-auto certonly --standalone -d [www.mydomain.com] --debug
 ```
 
 Finally, update your NGINX config like so.
