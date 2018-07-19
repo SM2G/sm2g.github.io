@@ -25,10 +25,20 @@ Then, cut all NGINX or other process using port 80 and request your certificate.
 ./certbot-auto certonly --standalone -d [www.mydomain.com] --debug
 ```
 
-Finally, update your NGINX config like so.
+Finally, update your NGINX config like so to use the newly generated certificates and also to redirect incoming traffic to the HTTPS server.
 ```
 # /etc/nginx/sites-enabled/elasticbeanstalk-nginx-docker-proxy.conf
 [...]
+
+server {
+    listen      80 default;
+    server_name [www.mydomain.com]
+    access_log  off;
+    error_log   off;
+    ## redirect http to https ##
+    return      301 https://$server_name$request_uri;
+}
+
 server {
     listen 443 ssl;
 
@@ -55,5 +65,5 @@ ln -s /opt/eff.org/certbot/venv/local/lib64/python2.7/dist-packages/zope/interfa
 ```
 Also add the following package.
 ```
-/opt/eff.org/certbot/venv/local/bin/pip install cryptography interface
+sudo /opt/eff.org/certbot/venv/local/bin/pip install cryptography interface
 ```
