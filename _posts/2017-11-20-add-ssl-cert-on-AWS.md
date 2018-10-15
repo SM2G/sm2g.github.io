@@ -67,3 +67,32 @@ Also add the following package.
 ```
 sudo /opt/eff.org/certbot/venv/local/bin/pip install cryptography interface
 ```
+
+## Add Password Authentication
+
+If you have OpenSSL installed on your server, you can create a password file without adding additional packages. We will create a hidden file called `.htpasswd` in the `/etc/nginx` configuration directory to store our username and password combinations.
+
+```
+sudo sh -c "echo -n '[USERNAME]:' >> /etc/nginx/.htpasswd"
+sudo sh -c "openssl passwd [MyPassword] >> /etc/nginx/.htpasswd"
+```
+
+Then add the following configuration in your NGINX configuration file.
+
+```
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    server_name localhost;
+
+    location / {
+        try_files $uri $uri/ =404;
+        auth_basic "Restricted Content";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+    }
+}
+```

@@ -48,8 +48,7 @@ docker rmi $(docker images -q)
 You can also start a Docker container in `--privileged` mode to unlock some advanced options, such as creating new network interfaces for a VPN, for example. Here's how to check if a container is started in privileged mode:
 
 ```
-docker inspect --format='{{.HostConfig.Privileged}}' 618d47113878
-false
+docker inspect --format='{{HostConfig.Privileged}}' [CONTAINER_ID]
 ```
 
 ## Useful tips
