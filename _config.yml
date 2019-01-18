@@ -28,7 +28,7 @@ donations:
 - code: ETH
   symbol: "Ξ"
   public_key: "0xf05080371075b00C6643B38aCd16De7F5948343E"
-paginate:            5
+paginate:            12
 disqus:              #"your-disqus"
 
 # Build settings

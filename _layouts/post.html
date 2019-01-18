@@ -2,12 +2,11 @@
 layout: default
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
+<div class="container">
+<h1>{{ page.title }}</h1>
 
 {% if page.image.feature %}
-  <img src="{{ site.github.url }}/images/{{ page.image.feature }}">
+  <img src="{{ site.baseurl }}/assets/images/{{ page.image.feature }}" class="img-fluid rounded">
 {% endif %}
 
 {{ content }}
@@ -30,3 +29,4 @@ layout: default
 {% if site.disqus %}
   {% include disqus.html %}
 {% endif %}
+</div>
