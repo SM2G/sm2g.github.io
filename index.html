@@ -43,17 +43,22 @@ title: Home
 
 <div class="container">
   <div class="row">
+    <div class="mx-auto centered">
     {% if paginator.next_page %}
-    <a class="pagination-button pagination-active" href="{{ paginator.next_page_path }}" class="next">Older</a>
+    <a class="btn btn-secondary" href="{{ paginator.next_page_path }}" class="next"><i class="fa-fw fa-2x fas fa-angle-double-left"></i> Older</a>
+
     {% else %}
-    <span class="pagination-button">Older</span>
+    <span class="btn btn-secondary disabled"><i class="fa-fw fa-2x fas fa-angle-double-left"></i> Older</span>
+
     {% endif %}
 
     {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active float-right" href="{{ paginator.previous_page_path }}">Newer</a>
-    {% else %}
-    <span class="pagination-button float-right">Newer</span>
-    {% endif %}
+    <a class="btn btn-secondary" href="{{ paginator.previous_page_path }}">Newer <i class="fa-fw fa-2x fas fa-angle-double-right"></i></a>
 
+    {% else %}
+    <span class="btn btn-secondary disabled">Newer <i class="fa-fw fa-2x fas fa-angle-double-right"></i></span>
+
+    {% endif %}
+    </div>
   </div>
 </div>
