@@ -1,8 +1,33 @@
-<footer class="footer">
-  <a href="https://github.com/{{site.author.github}}"><i class="fa fa-github" aria-hidden="true" target="_blank"></i></a>
-  <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i></a>
-  <a href="https://instagram.com/{{site.author.instagram}}"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
-  <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i></a>
-  <a href="mailto:{{site.author.email}}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
-  <div class="post-date"><a href="{{ site.github.url }}/menu/about.html">{{ site.title }} | {{ site.tagline }} by {{ site.author.name }}</a></div>
-</footer>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="https://github.com/{{site.author.github}}"><i class="fa-fw fa-2x fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
+        <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa-fw fa-2x fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
+        <a href="https://instagram.com/{{site.author.instagram}}"><i class="fa-fw fa-2x fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
+        <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa-fw fa-2x fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
+        <a href="mailto:{{site.author.email}}"><i class="fa-fw fa-2x fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
+        <a href="/">{{ site.title }} | {{ site.tagline }} by {{ site.author.name }}</a>
+      </div>
+    </div>
+    <div class="footer-lower">
+      <div class="media-container-row">
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+      <div class="media-container-row mbr-white">
+        <div class="col-md-6 copyright">
+          <p class="mbr-text mbr-fonts-style display-7">
+            © Copyright 2019 {{ site.title }} - All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src={{ "assets/js/wow.min.js" | absolute_url }}></script>
+<script>
+  new WOW().init();
+</script>
