@@ -1,34 +1,32 @@
-<div class="container">
-  <div class="row">
+<div class="row">
   <h2>You may also enjoy:</h2>
   {% assign listed_posts_urls = page.url | split: ' ' %}
-  </div>
-  <div class="row">
-    {% for tag in page.tags %}
+</div>
+<div class="row">
+  {% for tag in page.tags %}
 
-    {% for mypost in site.tags[tag] limit:6 %}
+  {% for mypost in site.tags[tag] limit:6 %}
 
-    {% assign remainder = forloop.index | modulo: 3 %}
-    {% if listed_posts_urls contains mypost.url %}
-    {% else %}
+  {% assign remainder = forloop.index | modulo: 3 %}
+  {% if listed_posts_urls contains mypost.url %}
+  {% else %}
 
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-      <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-        <img src="{{ site.baseurl }}/assets/images/{{ mypost.image.teaser }}" class="card-img-top" alt="{{ mypost.title }}">
-        <div class="card-body">
-          <h1>
-            <a href="{{ mypost.url }}">{{ mypost.title }}</a>
-          </h1>
-          <p class="card-text text-justify">{{ mypost.content | strip_html | truncate: 200 }} <a href="{{ site.github.url }}{{ mypost.url }}">Read more</a></p>
-          <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ mypost.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-        </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+    <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
+      <img src="{{ site.baseurl }}/assets/images/{{ mypost.image.teaser }}" class="card-img-top" alt="{{ mypost.title }}">
+      <div class="card-body">
+        <h1>
+          <a href="{{ mypost.url }}">{{ mypost.title }}</a>
+        </h1>
+        <p class="card-text text-justify">{{ mypost.content | strip_html | truncate: 100 }} <a href="{{ site.github.url }}{{ mypost.url }}">Read more</a></p>
+        <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ mypost.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
       </div>
-    </div><!-- col-lg-4 -->
+    </div>
+  </div><!-- col-lg-4 -->
 
-    {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-    {% endif %}
-    {% endfor %}
+  {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
+  {% endif %}
+  {% endfor %}
 
-    {% endfor %}
-  </div>
+  {% endfor %}
 </div>
