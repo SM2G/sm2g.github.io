@@ -5,56 +5,55 @@ title: Home
 
 <div class="container">
   <div class="row">
-      <div class="col-6 mx-auto centered">
-        <img src="/assets/images/sm2g-logo.png" class="ing-fluid" alt="{{ post.title }}">
+    <div class="col-6 mx-auto centered">
+      <img src="/assets/images/sm2g-logo.png" class="ing-fluid" alt="{{ post.title }}">
     </div>
-</div>
+  </div>
 
-<div class="container">
-  <div class="row">
+  <div class="container">
+    <div class="row">
 
-    {% for post in paginator.posts %}
-    {% assign remainder = forloop.index | modulo: 3 %}
+      {% for post in paginator.posts %}
+      {% assign remainder = forloop.index | modulo: 3 %}
 
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-      <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-        <img src="{{ site.baseurl }}/assets/images/{{ post.image.teaser }}" class="card-img-top" alt="{{ post.title }}">
-        <div class="card-body">
-          <h1>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h1>
-          <p class="card-text text-justify">{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a></p>
-          <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+        <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
+          <img src="{{ site.baseurl }}/assets/images/{{ post.image.teaser }}" class="card-img-top" alt="{{ post.title }}">
+          <div class="card-body">
+            <h1>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h1>
+            <p class="card-text text-justify">{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a></p>
+            <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+          </div>
         </div>
-      </div>
-    </div><!-- col-lg-4 -->
+      </div><!-- col-lg-4 -->
 
-    {% if remainder == 0 %}
-  </div><!-- /row -->
-</br>
-<div class="row">
-  {% endif %}
+      {% if remainder == 0 %}
+    </div><!-- /row -->
+  </br>
+  <div class="row">
+    {% endif %}
 
-
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- Pagination links -->
 
 <div class="container">
   <div class="row">
-      {% if paginator.next_page %}
-  <a class="pagination-button pagination-active" href="{{ paginator.next_page_path }}" class="next">Older</a>
-  {% else %}
-  <span class="pagination-button">Older</span>
-  {% endif %}
+    {% if paginator.next_page %}
+    <a class="pagination-button pagination-active" href="{{ paginator.next_page_path }}" class="next">Older</a>
+    {% else %}
+    <span class="pagination-button">Older</span>
+    {% endif %}
 
-  {% if paginator.previous_page %}
-  <a class="pagination-button pagination-active float-right" href="{{ paginator.previous_page_path }}">Newer</a>
-  {% else %}
-  <span class="pagination-button float-right">Newer</span>
-  {% endif %}
+    {% if paginator.previous_page %}
+    <a class="pagination-button pagination-active float-right" href="{{ paginator.previous_page_path }}">Newer</a>
+    {% else %}
+    <span class="pagination-button float-right">Newer</span>
+    {% endif %}
 
-</div>
+  </div>
 </div>
