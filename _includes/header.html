@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-
-    <a class="navbar-brand" href="/">{{ site.title }}</a>
+    <img src={{ "/assets/images/sm2g-favicon.png" | absolute_url }} width="30" height="30" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="/"> {{ site.title }}</a>
     <small class="masthead-subtitle">{{ site.tagline }}</small>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,28 +12,25 @@
       <ul class="navbar-nav mr-auto">
         {% for link in site.navigation %}{% assign active = nil %}{% if page.url contains link.url %}{% assign active = 'active' %}{% endif %}
         <li class="nav-item {% if forloop.first %}first{% endif %} {{ active }} {% if forloop.last %}last{% endif %}">
-          <a class="nav-link " href="/menu{{ link.url }}">{{ link.title }}</a>
+          <a class="nav-link" href="/menu{{ link.url }}">{{ link.title }}</a>
         </li>
         {% endfor %}
-      </ul>
-        <ul class="navbar-nav mr-auto float-right">
         <li class="nav-item">
-        <a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
+        <a class="nav-link" href="https://github.com/{{ site.author.github }}"><i class="fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
         </li>
         <li class="nav-item">
-        <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
+        <a class="nav-link" href="https://twitter.com/{{ site.author.twitter }}"><i class="fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
       </li>
         <li class="nav-item">
-        <a href="https://instagram.com/{{ site.author.instagram }}"><i class="fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
+        <a class="nav-link" href="https://instagram.com/{{ site.author.instagram }}"><i class="fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
       </li>
         <li class="nav-item">
-        <a href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
+        <a class="nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
       </li>
         <li class="nav-item">
-        <a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
+        <a class="nav-link" href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
       </li>
-        </ul>
-
+      </ul>
     </div>
   </div>
 </nav>

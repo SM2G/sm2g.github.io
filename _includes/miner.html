@@ -1,37 +1,35 @@
-<div class="container">
 
-  <div class="card bg-light mb-3">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Light card title</h5>
-      <p class="card-text">Welcome to my mining page. Has any of the tips provided in my blog saved your life or business at some point and you don't know how to say thank you? Well, look no further. Simply let the miner running and I'll know you liked the content.</p>
-      <p>The miner script on this page mines <b>XMR</b> and is provided by [Coinhive](https://coinhive.com).</p>
+<div class="card bg-light mb-3">
+  <div class="card-header">{{ page.title }}</div>
+  <div class="card-body">
+    <p class="card-text">Welcome to my mining page. Has any of the tips provided in my blog saved your life or business at some point and you don't know how to say thank you?
+    Simply let the miner running and I'll know you liked the content.</p>
+    <p>The miner script on this page mines <b>XMR</b> and is provided by [Coinhive](https://coinhive.com).</p>
 
-      <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
-      <div class="coinhive-miner animated fadeInUp"
-      	style="width: 256px; height: 310px;
-              -webkit-box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.75);
-              -moz-box-shadow:    4px 6px 12px 0px rgba(0, 0, 0, 0.75);
-              box-shadow:         4px 6px 12px 0px rgba(0, 0, 0, 0.75);"
-      	data-key="dfgyfdf73b6Xj8dAVkjgNPKcSlhvnpbr"
-      	data-autostart="true"
-      	data-whitelabel="false"
-      	data-background="#FCFCFC"
-      	data-text="#515151"
-      	data-action="#D9230F"
-      	data-graph="#D9230F"
-      	data-threads="4"
-      	data-throttle="0.1">
-      	<em>Loading...</em>
-      </div>
-
-      <p>And for classic donations:</p>
-      <ul>
-      {% for currency in site.donations %}
-        <li>{{ currency.code }} <span style="color: #D9230F">{{ currency.symbol }}</span> {{ currency.public_key }}</li>
-      {% endfor %}
-      </ul>
-      Thank you.
-      </div>
-    </div>
+    <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+    <div class="coinhive-miner animated fadeInUp"
+    style="width: 256px; height: 310px;
+    -webkit-box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    4px 6px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         4px 6px 12px 0px rgba(0, 0, 0, 0.75);"
+    data-key="dfgyfdf73b6Xj8dAVkjgNPKcSlhvnpbr"
+    data-autostart="true"
+    data-whitelabel="false"
+    data-background="#FCFCFC"
+    data-text="#515151"
+    data-action="#D9230F"
+    data-graph="#D9230F"
+    data-threads="4"
+    data-throttle="0.1">
+    <em>Loading...</em>
   </div>
+
+  <p>And for classic donations:</p>
+  <ul>
+    {% for currency in site.donations %}
+    <li>{{ currency.code }} <span style="color: #D9230F">{{ currency.symbol }}</span> {{ currency.public_key }}</li>
+    {% endfor %}
+  </ul>
+  Thank you.
+</div>
+</div>
