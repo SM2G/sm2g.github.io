@@ -4,15 +4,14 @@ A simple, minimalist personal blog. Mostly about **Blockchain**, **Distributed l
 
 ## External Components
 
-* [FontAwesome](http://fontawesome.io/)
+* [FontAwesome](https://fontawesome.io/)
 
 * [MathJax](https://www.mathjax.org/)
 
 ## Startup
+* Git clone
+* Serve with `jekyll serve --host 0.0.0.0`
 
-```
-jekyll serve
-```
 
 ## Disclaimer
 
