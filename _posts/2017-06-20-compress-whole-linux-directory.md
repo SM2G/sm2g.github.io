@@ -2,7 +2,7 @@
 layout: post
 title: "Compress a Whole Linux or UNIX Directory"
 categories: journal
-tags: [linux,sample]
+tags: linux
 image:
   feature: blur-drops.jpg
   teaser: blur-drops-teaser.jpg

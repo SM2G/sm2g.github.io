@@ -2,7 +2,7 @@
 layout: post
 title: "Oracle sqlplus silence output"
 categories: journal
-tags: [oracle, sqlplus, database]
+tags: oracle sqlplus database
 image:
   feature: valve.jpg
   teaser: valve-teaser.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL regexp Replace"
 categories: journal
-tags: [mysql]
+tags: mysql
 image:
   feature: two-cars.jpg
   teaser: two-cars-teaser.jpg

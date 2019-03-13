@@ -2,7 +2,7 @@
 layout: post
 title: "Blockchain and IoT"
 categories: journal
-tags: [documentation,sample]
+tags: blockchain linux
 image:
   feature: spider-web.jpg
   teaser: spider-web-teaser.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Resolving the “ERROR 126 Incorrect key file” error"
 categories: journal
-tags: [mysql]
+tags: mysql
 image:
   feature: key-file.jpg
   teaser: key-file-teaser.jpg

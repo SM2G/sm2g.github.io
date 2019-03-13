@@ -2,7 +2,7 @@
 layout: post
 title: "Change the default temporary tablespace"
 categories: journal
-tags: [oracle, sql]
+tags: oracle sql
 image:
   feature: stainless-clock.jpg
   teaser: stainless-clock-teaser.jpg

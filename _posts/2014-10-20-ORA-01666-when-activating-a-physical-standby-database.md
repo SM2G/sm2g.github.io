@@ -2,7 +2,7 @@
 layout: post
 title: "ORA-01666 When Activating a Physical Standby Database"
 categories: journal
-tags: [oracle, standby]
+tags: oracle standby
 image:
   feature: archive-room.jpg
   teaser: archive-room-teaser.jpg

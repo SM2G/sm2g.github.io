@@ -2,7 +2,7 @@
 layout: post
 title: "Using SCP with file compression"
 categories: journal
-tags: [mysql, linux]
+tags: mysql linux
 image:
   feature: compress.jpg
   teaser: compress-teaser.jpg

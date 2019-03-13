@@ -2,7 +2,7 @@
 layout: post
 title: "Moving MySQL datafiles"
 categories: journal
-tags: [mysql, linux]
+tags: mysql linux
 image:
   feature: mini-van.jpg
   teaser: mini-van-teaser.jpg

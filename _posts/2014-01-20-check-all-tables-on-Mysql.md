@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Chack all tables on MySQL"
+title: "Check all tables on MySQL"
 categories: journal
-tags: [mysql]
+tags: mysql
 image:
   feature: macbook-lights.jpg
   teaser: macbook-lights-teaser.jpg
@@ -10,7 +10,7 @@ image:
   creditlink: ""
 ---
 
-Data corruption is every DBA's worst nightmare and can happen anytime. 
+Data corruption is every DBA's worst nightmare and can happen anytime.
 Use this command to check and repair all tables on a MySQL database :
 
 ```SQL

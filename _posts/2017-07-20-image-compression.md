@@ -2,7 +2,7 @@
 layout: post
 title: "Image compression from the command line"
 categories: journal
-tags: [documentation,sample]
+tags: linux
 image:
   feature: camera-focus.jpg
   teaser: camera-focus-teaser.jpg
@@ -54,4 +54,3 @@ do
     echo -e "(${kb_orig}kb ==> ${kb_after}kb) \033[96m${pct_gain}\033[39m%."
 done
 ```
-

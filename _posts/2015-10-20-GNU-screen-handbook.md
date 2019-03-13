@@ -2,7 +2,7 @@
 layout: post
 title: "GNU Screen Handbook"
 categories: journal
-tags: [linux]
+tags: linux
 image:
   feature: linux-screen.jpg
   teaser: linux-screen-teaser.jpg
