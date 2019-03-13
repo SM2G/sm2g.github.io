@@ -14,13 +14,17 @@ author:
   github:            "sm2g"
   facebook:          "samy.gejzenblozen"
   linkedin:          "samy.gejzenblozen"
+
 navigation:
 - title: About
   url: /about
 - title: Blog
   url: /blog
+- title: Tags
+  url: /tags
 - title: Mining
   url: /mining
+
 donations:
 - code: BTC
   symbol: "฿"
@@ -28,6 +32,7 @@ donations:
 - code: ETH
   symbol: "Ξ"
   public_key: "0xf05080371075b00C6643B38aCd16De7F5948343E"
+
 paginate:            12
 disqus:              #"your-disqus"
 
