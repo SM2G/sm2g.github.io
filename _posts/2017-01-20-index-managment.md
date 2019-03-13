@@ -2,7 +2,7 @@
 layout: post
 title: "Index managment"
 categories: journal
-tags: [oracle]
+tags: oracle
 image:
   feature: drill-tools.jpg
   teaser: drill-tools-teaser.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Restart a hung Oracle database"
 categories: journal
-tags: [documentation,sample]
+tags: oracle
 image:
   feature: hanging-lights.jpg
   teaser: hanging-lights-teaser.jpg

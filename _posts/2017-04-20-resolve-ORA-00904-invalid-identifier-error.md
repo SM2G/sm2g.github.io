@@ -2,7 +2,7 @@
 layout: post
 title: "Resolve the ORA-00904 invalid identifier error"
 categories: journal
-tags: [oracle]
+tags: oracle
 image:
   feature: reflect-run.jpg
   teaser: reflect-run-teaser.jpg

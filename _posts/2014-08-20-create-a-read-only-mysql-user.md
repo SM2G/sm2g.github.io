@@ -2,7 +2,7 @@
 layout: post
 title: "Create a read-only MySQL user"
 categories: journal
-tags: [mysql]
+tags: mysql
 image:
   feature: dark-fence.jpg
   teaser: dark-fence-teaser.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Registering with the listener"
 categories: journal
-tags: [oracle, network]
+tags: oracle network
 image:
   feature: black-earphones.jpg
   teaser: black-earphones-teaser.jpg

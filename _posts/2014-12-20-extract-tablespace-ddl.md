@@ -2,7 +2,7 @@
 layout: post
 title: "Extract tablespace DDL"
 categories: journal
-tags: [oracle, sql]
+tags: oracle sql
 image:
   feature: structure-hall.jpg
   teaser: structure-hall-teaser.jpg
