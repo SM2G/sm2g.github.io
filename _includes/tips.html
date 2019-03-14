@@ -1,0 +1,14 @@
+<div class="card bg-light mb-3">
+
+  <div class="card-body">
+    <p class="card-text">Has any of the tips provided in my blog saved your life or business at some point and you don't know how to say thank you?
+
+  <p>Here's how ;)</p>
+  <ul>
+    {% for currency in site.donations %}
+    <li>{{ currency.code }} <span style="color: #D9230F">{{ currency.symbol }}</span> {{ currency.public_key }}</li>
+    {% endfor %}
+  </ul>
+  Thank you.
+</div>
+</div>

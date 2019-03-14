@@ -22,8 +22,8 @@ navigation:
   url: /blog
 - title: Tags
   url: /tags
-- title: Mining
-  url: /mining
+- title: Tips
+  url: /tips
 
 donations:
 - code: BTC

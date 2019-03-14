@@ -1,6 +1,6 @@
 # SM2G
 
-A simple, minimalist personal blog. Mostly about **Blockchain**, **Distributed ledger technologies**, **Database administration**, **Linux system administration**, **DevOps** and a collection of small tricks that just saved my life at some point.
+A simple, minimalist personal blog. Mostly about **DevOps**, **Database administration** and a collection of small tricks that just saved my life at some point.
 
 ## External Components
 
@@ -11,7 +11,6 @@ A simple, minimalist personal blog. Mostly about **Blockchain**, **Distributed l
 ## Startup
 * Git clone
 * Serve with `jekyll serve --host 0.0.0.0`
-
 
 ## Disclaimer
 
