@@ -20,7 +20,7 @@ title: Resume
   <div class="card">
     <div class="card-body">
         <h4 class="card-title text-info">{{ job.job_title }}</h4>
-        <h6 class="card-subtitle mb-2 text-muted">At {{ job.company_name }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
         <p class="card-text">{{ job.description | markdownify }}</p>
     </div>
   </div>

@@ -1,5 +1,6 @@
 - job_title: "Data Architect"
   company_name: ING Direct
+  location: Paris, France
   start_date: 2016-12-01
   end_date: 2017-05-01
   description: "Data model definition on **Oracle (11g R2)** for new banking projects. SQL scripts review and testing. Created a Python program to track structure changes between databases.
@@ -8,15 +9,14 @@
 
 - job_title: "Production team DBA"
   company_name: RAKUTEN PRICEMINISTER
+  location: Paris, France
   start_date: 2012-07-01
   end_date: 2016-12-01
-  description: "* *Administration*
-    **Oracle** database administration (11g R2) on Linux RHEL 5 and **Mysql** (5.1/5.6) on Ubuntu server 14.4.
+  description: "**Oracle** database administration (11g R2) on Linux RHEL 5 and **Mysql** (5.1/5.6) on Ubuntu server 14.4.
     Responsible for development, testing and production environment databases.
     SQL script review and performance optimization on high data volumes. Query tuning and support web application deployments.
     Monitoring of the platform with **Nagios** and **Graphana**, automated recurring tasks using **Bash scripting** and **Python**.
 
-  * *Projects*
     **Mysql database migration** from 5.1 to 5.6 to improve performance and deployment of Mysql Enterprise Manager for monitoring.
     Automation and standardization of Mysql installations using **SaltStack**.
     Delivered coherent database subset with reduced data volume of production database for developers.
@@ -25,6 +25,7 @@
 
 - job_title: "Performance DBA"
   company_name: MPhasis WYDE
+  location: Paris, France
   start_date: 2011-02-01
   end_date: 2012-07-01
   description: "Performance testing in a task force team responsible for improving application performance.
@@ -36,6 +37,7 @@
 
 - job_title: Support team DBA
   company_name: "Société Générale – SGCIB"
+  location: Paris, France
   start_date: 2010-07-01
   end_date: 2011-02-01
   description: "Multi-RDBMS Support (Oracle, Sybase, MS SQL).
