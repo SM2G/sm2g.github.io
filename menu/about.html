@@ -1,0 +1,38 @@
+---
+layout: page
+title: Resume
+---
+
+<h2>Professional Experience</h2>
+
+{% for job in site.data.cv_experience %}
+
+<div class="row">
+
+  <div class="col-md-4">
+    <blockquote class="blockquote text-right">
+      <p class="mb-0 text-warning">{{ job.company_name }}</p>
+      <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
+    </blockquote>
+  </div>
+
+<div class="col-md-8">
+  <div class="card">
+    <div class="card-body">
+        <h4 class="card-title text-info">{{ job.job_title }}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">At {{ job.company_name }}</h6>
+        <p class="card-text">{{ job.description | markdownify }}</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</br>
+
+{% endfor %}
+
+<h2>Education<h2>
+
+
+
+<h2>Certifications<h2>

@@ -1,0 +1,30 @@
+
+- category: itskill
+  name: Linux
+  description: Proficient with Bash console, scripting, system administration and Open source enthusiast.
+
+- category: itskill
+  name: Git
+  description: Good knowledge of Git and Github user for personal projects.
+
+- category: itskill
+  name: Python
+  description: "Python autodidact, website creation using the Django framework.
+    Created a Bitcoin trading bot in Python."
+
+- category: itskill
+  name: Blockchain
+  description: "Interest in blockchain protocol and distributed ledger technologies.
+    Attended conferences about blockchain, Bitcoin and crypto-currencies."
+
+- category: language
+  name: French
+  description: Native speaker
+
+- category: language
+  name: English
+  description: Fluent
+
+- category: language
+  name: Chinese
+  description: Beginner
