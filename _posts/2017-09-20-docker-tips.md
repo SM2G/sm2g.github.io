@@ -13,7 +13,7 @@ image:
 Recently, I started working with Docker on various projects.
 So here's just a bunch of commands I've found to be quite helpful while troubleshooting errors with Docker.
 
-```$xslt
+```bash
 # List all containers
 docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE

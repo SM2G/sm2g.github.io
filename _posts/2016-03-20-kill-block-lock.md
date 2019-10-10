@@ -16,7 +16,7 @@ Of course, as a professional you implemented some sort of monitoring system to k
 The following script does just that. It kills all sessions locked for more than two minutes and outputs you the result. You can use it manually when needed, or schedule it in a cron job.
 Feel free to modify it to suit your needs.
 
-``` Bash
+```bash
 #!/bin/sh
 
 date

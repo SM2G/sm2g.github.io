@@ -15,7 +15,7 @@ Here's a small script to open a JavaScript interface to interact with an IoT dev
 The IoT device I'll be using for this project is an old *Violet Mir:ror*. This device is a simple RFID tag reader operating at 13.56MHz.
 The device is shipped with Ztamps and Nabaztag bunnies, but it can also read standard RFID chips complying with this protocol. ISO/IEC 14443 consists of four parts and describes two types of cards: Type A and Type B, both of which communicate wirelessly at 13.56 MHz. Typically, a ISO 14443 tag has a range of 10cm. The 13.56MHz RFIDs have a broad range of applications across the world. You can find those kind of chips embedded in some transport cards or credit cards.
 
-``` Javascript
+```javascript
 // Interface requirement
 var HID = require('node-hid');
 

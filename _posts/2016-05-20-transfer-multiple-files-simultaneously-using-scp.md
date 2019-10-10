@@ -13,7 +13,7 @@ I have been using the **Secure Copy** (scp) utility for copying files between my
 
 When you have to copy multiple files to your remote server, the syntax is similar to the cp command.
 
-```
+```bash
 scp file1.sql file2.sh user@server:~/upload
 ```
 
@@ -21,7 +21,7 @@ Where *file1.sql* and *file2.sh* are the files to be copied, user is the usernam
 
 In order to download multiple files from the remote server, the command to be used is:
 
-```
+```bash
 scp user@server:"file1.log file2.log" ~/logs
 ```
 
@@ -29,7 +29,7 @@ Where *file1.log* and *file2.log* are the files to be downloaded and *~/logs* is
 
 The -r option can be used to copy directories recursively.
 
-```
+```bash
 scp -r user@server:~/logs ~/logs
 ```
 
