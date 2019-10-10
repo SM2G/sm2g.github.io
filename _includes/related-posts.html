@@ -22,7 +22,13 @@
         <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ mypost.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
       </div>
     </div>
-  </div><!-- col-lg-4 -->
+  </div> <!-- col-lg-4 -->
+  
+  {% if remainder == 0 %}
+</div><!-- /row -->
+</br>
+<div class="row">
+{% endif %}
 
   {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
   {% endif %}
