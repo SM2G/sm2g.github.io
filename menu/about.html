@@ -37,11 +37,19 @@ title: Resume
 
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
   <div class="card border-light">
-    <div class="card-header">{{ cert.issuer }}</div>
+    <div class="card-header text-success">{{ cert.issuer }}</div>
     <div class="card-body">
-      <h4 class="card-title text-success">{{ cert.title }}</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <div class="float-right"><button type="button" class="btn btn-sm btn-outline-success">Certificate</button></div>
+      <h4 class="card-title"><a href="{{ cert.link }}" target="_blank">{{ cert.title }}</a></h4>
+      <small class="text-muted">{{ cert.date | date: "%B %Y" }}</small>
+      <p class="card-text text-justify">{{ cert.description | markdownify }}</p>
+
+      {% if cert.cert_code %}
+      <div class="float-left"><pre>{{ cert.cert_code }}</pre></div>
+      {% endif %}
+
+      {% if cert.cert_link %}
+      <div class="float-right"><a href="{{ cert.cert_link }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-success">Certificate</button></a></div>
+      {% endif %}
     </div>
   </div>
 </div><!-- col-lg-4 -->
@@ -89,7 +97,8 @@ title: Resume
 <div class="row">
 
   <div class="col-md-4">
-    <p class="lead text-success">{{ ed.school_name }}</p>
+    <p class="lead text-success">{{ ed.school_name }}</br>
+    <small class="text-muted">{{ ed.start_date | date: "%Y" }} - {{ ed.end_date | date: "%Y" }}</small></p>
   </div>
 
   <div class="col-md-8">
