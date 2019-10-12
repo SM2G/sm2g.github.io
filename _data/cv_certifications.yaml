@@ -1,25 +1,25 @@
 - title: "Oracle Certified Associate"
-  lang: fr
+  issuer: Oracle
   link: www.oracle.com
   date: 2017-01-01
   description: "Administrateur de bases de données Oracle, obtention de la certification DBA Oracle en 2010, et plus de 5 ans d’expérience en environnement de développement comme en production."
 
 - title: "Corda Certified Developer"
-  lang: fr
+  issuer: Corda
   link: www.r3.net
   date: 2017-01-01
   description: "Développeur certifié sur la mise en place de réseaux Corda, la création et l’administration de nœuds Corda, ainsi que l’implémentation de contrats Java/Kotlin en environnement distribué."
 
 
-- title: "CISCO CCNA2"
-  lang: fr
+- title: "CCNA2"
+  issuer: CISCO
   link: www.cisco.com
   date: 2010-01-01
   description: "distribué."
 
 
 - title: "TOEIC"
-  lang: fr
+  issuer: TOEIC
   link: www.cisco.com
   date: 2010-01-01
   description: "Scored **960/990**."

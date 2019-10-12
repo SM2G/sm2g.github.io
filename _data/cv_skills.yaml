@@ -17,14 +17,22 @@
   description: "Interest in blockchain protocol and distributed ledger technologies.
     Attended conferences about blockchain, Bitcoin and crypto-currencies."
 
+# https://www.font-generator.com/symbols/flags/
+
 - category: language
   name: French
+  flag: 🇫🇷
+  level: 100
   description: Native speaker
 
 - category: language
   name: English
+  flag: 🇬🇧
+  level: 80
   description: Fluent
 
 - category: language
   name: Chinese
+  flag: 🇨🇳
+  level: 30
   description: Beginner

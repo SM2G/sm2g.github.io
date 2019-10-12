@@ -17,6 +17,7 @@
     SQL script review and performance optimization on high data volumes. Query tuning and support web application deployments.
     Monitoring of the platform with **Nagios** and **Graphana**, automated recurring tasks using **Bash scripting** and **Python**.
 
+
     **Mysql database migration** from 5.1 to 5.6 to improve performance and deployment of Mysql Enterprise Manager for monitoring.
     Automation and standardization of Mysql installations using **SaltStack**.
     Delivered coherent database subset with reduced data volume of production database for developers.
