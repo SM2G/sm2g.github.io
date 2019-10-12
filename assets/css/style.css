@@ -23,6 +23,14 @@ pre {
     }
 }
 
+p,a{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Orbitron', sans-serif;
+}
+
 .highlight .lineno {
   color: #aaa;
   display:inline-block;

@@ -4,35 +4,98 @@ title: Resume
 ---
 
 <h2>Professional Experience</h2>
-
-{% for job in site.data.cv_experience %}
-
+{% assign exp_sorted = site.data.cv_experience | sort: "start_date" | reverse %}
+{% for job in exp_sorted  %}
 <div class="row">
-
-  <div class="col-md-4">
-    <blockquote class="blockquote text-right">
-      <p class="mb-0 text-warning">{{ job.company_name }}</p>
-      <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
-    </blockquote>
-  </div>
+<div class="col-md-4">
+  <blockquote class="blockquote text-right">
+    <p class="mb-0 text-warning">{{ job.company_name }}</p>
+    <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
+  </blockquote>
+</div>
 
 <div class="col-md-8">
   <div class="card">
     <div class="card-body">
-        <h4 class="card-title text-info">{{ job.job_title }}</h4>
-        <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
-        <p class="card-text">{{ job.description | markdownify }}</p>
+      <h4 class="card-title text-info">{{ job.job_title }}</h4>
+      <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
+      <p class="card-text">{{ job.description | markdownify }}</p>
     </div>
   </div>
 </div>
-
 </div>
 </br>
 
 {% endfor %}
 
-<h2>Education<h2>
+<h2>Certifications</h2>
 
+<div class="row">
+{% assign cert_sorted = site.data.cv_certifications | sort: "date" | reverse %}
+{% for cert in cert_sorted %}
+{% assign remainder = forloop.index | modulo: 3 %}
 
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+  <div class="card border-light">
+    <div class="card-header">{{ cert.issuer }}</div>
+    <div class="card-body">
+      <h4 class="card-title text-success">{{ cert.title }}</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="float-right"><button type="button" class="btn btn-sm btn-outline-success">Certificate</button></div>
+    </div>
+  </div>
+</div><!-- col-lg-4 -->
 
-<h2>Certifications<h2>
+{% if remainder == 0 %}
+</div><!-- /row -->
+</br>
+<div class="row">
+{% endif %}
+
+{% endfor %}
+</div><!-- /row -->
+</br>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Skills</h2>
+
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+      <div class="card-body">
+        <h4 class="card-title">Primary card title</h4>
+        {% assign tech-skills = site.data.cv_skills | where: "category", "itskill" %}
+        {% for skill in tech-skills %}
+        <p class="card-text"> {{ skill.name }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h2>Languages</h2>
+
+    {% assign lang-skills = site.data.cv_skills | where: "category", "language" | sort: "level" | reverse %}
+    {% for skill in lang-skills %}
+    <h5>{{ skill.flag }} {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div></br>
+    {% endfor %}
+  </div>
+</div><!-- row -->
+
+<h2>Education</h2>
+
+{% for ed in site.data.cv_education %}
+<div class="row">
+
+  <div class="col-md-4">
+    <p class="lead text-success">{{ ed.school_name }}</p>
+  </div>
+
+  <div class="col-md-8">
+    <h4>{{ ed.diploma }}</h4>
+    <p class="lead">{{ ed.description | markdownify }}</p>
+  </div>
+</div>
+
+{% endfor %}
