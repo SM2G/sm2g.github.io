@@ -1,21 +1,24 @@
 
 - category: itskill
-  name: Linux
-  description: Proficient with Bash console, scripting, system administration and Open source enthusiast.
+  name: Linux & OSS
+  icon: fa-linux
+  description: "Proficient with Bash console, scripting, system administration and Open source enthusiast."
 
 - category: itskill
+  name: Docker
+  icon: fa-docker
+  description: "Deployed many contenerized applications using Docker for portability and reliability."
+  
+- category: itskill
   name: Git
+  icon: fa-git-alt
   description: Good knowledge of Git and Github user for personal projects.
 
 - category: itskill
   name: Python
+  icon: fa-python
   description: "Python autodidact, website creation using the Django framework.
     Created a Bitcoin trading bot in Python."
-
-- category: itskill
-  name: Blockchain
-  description: "Interest in blockchain protocol and distributed ledger technologies.
-    Attended conferences about blockchain, Bitcoin and crypto-currencies."
 
 # https://www.font-generator.com/symbols/flags/
 

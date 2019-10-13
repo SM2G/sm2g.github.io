@@ -67,13 +67,15 @@ title: Resume
   <div class="col-md-6">
     <h2>Skills</h2>
 
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card border-primary">
       <div class="card-body">
-        <h4 class="card-title">Primary card title</h4>
         {% assign tech-skills = site.data.cv_skills | where: "category", "itskill" %}
+        <ul class="fa-ul">
         {% for skill in tech-skills %}
-        <p class="card-text"> {{ skill.name }}</p>
+          <li><h5><span class="fa-li text-danger"><i class= "fa-lg fab {{ skill.icon }}"></i></span>{{ skill.name }}</h5></li>
+          <p>{{ skill.description }}</p>
         {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
@@ -90,6 +92,7 @@ title: Resume
     {% endfor %}
   </div>
 </div><!-- row -->
+</br>
 
 <h2>Education</h2>
 
