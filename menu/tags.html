@@ -9,7 +9,7 @@ title: Tags
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
  <span class="badge badge-pill badge-light">
-    <a href="/tag/{{ tag | first | slugify }}/"
+    <a href="/tag/{{ tag | first | slugify }}"
         style="color: black; font-size: {{ tag | last | size  |  times: 10 | plus: 80  }}%">
             {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
     </a>
