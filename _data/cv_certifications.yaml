@@ -1,0 +1,29 @@
+- title: "Oracle Certified Associate"
+  issuer: Oracle
+  link: https://education.oracle.com/home
+  date: 2010-07-01
+  description: "Certified Oracle database administrator since 2010 with more than 5 years of experience in both **development** and **production** environments."
+
+- title: "Corda Certified Developer"
+  issuer: Corda
+  link: https://www.corda.net/training-and-certification
+  cert_link: https://www.youracclaim.com/badges/8856d7fb-2d3a-4652-b4e2-6d85af4f4cd9/linked_in_profile
+  date: 2018-02-08
+  description: "Certified in Corda nodes setup and management as well as implementation of Java/Kotlin contracts in a distributed environment."
+
+- title: "AWS Certified Solutions Architect - Associate"
+  issuer: Amazon Web services
+  link: www.r3.net
+  cert_link: https://aw.certmetrics.com/amazon/public/verification.aspx
+  cert_code: TL6CJ8C23MQQQCKH
+  date: 2019-09-27
+  description: "Validated architect level on deploying secure and robust applications using AWS technologies.
+    Ability to define a solution using architectural design principles based on customer requirements and provide implementation guidance based on best practices to the organization throughout the life cycle of the project."
+
+- title: "TOEIC"
+  issuer: TOEIC
+  link: https://www.ets.org/toeic
+  date: 2010-01-01
+  description: "Completely fluent in English. Proven track record of international teaching missions in different Chinese universitied.
+
+  Score: **960/990**."

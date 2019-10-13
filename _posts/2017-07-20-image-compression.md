@@ -14,7 +14,7 @@ Useful to save a few kilobytes of bandwith when serving images from your website
 
 I might improve this script in the future to include more compression tools and/or file extensions.
 
-``` Bash
+```bash
 #!/bin/bash
 
 for f in *.jpg *.JPG *.jpeg *.JPEG
@@ -29,7 +29,7 @@ done
 ```
 
 To generate highly compressed **thumbnails**.
-``` Bash
+```bash
 #!/bin/bash
 
 # Thumbnail generator

@@ -3,6 +3,13 @@ layout: default
 ---
 <div class="container">
   <h1>{{ page.title }}</h1>
+  {% if page.tags.size > 0 %}
+    {% for tag in page.tags %}
+    <span class="badge badge-pill badge-light">
+      <a href="/tag/{{ tag | slugify }}/" style="color: black;">#{{ tag }}</a>
+    </span>
+    {% endfor %}
+  {% endif %}
 
 {{ content }}
 
@@ -24,4 +31,4 @@ layout: default
 {% if site.disqus %}
   {% include disqus.html %}
 {% endif %}
-</div>
+</div><!-- container -->
