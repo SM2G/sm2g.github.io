@@ -14,7 +14,7 @@ Because MySQL dumps are simply SQL scripts, we can use sed in order to extract o
 
 Let say the name of your table is **mytable** and the dumpfile containing the whole database is called **mysql.dmp**:
 
-``` Bash
+```bash
 $ sed -n -e '/CREATE TABLE.*mytable/,/CREATE TABLE/p' mysql.dmp > mytable.dmp
 ```
 

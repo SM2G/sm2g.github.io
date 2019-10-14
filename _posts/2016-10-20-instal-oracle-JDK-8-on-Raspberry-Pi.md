@@ -14,7 +14,7 @@ In this post, I'll show you how to download and install **Oracle JDK** 8 on a Ra
 Visit [Oracle download website](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and click the download button for **Java Platform (JDK) 8**. Then accept the license agreement and proceed to download the **Linux ARM x32** version.
 
 Login to your Raspberry Pi and extract the archive in the /opt directory.
-``` Bash
+```bash
 $ sudo tar zxvf jdk-8-linux-arm-[...].gz -C /opt
 ```
 

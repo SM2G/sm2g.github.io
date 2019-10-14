@@ -11,7 +11,7 @@ image:
 ---
 When displaying execution plans on SQL*plus, you may notice an information message like so:
 
-``` SQL
+```sql
 -------------------------------------------------------------------------------------------------
 | Id  | Operation                    | Name                        | Rows  | Bytes | Cost (%CPU)|
 -------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ Note
 
 To get rid of this message, and get a better view of your execution plans, simply execute the utlxplan script in the admin folder of the oracle home.
 
-``` SQL
+```sql
 SQL> @$ORACLE_HOME/rdbms/admin/utlxplan.sql
 
 Table created.

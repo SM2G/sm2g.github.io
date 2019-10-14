@@ -12,7 +12,7 @@ image:
 Eventually, you’ll need to automate queries on your Mysql database, let’s say, for reporting purposes.
 Hee’s how to put SQL queries into a shell script, and possibly including variables based on the date or whatever fits your needs:
 
-``` Bash
+```bash
 $ cat execmysql.sh
 #!/bin/sh
 ids="3,4"
@@ -27,7 +27,7 @@ eof
 
 And the execution output:
 
-``` Bash
+```bash
 $ ./execmysql.sh
 Executing the query...
 select id,data from NMS.main where id in (3,4)

@@ -14,7 +14,7 @@ image:
 
 On a **MySQL 5.6** database server, the *ibdata1* file includes 5 InnoDB tables in the mysql schema.
 
-``` SQL
+```sql
 mysql> select table_name from information_schema.tables
     -> where table_schema='mysql' and engine='InnoDB';
 +----------------------+
@@ -60,7 +60,7 @@ In this particular case, I copied *ibdata1* from a one server to another one.
 
 2. Use mysqldump to extract only those 5 tables.
 
-``` SQL
+```sql
 TABLELIST="innodb_index_stats"
 TABLELIST="${TABLELIST} innodb_table_stats"
 TABLELIST="${TABLELIST} slave_master_info"

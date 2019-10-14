@@ -21,6 +21,6 @@ WHERE user<>'' " | mysql ${MYSQL_CONN} --skip-column-names -A | sed 's/$/;/g' > 
 
 This might not look like much, but this can prove extremely useful. This method will produce a pure SQL dump of the MySQL grants. All there is left to do is to execute the script on a new server, like so:
 
-``` SQL
+```sql
 mysql -uroot -p -A < MySQLUserGrants.sql
 ```

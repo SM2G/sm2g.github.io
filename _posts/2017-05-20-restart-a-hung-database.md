@@ -21,7 +21,7 @@ If you're in an emergency situation, impacting a production environment, you'll 
 
 The *-prelim* option of the *SQL*Plus* connect string was introduced in 10g to bypasses the creation of a new session in cases where the database is hung and do not accept new connections.
 
-``` SQL
+```sql
 sqlplus /nolog
 set _prelim on
 conn / as sysdba

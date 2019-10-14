@@ -37,6 +37,6 @@ With the database in startup restrict mode. You can deduce the tablespace name f
 
 And finally, here is how to rebuild the TEST tablespace bitmap (to be done as SYS user):
 
-``` SQL
+```sql
 EXECUTE DBMS_SPACE_ADMIN.TABLESPACE_REBUILD_BITMAPS('TEST');
 ```

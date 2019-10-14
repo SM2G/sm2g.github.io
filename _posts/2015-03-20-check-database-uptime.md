@@ -14,14 +14,14 @@ To get the information, just log on to the database and use the following query 
 
 **On Oracle database**
 
-``` SQL
+```sql
 SELECT to_char(startup_time,'DD-MON-YYYY HH24:MI:SS') AS "DB Startup Time"
 FROM   sys.v_$instance;
 ```
 
 **On Mysql database**
 
-``` SQL
+```sql
 SHOW GLOBAL STATUS LIKE 'Uptime';
 ```
 

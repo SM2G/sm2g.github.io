@@ -23,13 +23,13 @@ In this article, I'll assume you're already familiar with the basic concepts of 
 
 * Listing GNU screen sessions
 
-``` Bash
+```bash
 screen -l
 ```
 * Kill a GNU screen session
 
 Once the job is done, you can kill the session, either by attaching to it and then exiting the terminal, or directly by killing the session without having to connect to it first, like so:
 
-``` Bash
+```bash
 screen -X -S [session_id] kill
 ```

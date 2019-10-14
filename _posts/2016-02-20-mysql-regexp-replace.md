@@ -14,7 +14,7 @@ MySQL provides you with a useful string function called REPLACE that allows you 
 
 The syntax of REPLACE function is as follows:
 
-``` SQL
+```sql
 UPDATE tbl_name
 SET field_name = REPLACE(field_name, string_to_find, string_to_replace)
 WHERE conditions;
@@ -24,7 +24,7 @@ Note that when searching for text to replace, MySQL uses case-sensitive match to
 
 For example, if you want to correct the spelling mistake in the products table in the sample database, you use the REPLACE function as follows:
 
-``` SQL
+```sql
 UPDATE products
 SET productDescription = REPLACE(productDescription,'abuot','about');
 ```

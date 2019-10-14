@@ -12,7 +12,7 @@ image:
 Suppose you want to count the number of lines returned by the last SQL statement issued.
 For **select** statements you can use the *FOUND_ROWS* construct:
 
-``` SQL
+```sql
 SELECT SQL_CALC_FOUND_ROWS something
 FROM your_table
 WHERE whatever;
@@ -24,7 +24,7 @@ This will return the number of rows in the last **select** query (or if the firs
 
 Also, for **DML** (insert, update, delete), use the *ROW_COUNT* construct to return the number of affected rows:
 
-``` SQL
+```sql
 INSERT INTO your_table
 VALUES (1,2,3);
 

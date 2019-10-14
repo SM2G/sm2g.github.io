@@ -25,7 +25,7 @@ pool at a size that produces the optimal performance benefit.
 
 Currently ASMM is enabled.
 
-``` SQL
+```sql
 SQL> alter system set sga_target = 300M;
 
 System altered.
@@ -69,7 +69,7 @@ ORA-00384: Insufficient memory to grow cache
 
 Now lets switch to manual mode temporarily
 
-``` SQL
+```sql
 SQL> alter system set sga_target = 0;
 
 System altered.
@@ -94,7 +94,7 @@ Redo Buffers                2932736 bytes
 Voila! We have successfully decreased shared pool and increased the db_cache_size.
 Now let switch back to ASMM mode.
 
-``` SQL
+```sql
 SQL> alter system set sga_target = 300M;
 
 System altered.

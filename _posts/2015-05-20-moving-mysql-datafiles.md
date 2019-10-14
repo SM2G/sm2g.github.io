@@ -15,12 +15,12 @@ In this article, I’ll demonstrate multiple solutions to move datafiles
 ### Method 1: using symbolic links
 
 Stop the Mysql instance.
-``` Bash
+```bash
 /etc/init.d/mysql stop
 ```
 
 Then move the files and put symbolic links to lure Mysql into thinking the files are still in place.
-``` Bash
+```bash
 mkdir /new_dir/datafiles/my_db
 cd /old_dir/datafiles/
 cp -Rvp my_db/* /new_dir/datafiles/my_db/.
@@ -34,6 +34,6 @@ Open your Mysql configuration file: /etc/mysql/my.cnf and look for the entry for
 
 This method also requires an instance restart.
 
-``` Bash
+```bash
 sudo /etc/init.d/mysql restart
 ```

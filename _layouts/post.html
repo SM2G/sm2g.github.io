@@ -6,7 +6,7 @@ layout: default
   {% if page.tags.size > 0 %}
     {% for tag in page.tags %}
     <span class="badge badge-pill badge-light">
-      <a href="/tag/{{ tag | slugify }}/" style="color: black;">#{{ tag }}</a>
+      <a href="/tag/{{ tag | slugify }}" style="color: black;">#{{ tag }}</a>
     </span>
     {% endfor %}
   {% endif %}

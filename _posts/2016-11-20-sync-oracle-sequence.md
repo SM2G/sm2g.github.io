@@ -18,7 +18,7 @@ In a database copy scenario, or to fix an applicative bug, you may have to resyn
 
 I advise using the first solution in most cases, as it will be instant and won't waste the server CPU resources needlessly. Here's how to do it:
 
-``` SQL
+```sql
 -- Get the delta, here we'll assume 12345.
 
 -- Alter the sequence to match the delta.
@@ -35,7 +35,7 @@ Be careful though, in a transaction intensive environment, an applicative sessio
 
 The other *safer* solution can also be used to sync sequences based on another database. Here's a practical example:
 
-``` SQL
+```sql
 declare
 val number(30);
 begin

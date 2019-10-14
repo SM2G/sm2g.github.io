@@ -11,7 +11,7 @@ image:
 ---
 Here’s how to extract the sql commands to create any tablespace. Useful when creating a partial database copy. You can modify the query to only get a specific set of tablespaces you need.
 
-``` SQL
+```sql
 set heading off
 set echo off
 set pages 999

@@ -14,7 +14,7 @@ Should you need to perform a large data export and import on different Oracle da
 
 Whether you keep the same tablespace configuration, or should you decide to change it. Here's how to get the DDL necessary to check the structure or eventually create new tablespaces on the database where you'll perform the import operation.
 
-``` SQL
+```sql
 set heading off
 set echo off
 Set pages 999

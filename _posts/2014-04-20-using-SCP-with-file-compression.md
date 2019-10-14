@@ -16,7 +16,7 @@ Here are a few axamples with different results:
 
 ### To copy & compress in a single line
 
-``` Bash
+```bash
 gzip -c test_arch.arc | ssh user@new_serv "cat > /home/oracle/backup/backup.tgz"
 # or
 ssh new_serv "cat /tmp/backup.sql | gzip -c1" | gunzip -c > backup.sql
@@ -24,7 +24,7 @@ ssh new_serv "cat /tmp/backup.sql | gzip -c1" | gunzip -c > backup.sql
 
 ### Best Gzip compression & transfer
 
-``` Bash
+```bash
 time gzip --fast -c /home/oracle/oradata/SID/FILE01.dbf | ssh -oCompression=no  oracle@new_serv  "gunzip -c > /home/oracle/FILE01.dat"
 ```
 
@@ -32,7 +32,7 @@ time gzip --fast -c /home/oracle/oradata/SID/FILE01.dbf | ssh -oCompression=no  
 
 This solution achieves network compression only.
 
-``` Bash
+```bash
 scp -C new_serv:/tmp/backup.sql /path/to/backup.sql
 
 scp -C /home/oracle/oradata/SID/file01.dbf   \

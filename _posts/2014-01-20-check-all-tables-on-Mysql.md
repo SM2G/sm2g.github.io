@@ -13,6 +13,6 @@ image:
 Data corruption is every DBA's worst nightmare and can happen anytime.
 Use this command to check and repair all tables on a MySQL database :
 
-```SQL
+```sql
 mysqlcheck -u root -p --auto-repair --check --optimize --all-databases
 ```

@@ -15,7 +15,7 @@ In this article, I'll show you various ways to move an index to another tablespa
 
 Simple and efficient. Will work flawlessly for small indexes (> 200-300 Mb)
 
-``` SQL
+```sql
 Alter index index_name rebuild
 tablespace new_tablespace_name;
 
@@ -27,7 +27,7 @@ Alter index ITEM_SELL rebuild online tablespace ACCOUNT compute statistics;
 
 Here's how to change index storage parameters without having to rebuild the object entirely.
 
-``` SQL
+```sql
 ALTER INDEX index_name
  REBUILD STORAGE (
    INITIAL 1M
@@ -37,13 +37,13 @@ ALTER INDEX index_name
 
 ## Rename an index
 
-``` SQL
+```sql
 ALTER INDEX index_name RENAME TO new_name;
 ```
 
 ## Rebuild multiple indexes using PARALLEL
 
-``` SQL
+```sql
 SELECT 'ALTER INDEX '||OWNER||'.'||INDEX_NAME||' REBUILD ONLINE PARALLEL 8;'
 FROM DBA_INDEXES;
 -- And execute the output.
@@ -54,7 +54,7 @@ Alter index OWNER.INDEX_NAME rebuild online parallel 8;
 Of course, you can change the parallel value if needed.
 Then you might need to change the parallel parameter for the indexes you've just rebuilt.
 
-``` SQL
+```sql
 SELECT DEGREE, 'ALTER INDEX '||OWNER||'.'||INDEX_NAME||' NOPARALLEL;'
 FROM DBA_INDEXES
 WHERE DEGREE > '1';
@@ -64,7 +64,7 @@ WHERE DEGREE > '1';
 
 If you ever get into trouble while rebuilding indexes and encounter the error **"ORA-08104: this index object 75350 is being online built or rebuilt"**, just get the OBJECT_ID of the index causing trouble, and use the following script to unlock it.
 
-``` SQL
+```sql
 DECLARE
 RetVal BOOLEAN;
 OBJECT_ID BINARY_INTEGER;
@@ -80,7 +80,7 @@ END;
 
 If this doesn't work, use this script to rebuild and clean all invalid indexes.
 
-``` SQL
+```sql
 begin
 isclean :=false;
 while isclean=false

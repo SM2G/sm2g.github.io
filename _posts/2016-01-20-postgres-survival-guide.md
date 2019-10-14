@@ -29,7 +29,7 @@ Quick remainder of some mainly used PostgreSQL datatypes:
 
 * List all users
 
-``` SQL
+```sql
 sam=# Select rolname, rolcanlogin, rolpassword, rolvaliduntil from pg_roles;
  rolname | rolcanlogin | rolpassword | rolvaliduntil
 ---------+-------------+-------------+---------------
@@ -47,7 +47,7 @@ sam=# \du
 
 * List all databases
 
-``` SQL
+```sql
 sam-# \l
                                 List of databases
     Name    |  Owner  | Encoding |   Collate   |    Ctype    | Access privileges
@@ -63,21 +63,21 @@ sam-# \l
 
 * Create a database
 
-``` SQL
+```sql
 sam=# Create database some_db;
 CREATE DATABASE
 ```
 
 * Connect to a database
 
-``` SQL
+```sql
 sam=# \c some_db;
 You are now connected to database "some_db" as user "sam".
 ```
 
 * List all tables
 
-``` SQL
+```sql
 some_db=# \dt
        List of relations
  Schema | Name | Type  | Owner
@@ -88,7 +88,7 @@ some_db=# \dt
 
 * Create a table with a PK index and describe structure
 
-``` SQL
+```sql
 some_db=# Create table test (test_col INTEGER PRIMARY KEY);
 CREATE TABLE
 some_db=# \dp
@@ -118,7 +118,7 @@ Note that the maximum name length for a table name is 64, which is much more com
 
 * SQL operations, explain plan and quit
 
-``` SQL 
+```sql 
 sam=# Select * from produits;
  no_produit |   nom   | prix
 ------------+---------+------

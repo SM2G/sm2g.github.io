@@ -15,7 +15,7 @@ By the way, DML stands for (Data Manipulation Language), and refers to Insert, U
 
 Using parallel DML is useful if you have a SQL statement that manipulates a lot of rows, like so:
 
-``` SQL
+```sql
 alter session enable parallel dml;
 
 -- to set a paralelism of 4 (aka degree of paralelism)

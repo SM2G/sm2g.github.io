@@ -13,13 +13,13 @@ image:
 Juste in case you wondered, yes it is possible to write custom messages directly to the alert log. For this, you'll have to use the procedure **ksdwrt** stored in the **dbms_system** supplied package.
 This can be a useful way to implement custom messages when you execute a stored procedure, or it can help with testing by generating alerts.
 
-``` SQL
+```sql
 SQL> execute dbms_system.ksdwrt(2, 'TEST --- write to log');
 ```
 
 or you can include a time-stamp as well.
 
-``` SQL
+```sql
 SQL> execute sys.dbms_system.ksdwrt(2,to_char(sysdate)|| ' -- ');
 ```
 

@@ -12,7 +12,7 @@ image:
 
 You can get session-level and global transaction isolation levels using these commands :
 
-``` SQL
+```sql
 
 SELECT @@global.tx_isolation;
 SELECT @@tx_isolation;
@@ -29,7 +29,7 @@ Set session TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 All transactions in "Oracle" mode now.
 
-``` SQL
+```sql
 
 Select * from testInnoDB WHERE Col1=1 and Col2=0 for update;
 

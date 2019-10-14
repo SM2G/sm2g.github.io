@@ -22,7 +22,7 @@ Also, as an advice, avoid using lowercase or any other special character. Althou
 
 In my case, the error was due to an invalid index after a column rename. So I just dropped and recreated the index.
 
-``` SQL
+```sql
 -- Create the new index
 Create index schema.new_index (col1, col2, col3) tablespace my_tablespace online;
 

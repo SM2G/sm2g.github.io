@@ -13,7 +13,7 @@ A few days ago, I was trying to optimize a single SQL statement in a production 
 
 Get the **SQL_ID** of the statement you want to purge and look up the cursor info using the following query:
 
-``` SQL
+```sql
 Select address, hash_value
 From v$sqlarea
 Where sql_id LIKE '97y75c8x7jumc';
@@ -39,7 +39,7 @@ The final parameter is for the heaps/locations to be purged. The default of 1 me
 
 Now that you have these values, you simply execute the call to the purge procedure:
 
-``` SQL
+```sql
 exec dbms_shared_pool.purge('00000000A9F34F98, 1682024353','C');
 
 PL/SQL procedure successfully completed.
@@ -47,7 +47,7 @@ PL/SQL procedure successfully completed.
 
 If you check the shared pool again after the purge successfully completes, you'll find that the query returns no rows.
 
-``` SQL
+```sql
 select address, hash_value from v$sqlarea where sql_id like '97y75c8x7jumc';
 
 no rows selected
@@ -55,7 +55,7 @@ no rows selected
 
 Finally, when everything fails, here's how to purge the whole **Shared Pool**.
 
-``` SQL
+```sql
 begin
 For src in (select address||','||hash_value as addr_hash
 from v$sql where last_active_time < sysdate - 3)

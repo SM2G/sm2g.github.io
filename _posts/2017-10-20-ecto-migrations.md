@@ -12,7 +12,7 @@ image:
 
 Ecto is the specific component for interacting with databases in the Elixir language. It supports mosts used database systems, the default being PostgreSQL, but Oracle, MySQL, SQLite, and MongoDB are also available. I recently started to work on Elixir for some project and here's a short syntax sum-up for using Ecto in your web apps.
 
-``` Bash
+```bash
 # Auto create models
 mix phx.gen.model Account accounts user_id:integer first_name:string last_name:string
 
@@ -28,7 +28,7 @@ mix ecto.rollback
 
 And here's the Ecto syntax for managing data structures (DDL only).
 
-``` Elixir
+```elixir
 # Creating a table
 create table(:users) do
   add :first_name, :string

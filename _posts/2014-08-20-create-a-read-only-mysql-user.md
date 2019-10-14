@@ -14,7 +14,7 @@ Sometimes you just need to give access to some users of your database. As you do
 
 Here’s how to provide only read privilege to a user:
 
-``` SQL
+```sql
 grant select on database_name.* to 'username'@'%' identified by 'userpasswd';
 grant select on otherdb_name.* to 'username'@'%' identified by 'userpasswd';
 

@@ -28,14 +28,14 @@ To fix this error, you can use any of the following solutions:
 * Avoid using a subselect. Rephrasing it as a join, using SELECT STRAIGHT_JOIN will override the query optimizer to get your performance back.
 
 * Avoid sorting, or sort the smallest dataset possible. For example:
-  ```
+  ```sql
   SELECT id, my_huge_text_field
   FROM table
   ORDER BY another_field;
   ```
 
 Will run faster if you restructure the query like so:
-```
+```sql
 SELECT id, my_huge_text_field
 FROM table
 JOIN (SELECT id

@@ -14,7 +14,7 @@ This can be useful when you need to perform a report query on a set of Oracle us
 
 Note that you can also make this static list a dynamically generated list.
 
-``` SQL
+```sql
 set serveroutput on
 
 DECLARE

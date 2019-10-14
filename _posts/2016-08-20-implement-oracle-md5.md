@@ -12,7 +12,7 @@ image:
 
 A few days ago, I was looking for a way to get an **MD5sum function** to work directly in Oracle, like the MD5() function in MySQL. After some searching I found out that there was no direct way to generate an MD5 checksum in Oracle. However, the function exists in the Oracle supplied package **dbms_obfuscation_toolkit**, so here's the way to make a usable function that will call this package and get the checksum.
 
-``` SQL
+```sql
 CREATE OR REPLACE FUNCTION USER.md5hash (str IN VARCHAR2)
 	RETURN VARCHAR2
 	IS v_checksum VARCHAR2(32);
@@ -33,7 +33,7 @@ This simple function uses the **sys.dbms_obfuscation_toolkit.md5** function's ra
 
 For example:
 
-``` SQL
+```sql
 SELECT md5hash('foo')
 FROM dual;
 

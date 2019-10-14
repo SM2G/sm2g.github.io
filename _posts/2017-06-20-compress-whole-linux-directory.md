@@ -20,7 +20,7 @@ This command does two things for you:
 + Compress the archive
 
 You need to use the *tar* command as follows:
-``` Bash
+```bash
 tar -zcvf archive-name.tar.gz directory-name
 ```
 With the arguments,
@@ -31,13 +31,13 @@ With the arguments,
 - **f**: finally, the archive File name
 
 For example, you have directory called **/home/sm2g/stuff** and you would like to compress this directory then you can type tar command as follows:
-``` Bash
+```bash
 tar -zcvf backup-2017.tar.gz /home/sm2g/stuff
 ```
 
 The above command will create an archive file called **backup-2017.tar.gz** in current directory.
 Now, eventually you'll want to restore your archive. Just use following command (it will extract all files in current directory):
-``` Bash
+```bash
 tar -zxvf backup-2017.tar.gz
 ```
 With,
@@ -45,7 +45,7 @@ With,
 - **x**: To extract files
 
 If you wish to extract files in particular directory, for example in /tmp then you need to use following command:
-``` Bash
+```bash
 tar -zxvf backup-2017.tar.gz -C /tmp
 cd /tmp
 ls -lhart

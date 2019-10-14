@@ -16,7 +16,7 @@ This might look trivial but there are some very important elements to consider b
 
 Here’s how to properly set-up a DML list script style.
 
-``` SQL
+```sql
 spool my_logfile.log
 alter session set cursor_sharing = force;
 set time on timing on echo on autocommit 300;
