@@ -8,14 +8,14 @@ title: Resume
 {% for job in exp_sorted  %}
 <div class="row">
 <div class="col-md-4">
-  <blockquote class="blockquote text-right">
+  <blockquote class="blockquote text-right wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
     <p class="mb-0 text-warning">{{ job.company_name }}</p>
     <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
   </blockquote>
 </div>
 
 <div class="col-md-8">
-  <div class="card">
+  <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
     <div class="card-body">
       <h4 class="card-title text-info">{{ job.job_title }}</h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
