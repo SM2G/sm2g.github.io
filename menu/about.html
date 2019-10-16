@@ -67,7 +67,7 @@ title: Resume
   <div class="col-md-6">
     <h2>Skills</h2>
 
-    <div class="card border-primary">
+    <div class="card border-primary wow fadeIn">
       <div class="card-body">
         {% assign tech-skills = site.data.cv_skills | where: "category", "itskill" %}
         <ul class="fa-ul">
@@ -85,9 +85,9 @@ title: Resume
 
     {% assign lang-skills = site.data.cv_skills | where: "category", "language" | sort: "level" | reverse %}
     {% for skill in lang-skills %}
-    <h5>{{ skill.flag }} {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
+    <h5><img src="{{ site.baseurl }}/assets/images/flags/flag_64_{{ skill.flag }}.png" style="width: 5%; height: auto;"> {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
     <div class="progress">
-      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar progress-bar-striped bg-info wow fadeInLeft" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
     </div></br>
     {% endfor %}
   </div>

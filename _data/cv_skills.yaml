@@ -8,7 +8,7 @@
   name: Docker
   icon: fa-docker
   description: "Deployed many contenerized applications using Docker for portability and reliability."
-  
+
 - category: itskill
   name: Git
   icon: fa-git-alt
@@ -24,18 +24,18 @@
 
 - category: language
   name: French
-  flag: 🇫🇷
+  flag: fr
   level: 100
   description: Native speaker
 
 - category: language
   name: English
-  flag: 🇬🇧
+  flag: en
   level: 80
   description: Fluent
 
 - category: language
   name: Chinese
-  flag: 🇨🇳
+  flag: zh
   level: 30
   description: Beginner
