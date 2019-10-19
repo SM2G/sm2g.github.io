@@ -1,6 +1,8 @@
 <div class="row">
+  <div class="col-md-12">
   <h2>You may also enjoy:</h2>
   {% assign listed_posts_urls = page.url | split: ' ' %}
+</div>
 </div>
 <div class="row">
   {% for tag in page.tags %}
@@ -23,7 +25,7 @@
       </div>
     </div>
   </div> <!-- col-lg-4 -->
-  
+
   {% if remainder == 0 %}
 </div><!-- /row -->
 </br>
