@@ -8,7 +8,7 @@ title: Tags
 <h1>Tag Cloud</h1>
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
- <span class="badge badge-pill badge-light">
+ <span class="badge badge-pill badge-light wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
     <a href="/tag/{{ tag | first | slugify }}"
         style="color: black; font-size: {{ tag | last | size  |  times: 10 | plus: 80  }}%">
             {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
