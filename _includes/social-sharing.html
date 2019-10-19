@@ -1,7 +1,43 @@
 <div class="row">
+  <div class="col-md-6">
+
+  <h3>Social networks</h3>
   <p>
     <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}&amp;via={{ site.author.twitter }}" target="_blank"><i class="fa-fw fa-2x fab fa-twitter-square" aria-hidden="true"></i></a>
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}" target="_blank"><i class="fa-fw fa-2x fab fa-facebook" aria-hidden="true"></i></a>
     <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" target="_blank"><i class="fa-fw fa-2x fab fa-google-plus" aria-hidden="true"></i></a>
   </p>
+</div>
+<div class="col-md-6 text-right">
+  <h3>Tips</h3>
+  <!-- Tips -->
+  <a href="" data-toggle="modal" data-target="#tipsModal">
+    <i class="fa-fw fa-2x fas fa-coins" aria-hidden="true"></i>
+  </a>
+
+  <!-- Modal -->
+  <div class="modal fade text-left" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tipsModalLabel">Tips</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="card-text">Has any of the tips provided in my blog saved your life or business at some point and you don't know how to say thank you?
+
+        <p>Here's how ;)</p>
+        <ul class="fa-ul">
+          {% for currency in site.donations %}
+          <li><span class="fa-li text-warning">{{ currency.symbol }}</span> <b>{{ currency.code }}</b> - {{ currency.public_key }}</li>
+          {% endfor %}
+        </ul>
+        <div class="text-right">Thank you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
