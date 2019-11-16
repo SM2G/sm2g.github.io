@@ -1,0 +1,13 @@
+// Links
+a {
+    text-decoration: none !important;
+    color: $primary-color;
+    transition: $global-transition;
+    &:hover {
+        color: darken($primary-color, 15%) !important;
+    }
+}
+
+h1, h2, h3 {
+  color: $primary-color;
+}
