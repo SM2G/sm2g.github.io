@@ -26,7 +26,7 @@ title: Home
               <a href="/tag/{{ tag | slugify }}" style="color: black;">#{{ tag }}</a>
             </span>
             {% endfor %}
-            <p class="card-text text-justify">{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a></p>
+            <p class="card-text text-justify">{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
             <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
           </div>
         </div></a>
