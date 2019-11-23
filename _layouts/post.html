@@ -5,11 +5,16 @@ layout: default
   <h1>{{ page.title }}</h1>
   <img src="{{ site.baseurl }}/assets/images/{{ page.image.teaser }}" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
   {% if page.tags.size > 0 %}
+  <h3>Tags:</h3>
+  <div class="row">
+    <div class="container">
     {% for tag in page.tags %}
     <span class="badge badge-pill badge-light">
       <a href="/tag/{{ tag | slugify }}" style="color: black;">#{{ tag }}</a>
     </span>
     {% endfor %}
+    </div>
+  </div>
   {% endif %}
 
 {{ content }}
