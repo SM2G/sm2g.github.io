@@ -12,11 +12,40 @@ a {
 }
 
 h1, h2, h3 {
-  color: $primary-color;
+  color: $secondary-color;
 }
 
-/* Code */
+// Text
+.text-primary-color {
+  color: $primary-color
+}
 
+.text-secondary-color {
+  color: $secondary-color
+}
+
+// images
+.filter {
+  position: relative;
+  -webkit-filter: contrast(110%) grayscale(50%);
+  filter: contrast(110%) grayscale(50%);
+}
+.filter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: color;
+  opacity: 0.9;
+  background: -webkit-linear-gradient(to bottom left, $primary-color, $secondary-color);
+  background: linear-gradient(to bottom left, $primary-color, $secondary-color);
+}
+
+// Code
 pre,
 code {
     font-size: 0.8rem;
