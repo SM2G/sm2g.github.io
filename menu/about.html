@@ -9,7 +9,7 @@ title: Resume
 <div class="row">
 <div class="col-md-4">
   <blockquote class="blockquote text-right wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-    <p class="mb-0 text-warning">{{ job.company_name }}</p>
+    <p class="mb-0 text-secondary-color">{{ job.company_name }}</p>
     <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
   </blockquote>
 </div>
@@ -17,7 +17,7 @@ title: Resume
 <div class="col-md-8">
   <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
     <div class="card-body">
-      <h4 class="card-title text-info">{{ job.job_title }}</h4>
+      <h4 class="card-title text-primary-color">{{ job.job_title }}</h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
       <p class="card-text">{{ job.description | markdownify }}</p>
     </div>
@@ -72,7 +72,7 @@ title: Resume
         {% assign tech-skills = site.data.cv_skills | where: "category", "itskill" %}
         <ul class="fa-ul">
         {% for skill in tech-skills %}
-          <li><h5><span class="fa-li text-danger"><i class= "fa-lg fab {{ skill.icon }}"></i></span>{{ skill.name }}</h5></li>
+          <li><h5><span class="fa-li text-primary-color"><i class= "fa-lg fab {{ skill.icon }}"></i></span>{{ skill.name }}</h5></li>
           <p>{{ skill.description }}</p>
         {% endfor %}
         </ul>
