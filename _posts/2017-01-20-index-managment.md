@@ -4,8 +4,8 @@ title: "Index managment"
 categories: journal
 tags: oracle
 image:
-  feature: drill-tools.jpg
-  teaser: drill-tools-teaser.jpg
+  feature: workshop-tools.jpg
+  teaser: workshop-tools-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---

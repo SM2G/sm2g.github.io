@@ -4,8 +4,8 @@ title: "Blockchain and IoT"
 categories: journal
 tags: blockchain linux
 image:
-  feature: spider-web.jpg
-  teaser: spider-web-teaser.jpg
+  feature: dark-chain.jpg
+  teaser: dark-chain-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
