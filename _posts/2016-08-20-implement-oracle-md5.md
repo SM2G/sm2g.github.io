@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: old-typewriter.jpg
   teaser: old-typewriter-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 A few days ago, I was looking for a way to get an **MD5sum function** to work directly in Oracle, like the MD5() function in MySQL. After some searching I found out that there was no direct way to generate an MD5 checksum in Oracle. However, the function exists in the Oracle supplied package **dbms_obfuscation_toolkit**, so here's the way to make a usable function that will call this package and get the checksum.

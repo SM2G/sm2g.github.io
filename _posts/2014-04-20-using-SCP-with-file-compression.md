@@ -6,8 +6,6 @@ tags: mysql linux
 image:
   feature: compress.jpg
   teaser: compress-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 The command-line tool SCP can be effectively used to move files and perform file compression in the transfer. However, there’s different ways to achieve this, with different results.

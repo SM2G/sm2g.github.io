@@ -6,8 +6,6 @@ tags: mysql linux
 image:
   feature: command.jpg
   teaser: command-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Eventually, you’ll need to automate queries on your Mysql database, let’s say, for reporting purposes.
 Hee’s how to put SQL queries into a shell script, and possibly including variables based on the date or whatever fits your needs:

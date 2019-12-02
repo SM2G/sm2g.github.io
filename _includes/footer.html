@@ -1,29 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 text-right">
-      <a href="/">{{ site.title }} | {{ site.tagline }} by {{ site.author.name }}</a>
-      </br>
-      <a href="https://github.com/{{site.author.github}}"><i class="fa-fw fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
-      <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa-fw fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
-      <a href="https://instagram.com/{{site.author.instagram}}"><i class="fa-fw fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
-      <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa-fw fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
-      <a href="mailto:{{site.author.email}}"><i class="fa-fw fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
+<div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mbr-text mbr-fonts-style display-7">
+          <em>{{ site.tagline }}</em></br>
+        </p>
     </div>
-  </div><!-- row -->
-  <hr>
-  <div class="row">
-    <div class="col-md-12 text-right">
-      <p class="mbr-text mbr-fonts-style display-7">
-        © Copyright 2019 {{ site.title }} - All Rights Reserved
-      </p>
+
+    <div class="col-md-6 text-right">
+    <a href="/">{{ site.title }} | {{ site.tagline }} by {{ site.author.name }}</a>
+  </br>
+  <a href="https://github.com/{{site.author.github}}"><i class="fa-fw fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
+  <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa-fw fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
+  <a href="https://instagram.com/{{site.author.instagram}}"><i class="fa-fw fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
+  <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa-fw fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
+  <a href="mailto:{{site.author.email}}"><i class="fa-fw fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
     </div>
   </div>
 </div>
-
-<script src={{ "assets/js/wow.min.js" | absolute_url }}></script>
-<script>
-  new WOW().init();
-</script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</div>

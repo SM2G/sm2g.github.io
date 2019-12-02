@@ -4,10 +4,8 @@ title: "Blockchain and IoT"
 categories: journal
 tags: blockchain linux
 image:
-  feature: spider-web.jpg
-  teaser: spider-web-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
+  feature: dark-chain.jpg
+  teaser: dark-chain-teaser.jpg
 ---
 
 Here's a small script to open a JavaScript interface to interact with an IoT device. This interface can then be easily incorporated in a larger Blockchain project with real tangible everyday life objects. I'll cover the Blockchain aspect of this project in another article, focusing on *Hyperledger*.

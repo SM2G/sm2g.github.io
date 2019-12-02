@@ -6,8 +6,6 @@ tags: mysql
 image:
   feature: dark-fence.jpg
   teaser: dark-fence-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Sometimes you just need to give access to some users of your database. As you don’t want theses users to modify or accidentally delete some data, it’s advisable to grant them only read access to the database.

@@ -6,8 +6,6 @@ tags: mysql
 image:
   feature: two-cars.jpg
   teaser: two-cars-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 MySQL provides you with a useful string function called REPLACE that allows you to replace a string in a column of a table by a new string. The REPLACE function is very handy to search and replace text which affects multiple records such as obsolete URL, spelling mistake and such.

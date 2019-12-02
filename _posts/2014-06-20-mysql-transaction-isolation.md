@@ -6,8 +6,6 @@ tags: mysql transaction
 image:
   feature: grey-wall.jpg
   teaser: grey-wall-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 You can get session-level and global transaction isolation levels using these commands :

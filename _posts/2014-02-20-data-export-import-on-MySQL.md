@@ -6,8 +6,6 @@ tags: mysql import export
 image:
   feature: import.jpg
   teaser: import-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 MySQL provides you with a lot of flexibility when it comes to import or export data between databases.

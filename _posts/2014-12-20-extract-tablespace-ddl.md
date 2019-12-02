@@ -6,8 +6,6 @@ tags: oracle sql
 image:
   feature: structure-hall.jpg
   teaser: structure-hall-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Here’s how to extract the sql commands to create any tablespace. Useful when creating a partial database copy. You can modify the query to only get a specific set of tablespaces you need.
 

@@ -6,8 +6,6 @@ tags: oracle script
 image:
   feature: vintage-gun.jpg
   teaser: vintage-gun-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Sometimes, you need to execute a lot of DML instructions on a database.

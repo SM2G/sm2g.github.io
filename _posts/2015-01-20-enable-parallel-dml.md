@@ -6,8 +6,6 @@ tags: oracle sql
 image:
   feature: highway-night.jpg
   teaser: highway-night-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Effectively using parallel DML can speed up data manipulation.
 

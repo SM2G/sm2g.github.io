@@ -2,8 +2,6 @@
   <div class="container">
     <img src={{ "/assets/images/sm2g-favicon.png" | absolute_url }} width="30" height="30" class="d-inline-block align-top" alt="">
     <a class="navbar-brand" href="/"> {{ site.title }}</a>
-    <small class="masthead-subtitle">{{ site.tagline }}</small>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,21 +13,6 @@
           <a class="nav-link" href="/menu{{ link.url }}">{{ link.title }}</a>
         </li>
         {% endfor %}
-        <li class="nav-item">
-        <a class="nav-link" href="https://github.com/{{ site.author.github }}"><i class="fab fa-github-square" aria-hidden="true" target="_blank"></i></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/{{ site.author.twitter }}"><i class="fab fa-twitter-square" aria-hidden="true" target="_blank"></i></a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="https://instagram.com/{{ site.author.instagram }}"><i class="fab fa-instagram" aria-hidden="true" target="_blank"></i></a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true" target="_blank"></i></a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
-      </li>
       </ul>
     </div>
   </div>

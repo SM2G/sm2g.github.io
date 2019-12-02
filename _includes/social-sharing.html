@@ -31,7 +31,7 @@
         <p>Here's how ;)</p>
         <ul class="fa-ul">
           {% for currency in site.donations %}
-          <li><span class="fa-li text-warning">{{ currency.symbol }}</span> <b>{{ currency.code }}</b> - {{ currency.public_key }}</li>
+          <li><span class="fa-li text-primary-color">{{ currency.symbol }}</span> <b>{{ currency.code }}</b> - {{ currency.public_key }}</li>
           {% endfor %}
         </ul>
         <div class="text-right">Thank you.</div>

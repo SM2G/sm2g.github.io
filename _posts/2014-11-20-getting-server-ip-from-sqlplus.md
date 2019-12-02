@@ -6,8 +6,6 @@ tags: system network
 image:
   feature: spider-web.jpg
   teaser: spider-web-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Here’s a small script to get the IP address of the host server directly from the SQL*plus command line.
 

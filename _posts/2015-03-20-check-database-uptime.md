@@ -6,8 +6,6 @@ tags: database oracle mysql
 image:
   feature: cockpit-sunset.jpg
   teaser: cockpit-sunset-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Sometimes you have to check when a database was started for the last time.
 To get the information, just log on to the database and use the following query to get the last startup time:

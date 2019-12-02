@@ -6,8 +6,6 @@ tags: oracle sqlplus database
 image:
   feature: valve.jpg
   teaser: valve-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.

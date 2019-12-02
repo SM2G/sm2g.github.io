@@ -4,10 +4,8 @@ title: "Resolve PLAN_TABLE is old version error"
 categories: journal
 tags: oracle
 image:
-  feature: old-table.jpg
-  teaser: old-table-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
+  feature: plan-table.jpg
+  teaser: plan-table-teaser.jpg
 ---
 When displaying execution plans on SQL*plus, you may notice an information message like so:
 
