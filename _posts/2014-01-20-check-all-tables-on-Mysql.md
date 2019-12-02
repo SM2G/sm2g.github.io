@@ -6,8 +6,6 @@ tags: mysql
 image:
   feature: macbook-lights.jpg
   teaser: macbook-lights-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Data corruption is every DBA's worst nightmare and can happen anytime.

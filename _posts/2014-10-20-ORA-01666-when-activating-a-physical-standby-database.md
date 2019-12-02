@@ -6,8 +6,6 @@ tags: oracle standby
 image:
   feature: archive-room.jpg
   teaser: archive-room-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 You're waking up a Physical standby database, and are welcomed by the following ORA-Code:
 

@@ -6,8 +6,6 @@ tags: linux
 image:
   feature: blur-drops.jpg
   teaser: blur-drops-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Ok, that's a simple one, but it's always nice to have a quick syntax remainder.

@@ -6,8 +6,6 @@ tags: mysql linux
 image:
   feature: mini-van.jpg
   teaser: mini-van-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 In this article, I’ll demonstrate multiple solutions to move datafiles

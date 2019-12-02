@@ -6,8 +6,6 @@ tags: mysql
 image:
   feature: dark-crane.jpg
   teaser: dark-crane-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 ### PROBLEM

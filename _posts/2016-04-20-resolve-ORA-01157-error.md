@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: old-door.jpg
   teaser: old-door-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Another day at the office, I was investigating a performace issue when I encountered the following error:
 

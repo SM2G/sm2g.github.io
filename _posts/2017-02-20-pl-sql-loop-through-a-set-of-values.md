@@ -6,8 +6,6 @@ tags: oracle plsql
 image:
   feature: hallway-loop.jpg
   teaser: hallway-loop-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Here's a simple trick on how to make a **PL/SQL loop** iterate through a set of predefined values.
 This can be useful when you need to perform a report query on a set of Oracle user account, or to query a set of specific dictionary objects for example.

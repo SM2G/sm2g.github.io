@@ -6,8 +6,6 @@ tags: linux
 image:
   feature: linux-screen.jpg
   teaser: linux-screen-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 GNU Screen is a very useful tool to run a long script on a server and make sure the script will run even if your computer gets disconnected, runs out of battery or whatever.

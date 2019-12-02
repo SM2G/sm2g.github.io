@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: hanging-lights.jpg
   teaser: hanging-lights-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 On rare occasions, mostly during a high server load peak or a process failure, an Oracle instance may not accept any connection. Either from regular users as well as SYSDBA.

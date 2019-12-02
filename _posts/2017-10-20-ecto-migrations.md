@@ -6,8 +6,6 @@ tags: elixir
 image:
   feature: liquid-text.jpg
   teaser: liquid-text-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Ecto is the specific component for interacting with databases in the Elixir language. It supports mosts used database systems, the default being PostgreSQL, but Oracle, MySQL, SQLite, and MongoDB are also available. I recently started to work on Elixir for some project and here's a short syntax sum-up for using Ecto in your web apps.

@@ -6,8 +6,6 @@ tags: AWS devops
 image:
   feature: padlock-blur.jpg
   teaser: padlock-blur-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Elastic Beanstalk is a fantastic way to deploy and manage web applications. Today, for most web apps, you'll need SSL certificates to encrypt data between users and your server. For this, we'll use **Let’s Encrypt** Certificate Authority which provides free SSL certificates and is supported by a wide array of browsers.

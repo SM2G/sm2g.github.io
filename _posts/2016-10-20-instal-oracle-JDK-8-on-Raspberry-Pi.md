@@ -6,8 +6,6 @@ tags: oracle java
 image:
   feature: ceramic-coffee.jpg
   teaser: ceramic-coffee-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 In this post, I'll show you how to download and install **Oracle JDK** 8 on a Raspberry Pi.
 

@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: container-jump.jpg
   teaser: container-jump-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 It was a normal day at the office, when I noticed an ORA-00600 on a production database. Upon investigation, I found the following details in the alert.log file:
 

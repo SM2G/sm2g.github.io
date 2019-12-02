@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: grey-cogs.jpg
   teaser: grey-cogs-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 In a database copy scenario, or to fix an applicative bug, you may have to resync sequences. Basically, there's two ways to achieve this:

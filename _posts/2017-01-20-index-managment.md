@@ -6,8 +6,6 @@ tags: oracle
 image:
   feature: workshop-tools.jpg
   teaser: workshop-tools-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 In this article, I'll show you various ways to move an index to another tablespace when you need to reorganize database objects or free some space.
 

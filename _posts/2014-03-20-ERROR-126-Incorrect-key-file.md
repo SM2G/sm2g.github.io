@@ -6,8 +6,6 @@ tags: mysql
 image:
   feature: key-file.jpg
   teaser: key-file-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 The Incorrect key file error:
 

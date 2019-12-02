@@ -6,8 +6,6 @@ tags: linux
 image:
   feature: camera-focus.jpg
   teaser: camera-focus-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 Here's a small script to compress JPEG images in a folder.
 Useful to save a few kilobytes of bandwith when serving images from your website.

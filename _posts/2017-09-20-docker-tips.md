@@ -6,8 +6,6 @@ tags: docker devops
 image:
   feature: space-container.jpg
   teaser: space-container-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
 ---
 
 Recently, I started working with Docker on various projects.
