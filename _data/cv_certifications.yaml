@@ -11,6 +11,12 @@
   date: 2018-02-08
   description: "Certified in Corda nodes setup and management as well as implementation of Java/Kotlin contracts in a distributed environment."
 
+- title: " CCC Professional Cloud Developer"
+  issuer: EXIN
+  cert_link: https://app.exeed.pro/holder/badge/51396
+  date: 2019-12-30
+  description: "CCC Professional Cloud Developer offers IT professionals the knowledge and background to step into the constantly evolving domain of cloud development. This advanced certification focuses on the core components and emerging trends of the Cloud Developer role."
+
 - title: "AWS Certified Solutions Architect - Associate"
   issuer: Amazon Web services
   link: www.r3.net
