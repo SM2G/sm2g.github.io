@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resolve the ORA-01157 Error"
-categories: journal
+categories: database
 tags: oracle
 image: old-door
 ---

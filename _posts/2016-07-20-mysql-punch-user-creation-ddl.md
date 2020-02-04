@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL punch user creation DDL"
-categories: journal
+categories: database
 tags: mysql
 image: white-office
 ---

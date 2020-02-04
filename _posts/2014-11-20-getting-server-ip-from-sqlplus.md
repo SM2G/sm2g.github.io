@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting the server IP Address from SQL*plus"
-categories: journal
+categories: database
 tags: system network
 image: spider-web
 ---

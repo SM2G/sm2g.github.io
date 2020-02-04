@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image compression from the command line"
-categories: journal
+categories: development
 tags: linux
 image: camera-focus
 ---

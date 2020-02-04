@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Registering with the listener"
-categories: journal
+categories: database
 tags: oracle network
 image: black-earphones
 ---

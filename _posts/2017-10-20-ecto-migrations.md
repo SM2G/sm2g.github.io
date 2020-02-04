@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intro to Ecto"
-categories: journal
+categories: development
 tags: elixir
 image: liquid-text
 ---

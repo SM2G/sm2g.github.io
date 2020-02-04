@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PostgreSQL Survival Guide"
-categories: journal
+categories: database
 tags: postgres
 image: mountain
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to prepare a DML list script"
-categories: journal
+categories: database
 tags: oracle script
 image: vintage-gun
 ---

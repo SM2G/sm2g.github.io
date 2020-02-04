@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configure SSL Certificates on AWS EBS"
-categories: journal
+categories: devops
 tags: AWS devops
 image: padlock-blur
 ---

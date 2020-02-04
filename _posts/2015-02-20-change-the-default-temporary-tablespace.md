@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Change the default temporary tablespace"
-categories: journal
+categories: database
 tags: oracle sql
 image: stainless-clock
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Check all tables on MySQL"
-categories: journal
+categories: database
 tags: mysql
 image: macbook-lights
 ---

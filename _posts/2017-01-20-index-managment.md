@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Index managment"
-categories: journal
+categories: database
 tags: oracle
 image: workshop-tools
 ---

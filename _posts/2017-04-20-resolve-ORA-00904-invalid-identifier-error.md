@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resolve the ORA-00904 invalid identifier error"
-categories: journal
+categories: database
 tags: oracle
 image: reflect-run
 ---

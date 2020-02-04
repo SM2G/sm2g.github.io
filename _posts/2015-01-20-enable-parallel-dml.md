@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Enable parallel DML"
-categories: journal
+categories: database
 tags: oracle sql
 image: highway-night
 ---

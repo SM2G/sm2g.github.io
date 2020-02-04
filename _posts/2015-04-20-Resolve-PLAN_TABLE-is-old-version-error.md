@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resolve PLAN_TABLE is old version error"
-categories: journal
+categories: database
 tags: oracle
 image: plan-table
 ---

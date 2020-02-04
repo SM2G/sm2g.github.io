@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Data export/import on MySQL"
-categories: journal
+categories: database
 tags: mysql import export
 image: import
 ---

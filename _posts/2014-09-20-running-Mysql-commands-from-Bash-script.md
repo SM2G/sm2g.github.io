@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Mysql commands from Bash script"
-categories: journal
+categories: database
 tags: mysql linux
 image: command
 ---

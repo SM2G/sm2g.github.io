@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker tips"
-categories: journal
+categories: devops
 tags: docker devops
 image: space-container
 ---

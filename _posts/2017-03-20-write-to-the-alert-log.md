@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to write to the alert log"
-categories: journal
+categories: database
 tags: oracle
 image: red-keyboard
 ---

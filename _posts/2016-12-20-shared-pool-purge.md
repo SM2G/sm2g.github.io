@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shared pool purge"
-categories: journal
+categories: database
 tags: oracle
 image: oil-pump
 ---

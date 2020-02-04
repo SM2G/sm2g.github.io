@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL transaction isolation"
-categories: journal
+categories: database
 tags: mysql transaction
 image: grey-wall
 ---

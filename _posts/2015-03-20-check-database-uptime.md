@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Check database uptime"
-categories: journal
+categories: database
 tags: database oracle mysql
 image: cockpit-sunset
 ---

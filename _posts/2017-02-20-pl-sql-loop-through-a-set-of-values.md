@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PL/SQL loop through a set of values"
-categories: journal
+categories: database
 tags: oracle plsql
 image: hallway-loop
 ---

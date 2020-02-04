@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL partial import"
-categories: journal
+categories: database
 tags: mysql import
 image: stormtrooper-disk
 ---

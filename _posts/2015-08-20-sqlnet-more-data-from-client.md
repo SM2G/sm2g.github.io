@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SQL*Net more data from client"
-categories: journal
+categories: database
 tags: oracle network
 image: traffic-blur
 ---

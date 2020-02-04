@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sync Oracle sequences"
-categories: journal
+categories: database
 tags: oracle
 image: grey-cogs
 ---

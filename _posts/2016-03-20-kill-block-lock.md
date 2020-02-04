@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kill locked sessions"
-categories: journal
+categories: database
 tags: oracle
 image: kill-gun
 ---

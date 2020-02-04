@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blockchain and IoT"
-categories: journal
+categories: development
 tags: blockchain linux
 image: dark-chain
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Install Oracle JDK 8 on Raspberry Pi"
-categories: journal
+categories: development
 tags: oracle java
 image: ceramic-coffee
 ---
