@@ -3,9 +3,7 @@ layout: post
 title: "Shared pool purge"
 categories: journal
 tags: oracle
-image:
-  feature: oil-pump.jpg
-  teaser: oil-pump-teaser.jpg
+image: oil-pump
 ---
 A few days ago, I was trying to optimize a single SQL statement in a production environment. The statement was using bind variables, so the plan would change to a different (sub-optimal) plan as adaptive cursor sharing was kicking in. I needed to flush that plan out of the shared pool *without* flushing the entire pool. Here's how to do that.
 

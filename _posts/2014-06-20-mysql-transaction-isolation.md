@@ -3,9 +3,7 @@ layout: post
 title: "MySQL transaction isolation"
 categories: journal
 tags: mysql transaction
-image:
-  feature: grey-wall.jpg
-  teaser: grey-wall-teaser.jpg
+image: grey-wall
 ---
 
 You can get session-level and global transaction isolation levels using these commands :

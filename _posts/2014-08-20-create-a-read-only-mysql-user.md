@@ -3,9 +3,7 @@ layout: post
 title: "Create a read-only MySQL user"
 categories: journal
 tags: mysql
-image:
-  feature: dark-fence.jpg
-  teaser: dark-fence-teaser.jpg
+image: dark-fence
 ---
 
 Sometimes you just need to give access to some users of your database. As you don’t want theses users to modify or accidentally delete some data, it’s advisable to grant them only read access to the database.

@@ -3,9 +3,7 @@ layout: post
 title: "Enable parallel DML"
 categories: journal
 tags: oracle sql
-image:
-  feature: highway-night.jpg
-  teaser: highway-night-teaser.jpg
+image: highway-night
 ---
 Effectively using parallel DML can speed up data manipulation.
 

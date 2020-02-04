@@ -3,9 +3,7 @@ layout: post
 title: "How to write to the alert log"
 categories: journal
 tags: oracle
-image:
-  feature: red-keyboard.jpg
-  teaser: red-keyboard-teaser.jpg
+image: red-keyboard
 ---
 
 Juste in case you wondered, yes it is possible to write custom messages directly to the alert log. For this, you'll have to use the procedure **ksdwrt** stored in the **dbms_system** supplied package.

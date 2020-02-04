@@ -3,9 +3,7 @@ layout: post
 title: "Transfer multiple files simultaneously using SCP"
 categories: journal
 tags: linux
-image:
-  feature: cable-car.jpg
-  teaser: cable-car-teaser.jpg
+image: cable-car
 ---
 I have been using the **Secure Copy** (scp) utility for copying files between my local server and development server. Sometimes I have to copy more than one file. Copying each file can be very annoying, as you have to type the password every time you use the command. But it is possible to copy multiple files using scp, just like the copy (cp) utility.
 

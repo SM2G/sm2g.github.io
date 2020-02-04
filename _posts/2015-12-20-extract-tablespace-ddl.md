@@ -3,9 +3,7 @@ layout: post
 title: "Extract tablespace DDL"
 categories: journal
 tags: oracle
-image:
-  feature: cathedral-structure.jpg
-  teaser: cathedral-structure-teaser.jpg
+image: cathedral-structure
 ---
 
 Should you need to perform a large data export and import on different Oracle databases, you'll need to make sure that the tablespace configuration matches your export and import parameters.

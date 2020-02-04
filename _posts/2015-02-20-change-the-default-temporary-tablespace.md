@@ -3,9 +3,7 @@ layout: post
 title: "Change the default temporary tablespace"
 categories: journal
 tags: oracle sql
-image:
-  feature: stainless-clock.jpg
-  teaser: stainless-clock-teaser.jpg
+image: stainless-clock
 ---
 When your temporary tablespace gets full and you can't resize it, you may consider switching ti a new ont to reclaim disk space. Changing the default temporary tablespace will allows you to discard the old one entirely, and reduce the total database size.
 In the following example, **Temp1** is the current temporary tablespace, that we want to switch for the **Temp2** tablespace.

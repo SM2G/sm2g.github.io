@@ -3,9 +3,7 @@ layout: post
 title: "Last rowcount in MySQL"
 categories: journal
 tags: mysql
-image:
-  feature: pile-books.jpg
-  teaser: pile-books-teaser.jpg
+image: pile-books
 ---
 Suppose you want to count the number of lines returned by the last SQL statement issued.
 For **select** statements you can use the *FOUND_ROWS* construct:
