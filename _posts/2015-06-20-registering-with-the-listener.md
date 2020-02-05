@@ -3,7 +3,6 @@ layout: post
 title: "Registering with the listener"
 categories: database
 tags: oracle network
-image: black-earphones
 ---
 When restarting a database, if you can't acess it from outside, you may have to associate the newly restarted database with the listener. The Pmon process that is started with the instance is responsible for registration of oracle server with listener.
 

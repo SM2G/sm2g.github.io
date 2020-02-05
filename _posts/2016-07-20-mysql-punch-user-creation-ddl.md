@@ -3,7 +3,6 @@ layout: post
 title: "MySQL punch user creation DDL"
 categories: database
 tags: mysql
-image: white-office
 ---
 
 You can get the DDL necessary to duplicate an existing user with the following system command:

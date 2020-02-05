@@ -3,7 +3,6 @@ layout: post
 title: "Install Oracle JDK 8 on Raspberry Pi"
 categories: development
 tags: oracle java
-image: ceramic-coffee
 ---
 In this post, I'll show you how to download and install **Oracle JDK** 8 on a Raspberry Pi.
 

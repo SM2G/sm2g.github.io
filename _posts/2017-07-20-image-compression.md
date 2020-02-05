@@ -3,7 +3,6 @@ layout: post
 title: "Image compression from the command line"
 categories: development
 tags: linux
-image: camera-focus
 ---
 Here's a small script to compress JPEG images in a folder.
 Useful to save a few kilobytes of bandwith when serving images from your website.

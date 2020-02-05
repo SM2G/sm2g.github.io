@@ -3,7 +3,6 @@ layout: post
 title: "Fixing the ORA-00600: [ktfbtgex-7] error"
 categories: database
 tags: oracle
-image: container-jump
 ---
 It was a normal day at the office, when I noticed an ORA-00600 on a production database. Upon investigation, I found the following details in the alert.log file:
 

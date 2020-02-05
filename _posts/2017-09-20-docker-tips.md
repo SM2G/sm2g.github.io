@@ -3,7 +3,6 @@ layout: post
 title: "Docker tips"
 categories: devops
 tags: docker devops
-image: space-container
 ---
 
 Recently, I started working with Docker on various projects.

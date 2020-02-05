@@ -3,7 +3,6 @@ layout: post
 title: "Getting the server IP Address from SQL*plus"
 categories: database
 tags: system network
-image: spider-web
 ---
 Here’s a small script to get the IP address of the host server directly from the SQL*plus command line.
 

@@ -3,7 +3,6 @@ layout: post
 title: "InnoDB table rebuild"
 categories: database
 tags: mysql
-image: dark-crane
 ---
 
 ### PROBLEM

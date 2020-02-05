@@ -3,7 +3,6 @@ layout: post
 title: "Resolve PLAN_TABLE is old version error"
 categories: database
 tags: oracle
-image: plan-table
 ---
 When displaying execution plans on SQL*plus, you may notice an information message like so:
 

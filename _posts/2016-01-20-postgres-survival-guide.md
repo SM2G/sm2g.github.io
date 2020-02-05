@@ -3,7 +3,6 @@ layout: post
 title: "PostgreSQL Survival Guide"
 categories: database
 tags: postgres
-image: mountain
 ---
 
 PostgreSQL has been gaining a lot of popularity these days, so let's have a look at the basics of administering a PostgreSQL database. We'll cover the structure exploration, object manipulation and some user managment.

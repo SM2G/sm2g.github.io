@@ -3,7 +3,6 @@ layout: post
 title: "Check all tables on MySQL"
 categories: database
 tags: mysql
-image: macbook-lights
 ---
 
 Data corruption is every DBA's worst nightmare and can happen anytime.

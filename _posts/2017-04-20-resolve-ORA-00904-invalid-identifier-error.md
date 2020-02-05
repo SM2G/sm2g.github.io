@@ -3,7 +3,6 @@ layout: post
 title: "Resolve the ORA-00904 invalid identifier error"
 categories: database
 tags: oracle
-image: reflect-run
 ---
 Eventually, you'll issue a valid SQL statement and *SQL*Plus* will return the error **ORA-00904 invalid identifier**. First, make sure it's not a typo and you typed a valid and existing column name.
 If the column exists you should be able to query it and not get this error. The *invalid identifier* error most commonly happens when you are referencing an invalid alias in a select statement.

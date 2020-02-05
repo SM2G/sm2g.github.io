@@ -3,7 +3,6 @@ layout: post
 title: "Resolve the ORA-01157 Error"
 categories: database
 tags: oracle
-image: old-door
 ---
 Another day at the office, I was investigating a performace issue when I encountered the following error:
 

@@ -3,7 +3,6 @@ layout: post
 title: "Resolving the “ERROR 126 Incorrect key file” error"
 categories: database
 tags: mysql
-image: key-file
 ---
 The Incorrect key file error:
 

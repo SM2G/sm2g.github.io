@@ -3,7 +3,6 @@ layout: post
 title: "MySQL regexp Replace"
 categories: database
 tags: mysql
-image: two-cars
 ---
 
 MySQL provides you with a useful string function called REPLACE that allows you to replace a string in a column of a table by a new string. The REPLACE function is very handy to search and replace text which affects multiple records such as obsolete URL, spelling mistake and such.

@@ -3,7 +3,6 @@ layout: post
 title: "Kill locked sessions"
 categories: database
 tags: oracle
-image: kill-gun
 ---
 Sometimes, when there's many database sessions connected and depending on the user activity, locks can occur on a database. While this may only affect a few users, the problem is that with many sessions locked the server load will increase. And there's a risk of crashing the whole database if this happens to many user sessions at the same time.
 

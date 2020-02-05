@@ -3,7 +3,6 @@ layout: post
 title: "Restart a hung Oracle database"
 categories: database
 tags: oracle
-image: hanging-lights
 ---
 
 On rare occasions, mostly during a high server load peak or a process failure, an Oracle instance may not accept any connection. Either from regular users as well as SYSDBA.

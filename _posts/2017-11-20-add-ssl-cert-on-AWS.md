@@ -3,7 +3,6 @@ layout: post
 title: "Configure SSL Certificates on AWS EBS"
 categories: devops
 tags: AWS devops
-image: padlock-blur
 ---
 
 Elastic Beanstalk is a fantastic way to deploy and manage web applications. Today, for most web apps, you'll need SSL certificates to encrypt data between users and your server. For this, we'll use **Let’s Encrypt** Certificate Authority which provides free SSL certificates and is supported by a wide array of browsers.

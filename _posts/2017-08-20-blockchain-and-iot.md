@@ -3,7 +3,6 @@ layout: post
 title: "Blockchain and IoT"
 categories: development
 tags: blockchain linux
-image: dark-chain
 ---
 
 Here's a small script to open a JavaScript interface to interact with an IoT device. This interface can then be easily incorporated in a larger Blockchain project with real tangible everyday life objects. I'll cover the Blockchain aspect of this project in another article, focusing on *Hyperledger*.

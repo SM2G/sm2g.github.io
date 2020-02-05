@@ -3,7 +3,6 @@ layout: post
 title: "Oracle sqlplus silence output"
 categories: database
 tags: oracle sqlplus database
-image: valve
 ---
 
 Use the following code on your scheduled Oracle scripts to silence terminal output except your data.

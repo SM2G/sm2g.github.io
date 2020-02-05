@@ -3,7 +3,6 @@ layout: post
 title: "Check database uptime"
 categories: database
 tags: database oracle mysql
-image: cockpit-sunset
 ---
 Sometimes you have to check when a database was started for the last time.
 To get the information, just log on to the database and use the following query to get the last startup time:

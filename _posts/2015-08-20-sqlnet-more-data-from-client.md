@@ -3,7 +3,6 @@ layout: post
 title: "SQL*Net more data from client"
 categories: database
 tags: oracle network
-image: traffic-blur
 ---
 
 The error *SQL*Net more data from client* usually happens when there's a large amount of data sent from client (or other database in case of dblinks), which doesn't fit into single SDU size Oracle packet. The server process knows that the call hasn't ended and there is more data/packets to come before the call ends.

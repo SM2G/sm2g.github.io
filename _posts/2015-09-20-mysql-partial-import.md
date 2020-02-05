@@ -3,7 +3,6 @@ layout: post
 title: "MySQL partial import"
 categories: database
 tags: mysql import
-image: stormtrooper-disk
 ---
 Here's the situation. You have a dumpfile called *mysql.dmp* which contains a whole MySQL database dump. However you only need to import one table (or anything, but only a portion of that dumpfile).
 Because MySQL dumps are simply SQL scripts, we can use sed in order to extract only the portion of the SQL instructions we want.

@@ -3,7 +3,6 @@ layout: post
 title: "Compress a Whole Linux or UNIX Directory"
 categories: system
 tags: linux
-image: blur-drops
 ---
 
 Ok, that's a simple one, but it's always nice to have a quick syntax remainder.

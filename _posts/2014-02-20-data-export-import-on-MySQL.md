@@ -3,7 +3,6 @@ layout: post
 title: "Data export/import on MySQL"
 categories: database
 tags: mysql import export
-image: import
 ---
 
 MySQL provides you with a lot of flexibility when it comes to import or export data between databases.
