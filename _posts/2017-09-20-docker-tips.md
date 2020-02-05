@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Docker tips"
-categories: journal
+categories: devops
 tags: docker devops
-image:
-  feature: space-container.jpg
-  teaser: space-container-teaser.jpg
+image: space-container
 ---
 
 Recently, I started working with Docker on various projects.

@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "InnoDB table rebuild"
-categories: journal
+categories: database
 tags: mysql
-image:
-  feature: dark-crane.jpg
-  teaser: dark-crane-teaser.jpg
+image: dark-crane
 ---
 
 ### PROBLEM

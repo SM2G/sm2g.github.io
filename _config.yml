@@ -18,10 +18,6 @@ author:
 navigation:
 - title: About
   url: /about
-- title: Blog
-  url: /blog
-- title: Tags
-  url: /tags
 
 donations:
 - code: BTC

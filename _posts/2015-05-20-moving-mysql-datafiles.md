@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Moving MySQL datafiles"
-categories: journal
+categories: database
 tags: mysql linux
-image:
-  feature: mini-van.jpg
-  teaser: mini-van-teaser.jpg
+image: mini-van
 ---
 
 In this article, I’ll demonstrate multiple solutions to move datafiles

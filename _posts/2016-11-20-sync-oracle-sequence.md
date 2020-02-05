@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Sync Oracle sequences"
-categories: journal
+categories: database
 tags: oracle
-image:
-  feature: grey-cogs.jpg
-  teaser: grey-cogs-teaser.jpg
+image: grey-cogs
 ---
 
 In a database copy scenario, or to fix an applicative bug, you may have to resync sequences. Basically, there's two ways to achieve this:

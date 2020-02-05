@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Index managment"
-categories: journal
+categories: database
 tags: oracle
-image:
-  feature: workshop-tools.jpg
-  teaser: workshop-tools-teaser.jpg
+image: workshop-tools
 ---
 In this article, I'll show you various ways to move an index to another tablespace when you need to reorganize database objects or free some space.
 

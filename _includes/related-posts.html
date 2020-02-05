@@ -7,25 +7,14 @@
 <div class="row">
   {% for tag in page.tags %}
 
-  {% for mypost in site.tags[tag] limit:6 %}
+  {% for post in site.tags[tag] limit:6 %}
 
   {% assign remainder = forloop.index | modulo: 3 %}
-  {% if listed_posts_urls contains mypost.url %}
+  {% if listed_posts_urls contains post.url %}
   {% else %}
 
   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-    <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-      <figure class="filter">
-      <img src="{{ site.baseurl }}/assets/images/{{ mypost.image.teaser }}" class="card-img-top" alt="{{ mypost.title }}">
-      </figure>
-      <div class="card-body">
-        <h1>
-          <a href="{{ mypost.url }}">{{ mypost.title }}</a>
-        </h1>
-        <p class="card-text text-justify">{{ mypost.content | strip_html | truncate: 100 }} <a href="{{ site.github.url }}{{ mypost.url }}">Read more</a></p>
-        <span style="margin-top:3px"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ mypost.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-      </div>
-    </div>
+    {% include post-card.html %}
   </div> <!-- col-lg-4 -->
 
   {% if remainder == 0 %}

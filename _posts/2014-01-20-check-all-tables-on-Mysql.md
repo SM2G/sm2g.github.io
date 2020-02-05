@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Check all tables on MySQL"
-categories: journal
+categories: database
 tags: mysql
-image:
-  feature: macbook-lights.jpg
-  teaser: macbook-lights-teaser.jpg
+image: macbook-lights
 ---
 
 Data corruption is every DBA's worst nightmare and can happen anytime.

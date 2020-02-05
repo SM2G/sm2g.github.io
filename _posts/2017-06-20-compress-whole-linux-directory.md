@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Compress a Whole Linux or UNIX Directory"
-categories: journal
+categories: system
 tags: linux
-image:
-  feature: blur-drops.jpg
-  teaser: blur-drops-teaser.jpg
+image: blur-drops
 ---
 
 Ok, that's a simple one, but it's always nice to have a quick syntax remainder.

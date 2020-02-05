@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "ORA-01666 When Activating a Physical Standby Database"
-categories: journal
+categories: database
 tags: oracle standby
-image:
-  feature: archive-room.jpg
-  teaser: archive-room-teaser.jpg
+image: archive-room
 ---
 You're waking up a Physical standby database, and are welcomed by the following ORA-Code:
 
