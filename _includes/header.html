@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 10px;">
   <div class="container">
-    <img src={{ "/assets/images/sm2g-favicon.png" | absolute_url }} width="30" height="30" class="d-inline-block align-top" alt="">
     <a class="navbar-brand" href="/"> {{ site.title }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +9,7 @@
       <ul class="navbar-nav mr-auto">
         {% for link in site.navigation %}{% assign active = nil %}{% if page.url contains link.url %}{% assign active = 'active' %}{% endif %}
         <li class="nav-item {% if forloop.first %}first{% endif %} {{ active }} {% if forloop.last %}last{% endif %}">
-          <a class="nav-link" href="/menu{{ link.url }}">{{ link.title }}</a>
+          <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
         </li>
         {% endfor %}
       </ul>
