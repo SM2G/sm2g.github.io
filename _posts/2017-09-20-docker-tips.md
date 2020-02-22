@@ -31,7 +31,7 @@ df54b187072b     postgres:9.4     "docker-entrypoint..."  3 hours ago      Up 3 
 
 And when everything fails...
 
-```$xslt
+```bash
 # Delete all containers
 docker rm $(docker ps -a -q)
 

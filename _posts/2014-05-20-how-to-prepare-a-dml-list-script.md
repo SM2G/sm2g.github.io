@@ -2,7 +2,7 @@
 layout: post
 title: "How to prepare a DML list script"
 categories: database
-tags: oracle script
+tags: database oracle script
 ---
 
 Sometimes, you need to execute a lot of DML instructions on a database.

@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL transaction isolation"
 categories: database
-tags: mysql transaction
+tags: database mysql transaction
 ---
 
 You can get session-level and global transaction isolation levels using these commands :
