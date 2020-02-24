@@ -88,7 +88,7 @@ title: Resume
     {% for skill in lang-skills %}
     <h5><img src="{{ site.baseurl }}/assets/images/flags/flag_64_{{ skill.flag }}.png" style="width: 5%; height: auto;"> {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
     <div class="progress">
-      <div class="progress-bar progress-bar-striped bg-info wow fadeInLeft" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar progress-bar-striped wow fadeInLeft" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
     </div></br>
     {% endfor %}
   </div>
@@ -101,7 +101,7 @@ title: Resume
 <div class="row">
 
   <div class="col-md-4">
-    <p class="lead text-primary-color">{{ ed.school_name }}</br>
+    <p class="lead text-primary-color">{{ ed.school_name }}, {{ ed.city }}</br>
     <small class="text-muted">{{ ed.start_date | date: "%Y" }} - {{ ed.end_date | date: "%Y" }}</small></p>
   </div>
 

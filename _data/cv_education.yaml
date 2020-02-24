@@ -1,12 +1,14 @@
 
-- school_name: SUPINFO International University (Paris)
+- school_name: SUPINFO International University
+  city: Paris
   diploma: SUPINFO Master of IT science
   start_date: 2005-01-01
   end_date: 2010-01-01
   description: "Oracle database technologies training courses on SQL, PL/SQL, **Oracle database administration**, RMAN & Recovery.
     International teaching missions in **China (18 months)**, lecturing technical lessons in English."
 
-- school_name: Lycée Victor Hugo (Paris)
+- school_name: Lycée Victor Hugo
+  city: Paris
   diploma: Baccalauréat
   start_date: 2004-01-01
   end_date: 2001-01-01
