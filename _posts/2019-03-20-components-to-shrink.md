@@ -1,13 +1,8 @@
 ---
 layout: post
 title: "Forcing ASMM component to shrink"
-categories: journal
-tags: [documentation,sample]
-image:
-  feature: IMAGE.jpg
-  teaser: IMAGE-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
+categories: database
+tags: oracle database
 ---
 
 Here's the way to force the shared pool to shrink dynamically. Documentation states that ASMM can only increase shared pool, and can't shrink.
