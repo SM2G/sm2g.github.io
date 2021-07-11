@@ -33,6 +33,7 @@ Some classics are:
 
 * *What happens when you type an URL into a web browser?*
 * *Explain NAT*
+* *Any technical question that might be relevant for the position to fill...*
 
 You can also add some logic questions.
 
