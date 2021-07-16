@@ -24,6 +24,65 @@ h1, h2, h3 {
   color: $secondary-color
 }
 
+.bgimage {
+  width:auto;
+  height:100vh;
+  background: url('../../assets/images/homepage.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bgimage h5 {
+  text-shadow:2px 2px #333;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+}
+.arrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid $primary-color;
+    border-right: 5px solid $primary-color;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
 // images
 .filter {
   position: relative;
