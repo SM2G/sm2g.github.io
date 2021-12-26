@@ -2,7 +2,7 @@
 layout: post
 title: "How to extract Oracle user DDL"
 categories: database
-tags: database, oracle
+tags: database oracle
 ---
 
 In some cases, you need to duplicate an Oracle user, along with all it's privileges. Doing this manually can be tedious.
