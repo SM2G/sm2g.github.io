@@ -5,7 +5,6 @@ A simple, minimalist personal blog. Mostly about **DevOps**, **Database administ
 ## External Components
 
 * [FontAwesome](https://fontawesome.io/)
-* [MathJax](https://www.mathjax.org/)
 
 ## Install
 
