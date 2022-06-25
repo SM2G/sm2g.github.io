@@ -7,9 +7,9 @@
 <div class="row">
   {% for tag in page.tags %}
 
-  {% for post in site.tags[tag] limit:6 %}
+  {% for post in site.tags[tag] limit: 7 %}
 
-  {% assign remainder = forloop.index | modulo: 3 %}
+  {% assign remainder = forloop.index | modulo: 4 %}
   {% if listed_posts_urls contains post.url %}
   {% else %}
 
@@ -18,14 +18,13 @@
   </div> <!-- col-lg-4 -->
 
   {% if remainder == 0 %}
-</div><!-- /row -->
-</br>
-<div class="row">
+    </div><!-- /row -->
+    </br>
+    <div class="row">
   {% endif %}
 
   {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
   {% endif %}
   {% endfor %}
-
   {% endfor %}
 </div>
