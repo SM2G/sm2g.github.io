@@ -37,7 +37,7 @@ title: Resume
 {% assign remainder = forloop.index | modulo: 3 %}
 
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-  <div class="card border-light">
+  <div class="card border-success mb-3">
     <div class="card-header text-success">{{ cert.issuer }}</div>
     <div class="card-body">
       <h4 class="card-title"><a href="{{ cert.link }}" target="_blank">{{ cert.title }}</a></h4>
@@ -54,7 +54,7 @@ title: Resume
       <p class="card-text text-justify">{{ cert.description | markdownify }}</p>
 
       {% if cert.cert_code %}
-      <div class="float-left"><pre>{{ cert.cert_code }}</pre></div>
+      <div class="float-left"><pre class="text-success">{{ cert.cert_code }}</pre></div>
       {% endif %}
 
       {% if cert.cert_link %}
