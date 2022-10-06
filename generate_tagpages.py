@@ -2,7 +2,7 @@
 
 import csv, glob, os
 
-print "Generating tag pages..."
+print("Generating tag pages...")
 
 post_dir = '_posts/'
 tag_dir = 'tag/'
@@ -44,4 +44,4 @@ for tag in total_tags:
     write_str = '---\nlayout: tagpage\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\nrobots: noindex\n---\n'
     f.write(write_str)
     f.close()
-print total_tags.__len__(), "tag pages successfully generated."
+print(total_tags.__len__(), "tag pages successfully generated.")
