@@ -15,26 +15,12 @@ h1, h2, h3 {
   color: $primary-color;
 }
 
-// Text
-.text-primary-color {
-  color: $primary-color
-}
-
-.text-secondary-color {
-  color: $secondary-color
-}
-
 .bgimage {
-  width:auto;
-  height:100vh;
   background: url('../../assets/images/homepage.jpg');
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size:cover;
-  margin-bottom: 50px;
-  padding-top: 55px;
-  padding-bottom: 50px;
 }
 
 .bgimage h5 {
@@ -44,7 +30,6 @@ h1, h2, h3 {
 body{
   margin: 0;
   padding: 0;
-  background-color: $white;
 }
 .arrow{
     position: absolute;
@@ -127,13 +112,6 @@ pre {
     }
 }
 
-p,a{
-  font-family: $secondary-font;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: $primary-font;
-}
 
 .highlight .lineno {
   color: $dark-grey;

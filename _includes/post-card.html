@@ -1,6 +1,6 @@
 <!-- post-card -->
 <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-  <figure class="filter">
+  <figure class="filter bgimage">
   <a href="{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/categories/cat-{{ post.categories }}-teaser.jpg" class="card-img-top" alt="{{ post.title }}"></a>
   </figure>
   <div class="card-body">
@@ -8,8 +8,8 @@
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h1>
       {% for tag in post.tags %}
-      <span class="badge badge-pill badge-light">
-        <a href="/tag/{{ tag | slugify }}" style="color: black;">#{{ tag }}</a>
+      <span class="badge rounded-pill bg-primary">
+        <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
       </span>
       {% endfor %}
       <p class="card-text text-justify">{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>

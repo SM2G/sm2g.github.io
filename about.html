@@ -8,23 +8,23 @@ title: Resume
 {% assign exp_sorted = site.data.cv_experience | sort: "start_date" | reverse %}
 {% for job in exp_sorted  %}
 <div class="row">
-<div class="col-md-4">
-  <blockquote class="blockquote text-right wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-    <p class="mb-0 text-secondary-color">{{ job.company_name }}</p>
-    <footer class="text-muted">{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
-  </blockquote>
-</div>
+  <div class="col-md-4">
+    <blockquote class="blockquote text-right wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
+      <p class="mb-0">{{ job.company_name }}</p>
+      <footer>{{ job.start_date | date: "%b %Y" }} to {{ job.end_date | date: "%b %Y" }}</footer>
+    </blockquote>
+  </div>
 
-<div class="col-md-8">
-  <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-    <div class="card-body">
-      <h4 class="card-title text-primary-color">{{ job.job_title }}</h4>
-      <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
-      <p class="card-text">{{ job.description | markdownify }}</p>
+  <div class="col-md-8">
+    <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
+      <div class="card-body">
+        <h4 class="card-title text-primary-color">{{ job.job_title }}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
+        <p class="card-text">{{ job.description | markdownify }}</p>
+      </div>
     </div>
   </div>
-</div>
-</div>
+</div><!-- /row -->
 </br>
 
 {% endfor %}
@@ -42,6 +42,15 @@ title: Resume
     <div class="card-body">
       <h4 class="card-title"><a href="{{ cert.link }}" target="_blank">{{ cert.title }}</a></h4>
       <small class="text-muted">{{ cert.date | date: "%B %Y" }}</small>
+
+      {% if cert.credly_share_id %}
+      </br>
+      <div class="float-left" style=" margin: 5px;">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="{{ cert.credly_share_id }}" data-share-badge-host="https://www.credly.com">
+      </div>
+      <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script></div>
+      {% endif %}
+
       <p class="card-text text-justify">{{ cert.description | markdownify }}</p>
 
       {% if cert.cert_code %}

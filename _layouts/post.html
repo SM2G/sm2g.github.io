@@ -4,7 +4,7 @@ layout: default
 <div class="container">
   </br></br></br></br>
   <h1>{{ page.title }}</h1>
-<figure class="filter">
+<figure class="filter bgimage">
   <img src="{{ site.baseurl }}/assets/images/categories/cat-{{ page.categories }}.jpg" class="img-fluid mx-auto d-block" alt="Responsive image">
 </figure>
 
@@ -27,8 +27,8 @@ layout: default
 <div class="row">
   <div class="container">
   {% for tag in page.tags %}
-  <span class="badge badge-pill badge-light">
-    <a href="/tag/{{ tag | slugify }}" style="color: black;">#{{ tag }}</a>
+  <span class="badge rounded-pill bg-primary">
+    <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
   </span>
   {% endfor %}
   </div>
