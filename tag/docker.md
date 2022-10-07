@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: docker"
-tag: docker
+title: "Tag: Docker"
+tag: Docker
 robots: noindex
 ---
