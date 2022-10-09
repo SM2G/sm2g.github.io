@@ -14,12 +14,14 @@
 
 - title: "CCC Professional Cloud Developer"
   issuer: EXIN
+  link: https://www.exin.com/technologies-software/ccc-cloud-computing/ccc-professional-cloud-developer/
   cert_link: https://app.exeed.pro/holder/badge/51396
   date: 2019-12-30
   description: "CCC Professional Cloud Developer offers IT professionals the knowledge and background to step into the constantly evolving domain of cloud development. This advanced certification focuses on the core components and emerging trends of the Cloud Developer role."
 
 - title: "Microsoft Certified: Azure Security Engineer Associate"
   issuer: Microsoft
+  link: https://learn.microsoft.com/en-us/certifications/azure-security-engineer/
   cert_link: https://www.credly.com/badges/8763ad11-e6d9-499e-923e-b057079d78f0/public_url
   credly_share_id: 8763ad11-e6d9-499e-923e-b057079d78f0
   date: 2022-06-18
@@ -27,6 +29,7 @@
 
 - title: "Microsoft Certified: Azure Solutions Architect Expert"
   issuer: Microsoft
+  link: https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/
   cert_link: https://www.credly.com/badges/6b8322be-ad7d-41d8-a0c5-9eb7e36f489c/public_url
   credly_share_id: 6b8322be-ad7d-41d8-a0c5-9eb7e36f489c
   date: 2022-02-19
@@ -35,8 +38,9 @@
 
 - title: "AWS Certified Solutions Architect - Associate"
   issuer: Amazon Web services
-  link: www.r3.net
-  cert_link: https://aw.certmetrics.com/amazon/public/verification.aspx
+  link: https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/
+  cert_link: https://www.credly.com/badges/7414b638-3885-4872-b136-1e696971d1fd/public_url
+  credly_share_id: 7414b638-3885-4872-b136-1e696971d1fd
   cert_code: TL6CJ8C23MQQQCKH
   date: 2019-09-27
   description: "Validated architect level on deploying secure and robust applications using **AWS technologies**.
