@@ -9,13 +9,29 @@
   link: https://www.corda.net/training-and-certification
   cert_link: https://www.youracclaim.com/badges/8856d7fb-2d3a-4652-b4e2-6d85af4f4cd9/linked_in_profile
   date: 2018-02-08
+  credly_share_id: 8856d7fb-2d3a-4652-b4e2-6d85af4f4cd9
   description: "Certified in **Corda** nodes setup and management as well as implementation of **Java/Kotlin** contracts in a distributed environment."
 
-- title: " CCC Professional Cloud Developer"
+- title: "CCC Professional Cloud Developer"
   issuer: EXIN
   cert_link: https://app.exeed.pro/holder/badge/51396
   date: 2019-12-30
   description: "CCC Professional Cloud Developer offers IT professionals the knowledge and background to step into the constantly evolving domain of cloud development. This advanced certification focuses on the core components and emerging trends of the Cloud Developer role."
+
+- title: "Microsoft Certified: Azure Security Engineer Associate"
+  issuer: Microsoft
+  cert_link: https://www.credly.com/badges/8763ad11-e6d9-499e-923e-b057079d78f0/public_url
+  credly_share_id: 8763ad11-e6d9-499e-923e-b057079d78f0
+  date: 2022-06-18
+  description: "Earning Azure Security Engineer Associate certification validates the skills and knowledge to implement security controls and threat protection, manage identity and access, and protect data, applications, and networks in cloud and hybrid environments as part of end-to-end infrastructure."
+
+- title: "Microsoft Certified: Azure Solutions Architect Expert"
+  issuer: Microsoft
+  cert_link: https://www.credly.com/badges/6b8322be-ad7d-41d8-a0c5-9eb7e36f489c/public_url
+  credly_share_id: 6b8322be-ad7d-41d8-a0c5-9eb7e36f489c
+  date: 2022-02-19
+  description: "Earning the Azure Solutions Architect Expert certification demonstrates subject matter expertise in designing cloud and hybrid solutions that run on Microsoft Azure, including compute, network, storage, monitoring, and security. Candidates have advanced experience and knowledge across IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platforms, and governance."
+
 
 - title: "AWS Certified Solutions Architect - Associate"
   issuer: Amazon Web services
