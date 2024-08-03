@@ -22,7 +22,7 @@
 - title: "Microsoft Certified: Azure Security Engineer Associate"
   issuer: Microsoft
   link: https://learn.microsoft.com/en-us/certifications/azure-security-engineer/
-  cert_link: https://www.credly.com/badges/8763ad11-e6d9-499e-923e-b057079d78f0/public_url
+  cert_link: https://learn.microsoft.com/api/credentials/share/en-us/SM2G/CF9A24EF8ABEB93E
   credly_share_id: 8763ad11-e6d9-499e-923e-b057079d78f0
   date: 2022-06-18
   description: "Earning Azure Security Engineer Associate certification validates the skills and knowledge to implement security controls and threat protection, manage identity and access, and protect data, applications, and networks in cloud and hybrid environments as part of end-to-end infrastructure."
@@ -30,7 +30,7 @@
 - title: "Microsoft Certified: Azure Solutions Architect Expert"
   issuer: Microsoft
   link: https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/
-  cert_link: https://www.credly.com/badges/6b8322be-ad7d-41d8-a0c5-9eb7e36f489c/public_url
+  cert_link: https://learn.microsoft.com/api/credentials/share/en-us/SM2G/F78EF4D3D5613557
   credly_share_id: 6b8322be-ad7d-41d8-a0c5-9eb7e36f489c
   date: 2022-02-19
   description: "Earning the Azure Solutions Architect Expert certification demonstrates subject matter expertise in designing cloud and hybrid solutions that run on Microsoft Azure, including compute, network, storage, monitoring, and security. Candidates have advanced experience and knowledge across IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platforms, and governance."
@@ -50,6 +50,5 @@
   issuer: TOEIC
   link: https://www.ets.org/toeic
   date: 2010-01-01
-  description: "Completely fluent in English. Proven track record of international teaching missions in different Chinese universities.
-
+  description: "Completely fluent in English. Proven track record of international teaching missions in different Chinese universities.\n\n
   Score: **960/990**."
