@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Performing large WodPress migrations"
+title: "Performing large WordPress migrations"
 categories: devops
 tags: wordpress aws
 ---
