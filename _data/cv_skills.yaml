@@ -24,18 +24,18 @@
 
 - category: language
   name: French
-  flag: fr
+  flag: 🇫🇷
   level: 100
   description: Native speaker
 
 - category: language
   name: English
-  flag: en
+  flag: 🇬🇧
   level: 80
   description: Fluent
 
 - category: language
   name: Chinese
-  flag: zh
+  flag: 🇨🇳
   level: 30
   description: Beginner

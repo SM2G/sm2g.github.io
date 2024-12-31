@@ -16,8 +16,8 @@ author:
   linkedin:          "samy.gejzenblozen"
 
 navigation:
-- title: About
-  url: /about
+- title: CV
+  url: /cv
 
 donations:
 - code: BTC

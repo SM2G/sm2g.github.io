@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /about/
+permalink: /cv/
 title: Resume
 ---
 
@@ -95,7 +95,7 @@ title: Resume
 
     {% assign lang-skills = site.data.cv_skills | where: "category", "language" | sort: "level" | reverse %}
     {% for skill in lang-skills %}
-    <h5><img src="{{ site.baseurl }}/assets/images/flags/flag_64_{{ skill.flag }}.png" style="width: 5%; height: auto;"> {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
+    <h5>{{ skill.flag }} {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
     <div class="progress">
       <div class="progress-bar progress-bar-striped wow fadeInLeft" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
     </div></br>
