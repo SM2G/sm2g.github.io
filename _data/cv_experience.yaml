@@ -1,3 +1,26 @@
+- job_title: "DevOps Engineer"
+  company_name: NeoXam
+  location: Paris, France
+  start_date: 2023-03-01
+  end_date: 2019-01-01
+  description: "**Structuring AWS Accounts** — Organizing Accounts, Roles, and Permissions
+access for the entire R&D division. Using Lambdas functions to
+automate deployments, and resource management.
+
+
+**Organizing Azure resources** — Defining methods of accessing resources
+Azure resources, documentation.
+
+
+**Creating infrastructure templates** — Creating, organizing, and managing a
+catalog of Cloud infrastructure models under Terraform allowing the deployment of
+standardized environments.
+
+
+**Team management** — Organizing teamwork (2-4) and workload, onboarding of new members.
+**Software Factory** — Managing and updating the Software Factory. Added tools for
+quality code such as SonarQube and VeraCode."
+    
 - job_title: "Data Architect"
   company_name: ING Direct
   location: Paris, France
