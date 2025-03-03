@@ -1,13 +1,11 @@
 <div class="row">
-  <div class="col-md-12">
     <h2>You may also enjoy:</h2>
     {% assign listed_posts_urls = page.url | split: ' ' %}
   </div>
-</div>
 <div class="row">
   {% for tag in page.tags %}
 
-  {% for post in site.tags[tag] limit: 7 %}
+  {% for post in site.tags[tag] limit: 3 %}
 
   {% assign remainder = forloop.index | modulo: 3 %}
   {% if listed_posts_urls contains post.url %}

@@ -1,19 +1,6 @@
 // Transition
 $global-transition: .30s;
 
-// Links
-a {
-    text-decoration: none !important;
-    transition: $global-transition;
-    &:hover {
-        color: darken($primary-color, 15%) !important;
-    }
-}
-
-h1, h2, h3 {
-  color: $primary-color;
-}
-
 .bgimage {
   background: url('../../assets/images/homepage.jpg');
   background-attachment: fixed;
@@ -22,14 +9,6 @@ h1, h2, h3 {
   background-size:cover;
 }
 
-.bgimage h5 {
-  text-shadow:2px 2px #333;
-}
-
-body{
-  margin: 0;
-  padding: 0;
-}
 .arrow{
     position: absolute;
     top: 90%;
@@ -109,14 +88,6 @@ pre {
         padding-right: 0;
         padding-left: 0;
     }
-}
-
-
-.highlight .lineno {
-  color: $dark-grey;
-  display:inline-block;
-  padding: 0 5px;
-  border-right:1px solid $light-grey;
 }
 
 .highlight pre code {

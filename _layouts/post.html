@@ -3,40 +3,41 @@ layout: default
 ---
 <div class="container">
   <h1>{{ page.title }}</h1>
-<figure class="filter bgimage">
-  <img src="{{ site.baseurl }}/assets/images/categories/cat-{{ page.categories }}.jpg" class="img-fluid mx-auto d-block" alt="Responsive image">
-</figure>
+  <figure class="filter bgimage d-none d-md-block">
+    <img src="{{ site.baseurl }}/assets/images/categories/cat-{{ page.categories }}.jpg"
+      class="img-fluid mx-auto d-block" alt="Responsive image">
+  </figure>
 
-{{ content }}
+  {{ content }}
 
-<span class="post-date">
-  Written on
-  {% assign d = page.date | date: "%-d"  %}
-  {{ page.date | date: "%B" }}
-  {% case d %}
+  <span class="post-date">
+    Written on
+    {% assign d = page.date | date: "%-d" %}
+    {{ page.date | date: "%B" }}
+    {% case d %}
     {% when '1' or '21' or '31' %}{{ d }}st
     {% when '2' or '22' %}{{ d }}nd
     {% when '3' or '23' %}{{ d }}rd
     {% else %}{{ d }}th{% endcase %},
-  {{ page.date | date: "%Y" }}
-  by {{ site.author.name }}
-</span>
-{% if page.tags.size > 0 %}
-<h3>Tags:</h3>
-<div class="row">
-  <div class="container">
-  {% for tag in page.tags %}
-  <span class="badge rounded-pill bg-primary">
-    <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
+    {{ page.date | date: "%Y" }}
+    by {{ site.author.name }}
   </span>
-  {% endfor %}
-  </div>
-</div></br>
-{% endif %}
-{% include social-sharing.html %}
-{% include related-posts.html %}
+  {% if page.tags.size > 0 %}
+  <h3>Tags:</h3>
+  <div class="row">
+    <div class="container">
+      {% for tag in page.tags %}
+      <span class="badge rounded-pill bg-primary">
+        <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
+      </span>
+      {% endfor %}
+    </div>
+  </div></br>
+  {% endif %}
+  {% include social-sharing.html %}
+  {% include related-posts.html %}
 
-{% if site.disqus %}
+  {% if site.disqus %}
   {% include disqus.html %}
-{% endif %}
+  {% endif %}
 </div><!-- container -->
