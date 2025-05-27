@@ -50,16 +50,16 @@ title: Home
     <div class="mx-auto centered">
       {% if paginator.next_page %}
       <a class="btn btn-link" href="{{ paginator.next_page_path }}" class="next"><i
-          class="fa-fw fa-3x fas fa-angle-double-left"></i></a>
+          class="bi bi-chevron-double-left"></i></a>
       {% else %}
-      <span class="btn btn-link disabled"><i class="fa-fw fa-3x fas fa-angle-double-left"></i></span>
+      <span class="btn btn-link disabled"><i class="bi bi-chevron-double-left"></i></span>
       {% endif %}
 
       {% if paginator.previous_page %}
       <a class="btn btn-link" href="{{ paginator.previous_page_path }}"><i
-          class="fa-fw fa-3x fas fa-angle-double-right"></i></a>
+          class="bi bi-chevron-double-right"></i></a>
       {% else %}
-      <span class="btn btn-link disabled"><i class="fa-fw fa-3x fas fa-angle-double-right"></i></span>
+      <span class="btn btn-link disabled"><i class="bi bi-chevron-double-right"></i></span>
       {% endif %}
     </div>
   </div>

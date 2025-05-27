@@ -6,59 +6,39 @@ $global-transition: .30s;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
-.arrow{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-// images
-.filter {
-  position: relative;
-  -webkit-filter: contrast(110%) grayscale(50%);
-  filter: contrast(110%) grayscale(50%);
-}
-.filter::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+.arrow {
   position: absolute;
-  pointer-events: none;
-  mix-blend-mode: color;
-  opacity: 0.5;
-  background: -webkit-linear-gradient(to bottom left, $primary-color, $secondary-color);
-  background: linear-gradient(to bottom left, $primary-color, $secondary-color);
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 // Code
 pre,
 code {
-    font-size: 0.8rem;
-    border-radius: 3px;
-    background-color: $black;
-    font-family: $code-font;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  background-color: $black;
+  font-family: $code-font;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  >code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .highlight pre code {
@@ -72,29 +52,29 @@ pre {
   background-color: $black;
   margin-top: 2rem;
   padding: 2rem 0;
-  
+
   h5 {
     color: $primary-color;
     margin-bottom: 1rem;
     font-weight: 600;
   }
-  
+
   a {
     color: $text;
     transition: color 0.3s ease;
-    
+
     &:hover {
       color: $primary-color;
       text-decoration: none;
     }
   }
-  
+
   .social-links {
     a {
       display: inline-block;
       margin-right: 1rem;
       font-size: 1.5rem;
-      
+
       &:hover {
         transform: translateY(-3px);
       }

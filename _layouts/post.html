@@ -3,10 +3,16 @@ layout: default
 ---
 <div class="container">
   <h1 class="title-terminator target-lock">{{ page.title }}</h1>
-  <figure class="filter bgimage">
-    <img src="{{ site.baseurl }}/assets/images/categories/cat-{{ page.categories }}.jpg"
-      class="img-fluid mx-auto d-block" alt="{{ page.title }} featured image">
-  </figure>
+  <div class="terminator-header">
+    <div class="scan-line"></div>
+    <div class="data-points"></div>
+    <div class="target-box"></div>
+    <div class="category-indicator">{{ page.categories }}</div>
+    <div class="header-text">
+      <span>ID: {{ page.date | date: "%Y%m%d" }}-{{ page.title | slugify | truncate: 10, "" }}</span>
+      <span>ACCESSING DATA...</span>
+    </div>
+  </div>
   <div class="terminator-data">
     <span class="data-label">SYSTEM:</span> <span class="data-value">ARCHIVE</span>
     <span class="data-label">FILE:</span> <span class="data-value">{{ page.title | upcase }}</span>
