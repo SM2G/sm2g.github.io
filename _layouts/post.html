@@ -2,11 +2,16 @@
 layout: default
 ---
 <div class="container">
-  <h1>{{ page.title }}</h1>
-  <figure class="filter bgimage d-none d-md-block">
+  <h1 class="title-terminator target-lock">{{ page.title }}</h1>
+  <figure class="filter bgimage">
     <img src="{{ site.baseurl }}/assets/images/categories/cat-{{ page.categories }}.jpg"
-      class="img-fluid mx-auto d-block" alt="Responsive image">
+      class="img-fluid mx-auto d-block" alt="{{ page.title }} featured image">
   </figure>
+  <div class="terminator-data">
+    <span class="data-label">SYSTEM:</span> <span class="data-value">ARCHIVE</span>
+    <span class="data-label">FILE:</span> <span class="data-value">{{ page.title | upcase }}</span>
+    <span class="data-label">STATUS:</span> <span class="data-value blink">ACTIVE</span>
+  </div>
 
   {{ content }}
 
@@ -33,11 +38,5 @@ layout: default
       {% endfor %}
     </div>
   </div></br>
-  {% endif %}
-  {% include social-sharing.html %}
-  {% include related-posts.html %}
-
-  {% if site.disqus %}
-  {% include disqus.html %}
   {% endif %}
 </div><!-- container -->

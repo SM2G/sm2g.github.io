@@ -1,0 +1,24 @@
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  border: 1px solid rgba($primary-color, 0.5);
+  outline: none;
+  background-color: rgba($terminator-dark, 0.8);
+  color: $primary-color;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  
+  &.visible {
+    display: block;
+  }
+  
+  &:hover {
+    background-color: rgba($terminator-dark, 1);
+    box-shadow: 0 0 10px rgba($primary-color, 0.7);
+  }
+}

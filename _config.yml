@@ -27,11 +27,9 @@ donations:
   symbol: "Ξ"
   public_key: "0xf05080371075b00C6643B38aCd16De7F5948343E"
 
-paginate:            12
-disqus:              #"your-disqus"
-
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
+paginate:            12
 permalink:           none
 plugins:             [jekyll-paginate]

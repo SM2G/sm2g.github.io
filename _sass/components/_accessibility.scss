@@ -1,0 +1,70 @@
+// Accessibility improvements
+
+// Focus styles
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid $focus-outline;
+  outline-offset: 2px;
+}
+
+// Skip to content link
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: $primary-color;
+  color: $white;
+  padding: 8px;
+  z-index: 9999;
+  
+  &:focus {
+    top: 0;
+  }
+}
+
+// Improved link styles
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+}
+
+// Improved button focus
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.5);
+}
+
+// Improved form controls
+.form-control:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+}
+
+// Improved contrast for badges
+.badge {
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+  
+  a {
+    color: $white;
+    
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      opacity: 0.9;
+    }
+  }
+}
+
+// Improved card styles
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}

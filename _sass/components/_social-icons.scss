@@ -1,0 +1,20 @@
+.social-icons {
+  margin-top: 1rem;
+  
+  a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: $primary-color;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: $white;
+      transform: translateY(-3px);
+    }
+    
+    .bi {
+      font-size: 1.8rem;
+    }
+  }
+}

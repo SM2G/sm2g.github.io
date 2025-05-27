@@ -1,6 +1,6 @@
-// Main Colors
-$primary-color: #25ABE6;
-$secondary-color: #82A4B5;
+// Main Colors - Terminator Theme
+$primary-color: #00FFFF; // Cyan/blue for Terminator HUD
+$secondary-color: #FF3300; // Red for Terminator targeting
 $text: #f8f8ff;
 $light-grey: #A4A4A4;
 $medium-grey: #6B6B6B;
@@ -8,3 +8,9 @@ $dark-grey: #474747;
 
 $white: #ffffff;
 $black: #101010;
+$terminator-dark: #0A0A0A; // Darker background
+$terminator-grid: rgba(20, 20, 20, 0.8); // Grid overlay
+
+// Accessibility contrast colors
+$link-hover: #5bc0eb;
+$focus-outline: #ffd166;

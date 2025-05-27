@@ -1,11 +1,11 @@
 <!-- post-card -->
 <div class="card wow fadeIn" data-wow-delay="0.{{forloop.index }}s">
-  <figure class="filter bgimage d-none d-md-block">
+  <figure class="filter bgimage d-sm-block">
     <a href="{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/categories/cat-{{ post.categories }}-teaser.jpg"
         class="card-img-top" alt="{{ post.title }}"></a>
   </figure>
   <div class="card-body">
-    <h1>
+    <h1 class="terminator-font">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h1>
     {% for tag in post.tags %}
@@ -13,9 +13,9 @@
       <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
     </span>
     {% endfor %}
-    <p class="card-text text-justify d-none d-md-block">{{ post.content | strip_html | truncate: 350 }} <a
+    <p class="card-text">{{ post.content | strip_html | truncate: 200 }} <a
         href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
-    <span class="d-none d-md-block"><i class="fa fa-calendar-day" aria-hidden="true"></i> {{ post.date | date_to_string }}
-      - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+    <span class="d-sm-block"><i class="bi bi-calendar-date" aria-hidden="true"></i> {{ post.date | date_to_string }}
+      - <i class="bi bi-clock" aria-hidden="true"></i> {% include read-time.html %}</span>
   </div>
 </div>
