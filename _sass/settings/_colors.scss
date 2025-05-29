@@ -14,3 +14,9 @@ $terminator-grid: rgba(20, 20, 20, 0.8); // Grid overlay
 // Accessibility contrast colors
 $link-hover: #5bc0eb;
 $focus-outline: #ffd166;
+
+// CSS Variables for JavaScript access
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+}

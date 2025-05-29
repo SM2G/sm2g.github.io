@@ -18,6 +18,8 @@ author:
 navigation:
 - title: CV
   url: /cv
+- title: Projects
+  url: /projects
 
 donations:
 - code: BTC

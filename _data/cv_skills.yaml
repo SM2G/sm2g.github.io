@@ -1,26 +1,24 @@
 
 - category: itskill
   name: Linux & OSS
-  icon: fa-linux
+  icon: bi-terminal
   description: "Proficient with Bash console, scripting, system administration and Open source enthusiast."
 
 - category: itskill
   name: Docker
-  icon: fa-docker
+  icon: bi-boxes
   description: "Deployed many contenerized applications using Docker for portability and reliability."
 
 - category: itskill
   name: Git
-  icon: fa-git-alt
+  icon: bi-git
   description: Good knowledge of Git and Github user for personal projects.
 
 - category: itskill
   name: Python
-  icon: fa-python
+  icon: bi-code-square
   description: "Python autodidact, website creation using the Django framework.
     Created a Bitcoin trading bot in Python."
-
-# https://www.font-generator.com/symbols/flags/
 
 - category: language
   name: French

@@ -6,6 +6,7 @@
 <script src="{{ site.baseurl }}/assets/js/wow.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/back-to-top.js"></script>
 <script src="{{ site.baseurl }}/assets/js/terminator-animation.js"></script>
+<script src="{{ site.baseurl }}/assets/js/cyber-hero.js"></script>
 
 <!-- Custom JavaScript -->
 <script>
@@ -23,11 +24,12 @@
     });
   });
 
-  // Add padding to body for fixed navbar
+  // Add padding to body for fixed navbar and set CSS variable for navbar height
   document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.offsetHeight;
     document.body.style.paddingTop = navbarHeight + 'px';
+    document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
   });
 
   // Add active class to current page in navbar
@@ -43,25 +45,32 @@
     });
   });
 
-  // Terminator boot sequence
+  // Terminator boot sequence - only on homepage
   document.addEventListener('DOMContentLoaded', function () {
-    const bootSequence = document.createElement('div');
-    bootSequence.className = 'boot-sequence';
-    bootSequence.innerHTML = `
-      <div class="boot-content">
-        <div class="boot-text">SYSTEM ONLINE</div>
-        <div class="boot-progress"></div>
-        <div class="boot-text">INITIALIZING INTERFACE</div>
-        <div class="boot-text">ACCESSING ARCHIVES...</div>
-      </div>
-    `;
-    document.body.appendChild(bootSequence);
+    // Check if we're on the homepage
+    const isHomepage = window.location.pathname === '/' || 
+                       window.location.pathname === '/index.html' || 
+                       window.location.pathname.endsWith('/');
+    
+    if (isHomepage) {
+      const bootSequence = document.createElement('div');
+      bootSequence.className = 'boot-sequence';
+      bootSequence.innerHTML = `
+        <div class="boot-content">
+          <div class="boot-text">SYSTEM ONLINE</div>
+          <div class="boot-progress"></div>
+          <div class="boot-text">INITIALIZING INTERFACE</div>
+          <div class="boot-text">ACCESSING ARCHIVES...</div>
+        </div>
+      `;
+      document.body.appendChild(bootSequence);
 
-    setTimeout(() => {
-      bootSequence.classList.add('boot-complete');
       setTimeout(() => {
-        bootSequence.remove();
-      }, 1000);
-    }, 2500);
+        bootSequence.classList.add('boot-complete');
+        setTimeout(() => {
+          bootSequence.remove();
+        }, 1000);
+      }, 2500);
+    }
   });
 </script>

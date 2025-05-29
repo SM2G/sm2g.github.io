@@ -1,20 +1,9 @@
 // Transition
 $global-transition: .30s;
 
-.bgimage {
-  background: url('../../assets/images/homepage.jpg');
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// Removed static background image
 
-.arrow {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// Arrow styles moved to hero-animation.scss
 
 
 // Code

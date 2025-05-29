@@ -1,6 +1,7 @@
 // SETTINGS
 @import 'settings/colors';
 @import 'settings/fonts';
+@import 'settings/variables';
 
 // COMPONENTS
 @import 'components/base';
@@ -13,3 +14,5 @@
 @import 'components/social-icons';
 @import 'components/terminator-animation';
 @import 'components/boot-sequence';
+@import 'components/network-animation';
+@import 'components/cyber-hero';

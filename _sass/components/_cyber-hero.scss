@@ -1,0 +1,360 @@
+// Cyberpunk/Terminator themed hero animation
+
+.cyber-hero {
+  position: relative;
+  height: calc(100vh - var(--navbar-height, 0px));
+  width: 100%;
+  overflow: hidden;
+  background-color: $terminator-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Grid overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      linear-gradient(90deg, rgba($primary-color, 0.07) 1px, transparent 1px),
+      linear-gradient(rgba($primary-color, 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+  }
+
+  // Glowing horizontal line
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $primary-color;
+    box-shadow: 0 0 15px 2px $primary-color;
+    opacity: 0.7;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: clamp(1rem, 5vw, 2rem);
+    max-width: 800px;
+
+    .hero-title {
+      font-family: $terminator-font;
+      font-size: clamp(2rem, 8vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: clamp(2px, 0.5vw, 5px);
+      color: $white;
+      margin-bottom: clamp(1rem, 3vw, 2rem);
+      position: relative;
+      display: inline-block;
+
+      // Glitch effect
+      &::before,
+      &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+      }
+
+      &::before {
+        color: $primary-color;
+        z-index: -1;
+        animation: glitch-1 3s infinite linear alternate-reverse;
+      }
+
+      &::after {
+        color: $secondary-color;
+        z-index: -2;
+        animation: glitch-2 2s infinite linear alternate-reverse;
+      }
+    }
+
+    .hero-tagline {
+      font-family: $code-font;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: $primary-color;
+      opacity: 0.9;
+      margin-bottom: clamp(2rem, 5vw, 3rem);
+
+      .typing {
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: typing 4s steps(40) 1s 1 normal both;
+        
+        &::after {
+          content: "";
+          position: absolute;
+          right: -2px;
+          bottom: 0;
+          height: 1.2em;
+          width: 0.6em;
+          background-color: $primary-color;
+          animation: blink-square 1s steps(1) infinite;
+        }
+      }
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+      background-color: transparent;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      font-family: $terminator-font;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba($primary-color, 0.2), transparent);
+        transition: all 0.6s ease;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px rgba($primary-color, 0.5);
+        color: $white;
+
+        &::before {
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        rgba($primary-color, 0.03) 50%);
+    background-size: 100% 4px;
+    animation: scanlines 0.5s steps(60) infinite;
+  }
+
+  .corner-bracket {
+    position: absolute;
+    width: clamp(30px, 10vw, 100px);
+    height: clamp(30px, 10vw, 100px);
+    border: clamp(1px, 0.3vw, 3px) solid $primary-color;
+    opacity: 0.7;
+    z-index: 3;
+
+    &.top-left {
+      top: clamp(20px, 5vw, 50px);
+      left: clamp(20px, 5vw, 50px);
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &.top-right {
+      top: clamp(20px, 5vw, 50px);
+      right: clamp(20px, 5vw, 50px);
+      border-left: none;
+      border-bottom: none;
+    }
+
+    &.bottom-left {
+      bottom: clamp(20px, 5vw, 50px);
+      left: clamp(20px, 5vw, 50px);
+      border-right: none;
+      border-top: none;
+    }
+
+    &.bottom-right {
+      bottom: clamp(20px, 5vw, 50px);
+      right: clamp(20px, 5vw, 50px);
+      border-left: none;
+      border-top: none;
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: clamp(20px, 5vw, 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    .chevron {
+      width: clamp(20px, 5vw, 30px);
+      height: clamp(10px, 2.5vw, 15px);
+      opacity: 0;
+      transform: scale(0.3);
+      animation: scroll-down 3s ease-out infinite;
+      position: relative;
+      margin: 8px auto;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: $primary-color;
+      }
+
+      &::before {
+        left: 0;
+        transform: skewY(30deg);
+      }
+
+      &::after {
+        right: 0;
+        width: 50%;
+        transform: skewY(-30deg);
+      }
+    }
+  }
+
+  // Random glitch elements
+  .glitch-element {
+    position: absolute;
+    z-index: 3;
+    transition: all 0.2s ease;
+  }
+}
+
+// Animations
+@keyframes glitch-1 {
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 1px);
+  }
+
+  40% {
+    transform: translate(-1px, -1px);
+  }
+
+  60% {
+    transform: translate(1px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-2 {
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(2px, 2px);
+  }
+
+  50% {
+    transform: translate(-3px, 1px);
+  }
+
+  75% {
+    transform: translate(1px, -2px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-square {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes scanlines {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.3);
+  }
+
+  20% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(0.5);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.3);
+  }
+}
+
+// Media queries for specific adjustments
+@media (max-width: 767px) {
+  .cyber-hero {
+    .hero-content {
+      width: 90%;
+    }
+  }
+}
