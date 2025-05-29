@@ -1,15 +1,19 @@
 - name: secret-santa-aws
-  link: 
-  description: ""
+  link: https://github.com/SM2G/secret-santa-aws
+  description: "Organize a Secret Santa using AWS SNS."
+  tech: ["AWS", "Python", "SNS"]
 
 - name: de-bruijn-sequencer
-  link: 
-  description: ""
+  link: https://sm2g.github.io/de-bruijn-sequencer/
+  description: "Dark and elegant web app to generate de Bruijn sequences anywhere, anytime."
+  tech: ["JavaScript", "HTML/CSS", "Algorithms"]
 
 - name: vesperwallet
-  link: 
-  description: ""
+  link: https://sm2g.github.io/vesperwallet
+  description: "An IOTA Seed generator that relies on standard Javascript crypto library."
+  tech: ["JavaScript", "Crypto", "IOTA"]
 
 - name: PPK
-  link: 
-  description: "Personal PoKer assistant"
+  link: https://sm2g.github.io/ppk
+  description: "Personal Poker assistant"
+  tech: ["JavaScript", "HTML/CSS", "Game Theory"]

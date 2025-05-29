@@ -1,0 +1,52 @@
+// Project cards styling
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba($primary-color, 0.2);
+  }
+  
+  .card-title {
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: none;
+        text-shadow: 0 0 8px rgba($primary-color, 0.5);
+      }
+    }
+  }
+  
+  .badge {
+    background-color: rgba($primary-color, 0.8);
+    color: $terminator-dark;
+    font-family: $code-font;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: $primary-color;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .card-footer {
+    background-color: rgba($terminator-dark, 0.7);
+    border-top: 1px solid rgba($primary-color, 0.2);
+    
+    .btn-outline-primary {
+      border-color: $primary-color;
+      color: $primary-color;
+      
+      &:hover {
+        background-color: rgba($primary-color, 0.1);
+        box-shadow: 0 0 8px rgba($primary-color, 0.5);
+      }
+    }
+  }
+}
