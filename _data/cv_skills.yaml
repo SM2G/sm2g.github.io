@@ -2,7 +2,7 @@
 - category: itskill
   name: Linux & OSS
   icon: bi-terminal
-  description: "Proficient with Bash console, scripting, system administration and Open source enthusiast."
+  description: "Proficient with Bash console, scripting, system administration and Open source software."
 
 - category: itskill
   name: Docker
@@ -31,6 +31,12 @@
   flag: 🇬🇧
   level: 80
   description: Fluent
+
+- category: language
+  name: Hebrew
+  flag: 🇮🇱
+  level: 20
+  description: Beginner
 
 - category: language
   name: Chinese

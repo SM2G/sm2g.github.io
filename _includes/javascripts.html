@@ -47,10 +47,9 @@
 
   // Terminator boot sequence - only on homepage
   document.addEventListener('DOMContentLoaded', function () {
-    // Check if we're on the homepage
+    // Check if we're on the homepage (main index page only)
     const isHomepage = window.location.pathname === '/' || 
-                       window.location.pathname === '/index.html' || 
-                       window.location.pathname.endsWith('/');
+                       window.location.pathname === '/index.html';
     
     if (isHomepage) {
       const bootSequence = document.createElement('div');

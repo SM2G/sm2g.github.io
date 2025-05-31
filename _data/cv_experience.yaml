@@ -1,4 +1,21 @@
-- job_title: "DevOps Engineer"
+- job_title: "SRE Engineer"
+  company_name: Planity
+  location: Paris, France
+  start_date: 2023-03-01
+  end_date: Current
+  description: "Site Reliability Engineer driving operational excellence and infrastructure optimization. I specialize in AWS cloud resource management, with product focused strategic approach to enhance system efficiency and scalability while maintaining optimal cost usage. 
+Key achievements include: 
+
+
+**Setting up a production GitLab server** — Complete with comprehensive CI/CD pipelines, empowering development teams through expert tooling and guidance, 
+
+
+**Complete Data Audit** — Scanned Dynamo instances, S3 Buckets and analized data usage to optimize costs and lifecycle managment.
+
+
+**IaC SSO IAM Roles** — Import centralized SSO IAM access controls to infrastructure as code to significantly strengthen organizational security."
+
+- job_title: "Lead DevOps Engineer"
   company_name: NeoXam
   location: Paris, France
   start_date: 2019-01-01
