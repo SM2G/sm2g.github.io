@@ -4,26 +4,25 @@ title: Home
 ---
 
 <!-- ======= Hero Section ======= -->
-<section class="cyber-hero">
-  <div class="hero-content">
-    <h1 class="hero-title">{{ site.title }}</h1>
-    <div class="hero-tagline">
-      <span class="typing">{{ site.tagline }}</span>
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="hero-content">
+          <h1 class="hero-title glitch" data-text="{{ site.title }}">{{ site.title }}</h1>
+          <p class="hero-subtitle">{{ site.tagline }}</p>
+          <div class="hero-cta">
+            <a href="#about" class="btn btn-primary">Explore</a>
+            <a href="/projects" class="btn btn-outline-primary">View Projects</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="cyber-image">
+          <div class="cyber-logo"></div>
+        </div>
+      </div>
     </div>
-    <a href="#about" class="hero-cta">Explore</a>
-  </div>
-  
-  <div class="corner-bracket top-left"></div>
-  <div class="corner-bracket top-right"></div>
-  <div class="corner-bracket bottom-left"></div>
-  <div class="corner-bracket bottom-right"></div>
-  
-  <div class="scan-line"></div>
-  
-  <div class="scroll-indicator">
-    <div class="chevron"></div>
-    <div class="chevron"></div>
-    <div class="chevron"></div>
   </div>
 </section><!-- End Hero -->
 
@@ -31,7 +30,9 @@ title: Home
 {% include about.html %}
 
 <div class="container">
-  <h2 class="text-center animated fade-in title-terminator">Blog</h2>
+  <div class="section-title">
+    <h2 class="wow fadeInUp" data-wow-delay="0.1s">Latest Articles</h2>
+  </div>
   <div class="row">
 
     {% for post in paginator.posts %}
