@@ -3,26 +3,45 @@
 .hero {
   position: relative;
   padding: 6rem 0;
-  background-color: $terminator-dark;
+  background: linear-gradient(135deg, $terminator-dark 0%, #1a1a2e 50%, #16213e 100%);
   overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba($primary-color, 0.1);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+    z-index: 1;
+  }
   
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
     background: 
-      linear-gradient(90deg, rgba($primary-color, 0.07) 1px, transparent 1px),
-      linear-gradient(rgba($primary-color, 0.07) 1px, transparent 1px);
+      linear-gradient(90deg, rgba($primary-color, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba($primary-color, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     z-index: 0;
+    transform: skewY(-1.5deg) translateZ(-50px);
+    transform-origin: center;
+    animation: gridFloat 8s ease-in-out infinite alternate;
   }
   
   .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    perspective: 1000px;
+    transform-style: preserve-3d;
   }
   
   .hero-title {
@@ -73,6 +92,12 @@
     .btn {
       margin-right: 1rem;
       margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
     }
   }
   
@@ -80,9 +105,11 @@
     position: relative;
     width: 100%;
     height: 350px;
-    background-color: rgba($terminator-dark, 0.5);
+    background-color: rgba(10, 10, 20, 0.4);
     border-left: 3px solid $primary-color;
     box-shadow: 0 0 20px rgba($primary-color, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     overflow: hidden;
     
     &::before {
@@ -160,5 +187,23 @@
   100% {
     background-position: 60px 60px;
     opacity: 0.3;
+  }
+}
+
+@keyframes gridFloat {
+  0% {
+    transform: skewY(-1.5deg) translateZ(-50px) translateY(0);
+  }
+  100% {
+    transform: skewY(-1.5deg) translateZ(-50px) translateY(-10px);
+  }
+}
+
+.depth-effect {
+  transform: translateZ(30px);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateZ(50px);
   }
 }
