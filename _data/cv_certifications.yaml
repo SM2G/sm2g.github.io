@@ -38,9 +38,8 @@
 - title: "AWS Certified Solutions Architect - Associate"
   issuer: Amazon Web services
   link: https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/
-  cert_link: https://www.credly.com/badges/7414b638-3885-4872-b136-1e696971d1fd/public_url
-  credly_share_id: 7414b638-3885-4872-b136-1e696971d1fd
-  cert_code: TL6CJ8C23MQQQCKH
+  cert_link: https://www.credly.com/badges/ec243a10-b906-4cae-9305-d9f2ecfc5f48/public_url
+  credly_share_id: ec243a10-b906-4cae-9305-d9f2ecfc5f48
   date: 2019-09-27
   description: "Validated architect level on deploying secure and robust applications using **AWS technologies**.
     Ability to define a solution using architectural design principles based on customer requirements and provide implementation guidance based on best practices to the organization throughout the life cycle of the project."
