@@ -1,18 +1,95 @@
-// Transition
+// Global Styles
 $global-transition: .30s;
 
-// Removed static background image
+// Base styling
+body {
+  font-family: $secondary-font;
+  color: $text-color;
+  background: linear-gradient(135deg, $background-gradient-start 0%, $background-gradient-end 100%);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 
-// Arrow styles moved to hero-animation.scss
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $primary-font;
+  font-weight: 700;
+  color: $primary-color;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
 
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid $light-grey;
+  padding-bottom: 0.5rem;
+}
 
-// Code
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $global-transition ease;
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+    outline-offset: 2px;
+  }
+}
+
+// Highlight elements with gold accents
+.highlight-element {
+  border-left: 3px solid $secondary-color;
+  padding-left: 1rem;
+  margin-left: -1rem;
+}
+
+.tag-badge {
+  background-color: $light-grey;
+  border: 1px solid $medium-grey;
+  border-left: 3px solid $secondary-color;
+  color: $text-color;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  transition: background-color $global-transition ease;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white;
+  }
+}
+
+// Code styling - preserved from original
 pre,
 code {
   font-size: 0.8rem;
   border-radius: 3px;
   background-color: $black;
   font-family: $code-font;
+  color: $white;
 }
 
 code {
@@ -22,6 +99,7 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   >code {
     border: 0;
@@ -37,8 +115,25 @@ pre {
   word-wrap: normal;
 }
 
+// Container and layout
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-section {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+// Footer styling
 .footer {
-  background-color: $black;
+  background: linear-gradient(135deg, $background-gradient-end 0%, $background-gradient-start 100%);
+  border-top: 1px solid $medium-grey;
   margin-top: 2rem;
   padding: 2rem 0;
 
@@ -49,7 +144,7 @@ pre {
   }
 
   a {
-    color: $text;
+    color: $text-color;
     transition: color 0.3s ease;
 
     &:hover {

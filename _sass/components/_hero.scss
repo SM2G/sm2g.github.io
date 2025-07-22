@@ -3,87 +3,55 @@
 .hero {
   position: relative;
   padding: 6rem 0;
-  background: linear-gradient(135deg, $terminator-dark 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, $white 0%, $background-gradient-end 100%);
   overflow: hidden;
   margin-bottom: 2rem;
-  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid rgba($primary-color, 0.1);
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
-    z-index: 1;
-  }
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid $medium-grey;
   
   &::before {
     content: '';
     position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: 
-      linear-gradient(90deg, rgba($primary-color, 0.03) 1px, transparent 1px),
-      linear-gradient(rgba($primary-color, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
+      radial-gradient(circle at 20% 30%, rgba($primary-color, 0.05) 0%, transparent 25%),
+      radial-gradient(circle at 80% 70%, rgba($secondary-color, 0.05) 0%, transparent 30%);
     z-index: 0;
-    transform: skewY(-1.5deg) translateZ(-50px);
-    transform-origin: center;
-    animation: gridFloat 8s ease-in-out infinite alternate;
   }
   
   .container {
     position: relative;
     z-index: 2;
-    perspective: 1000px;
-    transform-style: preserve-3d;
   }
   
   .hero-title {
-    font-family: $terminator-font;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $white;
+    font-family: $primary-font;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $primary-color;
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
     
-    // Glitch effect
-    &.glitch::before,
-    &.glitch::after {
-      content: attr(data-text);
+    &::after {
+      content: '';
       position: absolute;
-      top: 0;
+      bottom: -10px;
       left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.8;
-    }
-
-    &.glitch::before {
-      color: $primary-color;
-      z-index: -1;
-      animation: glitch-1 3s infinite linear alternate-reverse;
-    }
-
-    &.glitch::after {
-      color: $secondary-color;
-      z-index: -2;
-      animation: glitch-2 2s infinite linear alternate-reverse;
+      width: 60px;
+      height: 3px;
+      background: $secondary-color;
     }
   }
   
   .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: $text;
-    opacity: 0.9;
+    color: $text-color;
+    max-width: 600px;
   }
   
   .hero-cta {
@@ -96,114 +64,56 @@
       
       &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    .btn-primary {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+      }
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid $secondary-color;
+      color: $text-color;
+      
+      &:hover {
+        background-color: $secondary-color;
+        color: $white;
       }
     }
   }
   
-  .cyber-image {
+  .hero-image {
     position: relative;
     width: 100%;
     height: 350px;
-    background-color: rgba(10, 10, 20, 0.4);
-    border-left: 3px solid $primary-color;
-    box-shadow: 0 0 20px rgba($primary-color, 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        linear-gradient(45deg, transparent 48%, rgba($primary-color, 0.1) 50%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba($primary-color, 0.1) 50%, transparent 52%);
-      background-size: 30px 30px;
-      animation: cyberShift 3s linear infinite;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
-    .cyber-logo {
+    &::after {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120px;
-      height: 120px;
-      
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 2px solid $primary-color;
-        transform: rotate(45deg);
-        box-shadow: 0 0 15px rgba($primary-color, 0.7);
-      }
-      
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        height: 60%;
-        border: 2px solid $secondary-color;
-        box-shadow: 0 0 15px rgba($secondary-color, 0.7);
-      }
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, $primary-color, $secondary-color);
     }
-  }
-}
-
-@keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 1px); }
-  40% { transform: translate(-1px, -1px); }
-  60% { transform: translate(1px, 2px); }
-  80% { transform: translate(2px, -2px); }
-}
-
-@keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  25% { transform: translate(2px, 2px); }
-  50% { transform: translate(-3px, 1px); }
-  75% { transform: translate(1px, -2px); }
-}
-
-@keyframes cyberShift {
-  0% {
-    background-position: 0 0;
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  100% {
-    background-position: 60px 60px;
-    opacity: 0.3;
-  }
-}
-
-@keyframes gridFloat {
-  0% {
-    transform: skewY(-1.5deg) translateZ(-50px) translateY(0);
-  }
-  100% {
-    transform: skewY(-1.5deg) translateZ(-50px) translateY(-10px);
-  }
-}
-
-.depth-effect {
-  transform: translateZ(30px);
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: translateZ(50px);
   }
 }

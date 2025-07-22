@@ -12,7 +12,7 @@
       
       <div class="col-md-4 mb-3">
         <h5>Quick Links</h5>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled footer-links">
           {% for link in site.navigation %}
           <li><a href="{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
@@ -22,14 +22,14 @@
       <div class="col-md-4 mb-3">
         <h5>Connect</h5>
         <div class="social-links">
-          <a href="https://github.com/{{site.author.github}}" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-          <a href="https://twitter.com/{{site.author.twitter}}" aria-label="Twitter"><i class="bi bi-twitter" aria-hidden="true"></i></a>
-          <a href="https://instagram.com/{{site.author.instagram}}" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-          <a href="https://linkedin.com/in/{{site.author.linkedin}}" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-          <a href="mailto:{{site.author.email}}" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+          <a href="https://github.com/{{site.author.github}}" aria-label="GitHub" class="social-icon"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/{{site.author.twitter}}" aria-label="Twitter" class="social-icon"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/{{site.author.instagram}}" aria-label="Instagram" class="social-icon"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/{{site.author.linkedin}}" aria-label="LinkedIn" class="social-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:{{site.author.email}}" aria-label="Email" class="social-icon"><i class="bi bi-envelope" aria-hidden="true"></i></a>
         </div>
         <p class="mt-3">
-          <a href="/">{{ site.title }} by {{ site.author.name }}</a>
+          <a href="/" class="footer-brand">{{ site.title }} by {{ site.author.name }}</a>
         </p>
       </div>
     </div>

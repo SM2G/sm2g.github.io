@@ -4,21 +4,26 @@
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  border: 1px solid rgba($primary-color, 0.5);
+  border: 2px solid $light-grey;
   outline: none;
-  background-color: rgba($terminator-dark, 0.8);
+  background-color: $white;
   color: $primary-color;
   cursor: pointer;
-  padding: 15px;
+  padding: 12px 15px;
   font-size: 18px;
   transition: all 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   
   &.visible {
     display: block;
   }
   
   &:hover {
-    background-color: rgba($terminator-dark, 1);
-    box-shadow: 0 0 10px rgba($primary-color, 0.7);
+    background-color: $primary-color;
+    color: $white;
+    border-color: $primary-color;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
 }

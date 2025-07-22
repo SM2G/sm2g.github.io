@@ -5,29 +5,17 @@
   integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/assets/js/wow.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/back-to-top.js"></script>
-
+<script src="{{ site.baseurl }}/assets/js/elegant-theme.js"></script>
 
 <!-- Custom JavaScript -->
 <script>
   // Initialize WOW.js for animations
   new WOW().init();
 
-  // Add smooth scrolling to all links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
   // Add padding to body for fixed navbar and set CSS variable for navbar height
   document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.offsetHeight;
-    document.body.style.paddingTop = navbarHeight + 'px';
     document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
   });
 
@@ -43,32 +31,20 @@
       }
     });
   });
-
-  // Terminator boot sequence - only on homepage
-  document.addEventListener('DOMContentLoaded', function () {
-    // Check if we're on the homepage (main index page only)
-    const isHomepage = window.location.pathname === '/' || 
-                       window.location.pathname === '/index.html';
+  
+  // Add gold accent to strong elements
+  document.addEventListener('DOMContentLoaded', function() {
+    const strongElements = document.querySelectorAll('strong');
+    strongElements.forEach(element => {
+      element.style.color = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+    });
     
-    if (isHomepage) {
-      const bootSequence = document.createElement('div');
-      bootSequence.className = 'boot-sequence';
-      bootSequence.innerHTML = `
-        <div class="boot-content">
-          <div class="boot-text">SYSTEM ONLINE</div>
-          <div class="boot-progress"></div>
-          <div class="boot-text">INITIALIZING INTERFACE</div>
-          <div class="boot-text">ACCESSING ARCHIVES...</div>
-        </div>
-      `;
-      document.body.appendChild(bootSequence);
-
-      setTimeout(() => {
-        bootSequence.classList.add('boot-complete');
-        setTimeout(() => {
-          bootSequence.remove();
-        }, 1000);
-      }, 2500);
-    }
+    // Add animation to card headers
+    const cardTitles = document.querySelectorAll('.card-title');
+    cardTitles.forEach(title => {
+      title.addEventListener('mouseenter', function() {
+        this.classList.add('animated');
+      });
+    });
   });
 </script>

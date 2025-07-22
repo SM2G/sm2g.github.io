@@ -1,12 +1,34 @@
-// Project cards styling
+// Post Card Styling
 
-.project-header {
+.post-header-link {
+  display: block;
   position: relative;
   background: linear-gradient(135deg, $background-gradient-start 0%, $background-gradient-end 100%);
   overflow: hidden;
   border-bottom: 3px solid $secondary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
   
-  .project-number {
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: $primary-color;
+    color: $white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-date-indicator {
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -18,24 +40,24 @@
   }
 }
 
-.project-card {
-  background-color: $white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  height: 100%;
-  overflow: hidden;
+.card {
+  margin-bottom: 2rem;
   border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
   
   .card-title {
     font-family: $primary-font;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.5rem;
     
@@ -70,11 +92,6 @@
   
   // Animation handled by JavaScript and CSS
   
-  @keyframes cardTitleLine {
-    0% { width: 0; }
-    100% { width: 50px; }
-  }
-  
   .badge {
     background-color: $light-grey;
     color: $text-color;
@@ -85,54 +102,32 @@
     margin-bottom: 0.3rem;
     transition: all 0.2s ease;
     
-    &:hover {
-      background-color: $secondary-color;
-      color: $white;
-    }
-  }
-  
-  .card-img-top {
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 3px solid $secondary-color;
-  }
-  
-  .card-footer {
-    background-color: $white;
-    border-top: 1px solid $light-grey;
-    padding: 1rem;
-    
-    .btn-outline-primary {
-      border: 2px solid $primary-color;
-      color: $primary-color;
-      font-weight: 600;
-      padding: 0.375rem 1rem;
+    a {
+      color: $text-color;
+      text-decoration: none;
       
       &:hover {
-        background-color: $primary-color;
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+    
+    &:hover {
+      background-color: $secondary-color;
+      
+      a {
         color: $white;
       }
     }
   }
+  
+  .card-text {
+    color: $text-color;
+    margin: 1rem 0;
+  }
 }
 
-.projects-section {
-  padding: 3rem 0;
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    position: relative;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: $secondary-color;
-    }
-  }
+@keyframes cardTitleLine {
+  0% { width: 0; }
+  100% { width: 50px; }
 }

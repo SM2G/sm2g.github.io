@@ -1,22 +1,24 @@
-// Main Colors - Terminator Theme
-$primary-color: #00FFFF; // Cyan/blue for Terminator HUD
-$secondary-color: #FF3300; // Red for Terminator targeting
-$text: #f8f8ff;
-$light-grey: #A4A4A4;
-$medium-grey: #6B6B6B;
-$dark-grey: #474747;
+// Main Colors - Elegant Theme
+$primary-color: #54A9E1; // Blue for headings
+$secondary-color: #D4AF37; // Gold for accents
+$text-color: #333333; // Dark gray for text
+$light-grey: #f0f0f0;
+$medium-grey: #cccccc;
+$dark-grey: #666666;
 
 $white: #ffffff;
-$black: #101010;
-$terminator-dark: #0A0A0A; // Darker background
-$terminator-grid: rgba(20, 20, 20, 0.8); // Grid overlay
+$black: #333333;
+$background-gradient-start: #ffffff;
+$background-gradient-end: #f9f9f9;
 
 // Accessibility contrast colors
-$link-hover: #5bc0eb;
-$focus-outline: #ffd166;
+$link-color: #3a87c4;
+$link-hover: #2c6a9e;
+$focus-outline: #D4AF37;
 
 // CSS Variables for JavaScript access
 :root {
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
+  --text-color: #{$text-color};
 }

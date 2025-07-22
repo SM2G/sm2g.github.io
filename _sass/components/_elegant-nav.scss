@@ -1,0 +1,63 @@
+// Elegant Navigation Styling
+
+.elegant-nav {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  .navbar-brand {
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $primary-color;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    color: $text-color;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: $secondary-color;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    &:hover, &:focus {
+      color: $primary-color;
+      
+      &:after {
+        width: 80%;
+      }
+    }
+  }
+  
+  .active .nav-link {
+    color: $primary-color;
+    
+    &:after {
+      width: 80%;
+      background-color: $secondary-color;
+    }
+  }
+  
+  &.scrolled {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Add padding to body to account for fixed navbar
+body {
+  padding-top: 70px;
+}

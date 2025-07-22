@@ -2,47 +2,40 @@
 layout: default
 ---
 <div class="container">
-  <h1 class="title-terminator target-lock">{{ page.title }}</h1>
-  <div class="terminator-header">
-    <div class="scan-line"></div>
-    <div class="data-points"></div>
-    <div class="target-box"></div>
-    <div class="category-indicator">{{ page.categories }}</div>
-    <div class="header-text">
-      <span>ID: {{ page.date | date: "%Y%m%d" }}</span>
-      <span>ACCESSING DATA...</span>
-    </div>
-  </div>
-  <div class="terminator-data">
-    <span class="data-label">SYSTEM:</span> <span class="data-value">ARCHIVE</span>
-    <span class="data-label">FILE:</span> <span class="data-value">{{ page.title | upcase }}</span>
-    <span class="data-label">STATUS:</span> <span class="data-value blink">ACTIVE</span>
-  </div>
+  <article class="content-section">
+    <header class="post-header">
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <span class="post-category highlight-element">{{ page.categories }}</span>
+        <span class="post-date">
+          {% assign d = page.date | date: "%-d" %}
+          {{ page.date | date: "%B" }}
+          {% case d %}
+          {% when '1' or '21' or '31' %}{{ d }}st
+          {% when '2' or '22' %}{{ d }}nd
+          {% when '3' or '23' %}{{ d }}rd
+          {% else %}{{ d }}th{% endcase %},
+          {{ page.date | date: "%Y" }}
+        </span>
+        <span class="post-author">by {{ site.author.name }}</span>
+      </div>
+    </header>
 
-  {{ content }}
-
-  <span class="post-date">
-    Written on
-    {% assign d = page.date | date: "%-d" %}
-    {{ page.date | date: "%B" }}
-    {% case d %}
-    {% when '1' or '21' or '31' %}{{ d }}st
-    {% when '2' or '22' %}{{ d }}nd
-    {% when '3' or '23' %}{{ d }}rd
-    {% else %}{{ d }}th{% endcase %},
-    {{ page.date | date: "%Y" }}
-    by {{ site.author.name }}
-  </span>
-  {% if page.tags.size > 0 %}
-  <h3>Tags:</h3>
-  <div class="row">
-    <div class="container">
-      {% for tag in page.tags %}
-      <span class="badge rounded-pill bg-primary">
-        <a href="/tag/{{ tag | slugify }}">#{{ tag }}</a>
-      </span>
-      {% endfor %}
+    <div class="post-content">
+      {{ content }}
     </div>
-  </div></br>
-  {% endif %}
+
+    <footer class="post-footer">
+      {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        <h3>Tags:</h3>
+        <div class="tags-container">
+          {% for tag in page.tags %}
+          <a href="/tag/{{ tag | slugify }}" class="tag-badge">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </footer>
+  </article>
 </div><!-- container -->
