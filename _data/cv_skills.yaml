@@ -1,24 +1,52 @@
 
 - category: itskill
   name: Linux & OSS
+  subcategory: infrastructure
   icon: bi-terminal
-  description: "Proficient with Bash console, scripting, system administration and Open source software."
+  description: "Proficient with Bash, **ZSH** console, scripting, system administration and Open source software."
 
 - category: itskill
   name: Docker
+  subcategory: language
   icon: bi-boxes
   description: "Deployed many contenerized applications using Docker for portability and reliability."
 
 - category: itskill
   name: Git
+  subcategory: language
   icon: bi-git
-  description: Good knowledge of Git and Github user for personal projects.
+  description: Good knowledge of **Git** and Github user for personal projects.
 
 - category: itskill
   name: Python
+  subcategory: language
   icon: bi-code-square
-  description: "Python autodidact, website creation using the Django framework.
+  description: "Python autodidact, website creation using the **Django** framework.
     Created a Bitcoin trading bot in Python."
+
+- category: itskill
+  name: SQL
+  subcategory: language
+  icon: bi-database
+  description: "Expert in **SQL**, PL/SQL and Oracle database administration."
+
+- category: itskill
+  name: HCL
+  subcategory: language
+  icon: bi-hdd-rack
+  description: "Expert level on HCL language, used by **Terraform** and **OpenTofu** to manage infrastructure environments."
+
+- category: itskill
+  name: AWS
+  subcategory: infrastructure
+  icon: bi-amazon
+  description: "Certified **AWS Solutions Architect**."
+
+- category: itskill
+  name: Azure
+  subcategory: infrastructure
+  icon: bi-microsoft
+  description: "Certified Microsoft **Azure Solutions Architect** Expert & **Azure Security Engineer** Associate."
 
 - category: language
   name: French

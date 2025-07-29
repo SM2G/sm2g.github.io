@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="section-title">
+        <h2 class="wow fadeInUp" data-wow-delay="0.1s">Skills</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card border-info">
+                <div class="card-header"><i class="bi bi-person-raised-hand"></i> Soft Skills</div>
+                <div class="card-body">
+                    <h5 class="card-title">Languages</h5>
+
+                    {% assign soft-skills = site.data.cv_skills | where: "category", "language" | sort: "level" |
+                    reverse %}
+                    {% for skill in soft-skills %}
+
+                    <h5>{{ skill.flag }} {{ skill.name }} <small class="text-muted">{{ skill.description }}</small></h5>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card border-dark">
+                <div class="card-header"><i class="bi bi-laptop"></i> Hard Skills</div>
+                <div class="card-body">
+                    <h5 class="card-title">Computer Languages</h5>
+
+                    {% assign hard-lang-skills = site.data.cv_skills | where: "category", "itskill"| where:
+                    "subcategory",
+                    "language" | sort: "name" |
+                    reverse %}
+                    {% for skill in hard-lang-skills %}
+
+                    <h5><i class="bi {{ skill.icon }} me-2 text-primary-color"></i> <small>{{skill.name }}</small>
+                        </br>
+                        <small class="text-muted d-none d-sm-block">{{skill.description| markdownify }}</small>
+                    </h5>
+                    {% endfor %}
+                    <h5 class="card-title">Infrastructure & Providers</h5>
+                    {% assign hard-infra-skills = site.data.cv_skills | where: "category", "itskill"| where:
+                    "subcategory",
+                    "infrastructure" | sort: "name" %}
+                    {% for skill in hard-infra-skills %}
+
+                    <h5><i class="bi {{ skill.icon }} me-2 text-primary-color"></i> <small>{{skill.name }}</small>
+                        </br>
+                        <small class="text-muted d-none d-sm-block">{{skill.description| markdownify }}</small>
+                    </h5>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
