@@ -1,0 +1,23 @@
+---
+layout: null
+---
+User-agent: *
+Allow: /
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow important assets
+Allow: /assets/images/
+Allow: /assets/fonts/
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1
