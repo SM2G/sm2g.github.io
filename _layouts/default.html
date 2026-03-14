@@ -3,8 +3,8 @@
 
 {% include head.html %}
 
-<body class="links-body{% if site.data.base.background %} has-bg{% endif %}"
-  {% if site.data.base.background %}style="--lt-bg-image: url('{{ site.data.base.background }}')"{% endif %}>
+<body class="links-body{% if site.data.base.background %} has-bg{% endif %}" {% if site.data.base.background
+  %}style="--lt-bg-image: url('{{ site.data.base.background }}')" {% endif %}>
 
   <div class="lt-wrapper">
 
@@ -13,74 +13,60 @@
       <i class="bi bi-sun-fill" id="theme-icon"></i>
     </button>
 
-    <!-- Avatar + identity -->
-    <header class="lt-header">
-      <div class="lt-avatar-ring">
-        <div class="lt-avatar">
-          {% if site.data.base.avatar %}
-            <img src="{{ site.data.base.avatar }}"
-                 alt="{{ site.author.name }}"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
-          {% else %}
-            <span class="lt-avatar-fallback">{{ site.author.name | slice: 0 }}</span>
-          {% endif %}
-        </div>
-      </div>
-      <h1 class="lt-name">{{ site.author.name }}</h1>
-      <p class="lt-bio">{{ site.author.bio }}</p>
-    </header>
+    {% include header.html %}
+
 
     <!-- Link buttons — sorted by order, missing order falls to bottom -->
     {% assign links_sorted = "" | split: "" %}
     {% for item in site.data.links %}
-      {% assign links_sorted = links_sorted | push: item[1] %}
+    {% assign links_sorted = links_sorted | push: item[1] %}
     {% endfor %}
-    {% assign links_with_order    = links_sorted | where_exp: "l", "l.order" | sort: "order" %}
+    {% assign links_with_order = links_sorted | where_exp: "l", "l.order" | sort: "order" %}
     {% assign links_without_order = links_sorted | where_exp: "l", "l.order == nil" %}
     {% assign links_sorted = links_with_order | concat: links_without_order %}
     <nav class="lt-links" aria-label="Links">
       {% for link in links_sorted %}
-        <a href="{{ link.url }}"
-           class="lt-btn"
-           style="--btn-color: {{ link.color }}"
-           {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
-          <span class="lt-btn-icon">
-            <i class="{{ link.icon }}"></i>
-          </span>
-          <span class="lt-btn-label">{{ link.title }}</span>
-          <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+        {% if link.type == "text" %}
+          <p class="lt-text-block">{{ link.content }}</p>
+        {% else %}
+          <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}"
+            {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
+            <span class="lt-btn-label">{{ link.title }}</span>
+            <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        {% endif %}
       {% endfor %}
     </nav>
 
-{% include footer.html %}
+    {% include footer.html %}
 
-  <script>
-    // Theme toggle
-    (function () {
-      var btn  = document.getElementById('theme-toggle');
-      var icon = document.getElementById('theme-icon');
+    <script>
+      // Theme toggle
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-icon');
 
-      function syncIcon() {
-        var t = document.documentElement.getAttribute('data-theme');
-        icon.className = t === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
-      }
-      syncIcon();
-
-      btn.addEventListener('click', function () {
-        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
+        function syncIcon() {
+          var t = document.documentElement.getAttribute('data-theme');
+          icon.className = t === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+        }
         syncIcon();
-      });
-    })();
 
-    // Stagger entrance animations
-    document.querySelectorAll('.lt-btn').forEach(function (el, i) {
-      el.style.animationDelay = (i * 0.07) + 's';
-    });
-  </script>
+        btn.addEventListener('click', function () {
+          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          syncIcon();
+        });
+      })();
+
+      // Stagger entrance animations
+      document.querySelectorAll('.lt-btn').forEach(function (el, i) {
+        el.style.animationDelay = (i * 0.07) + 's';
+      });
+    </script>
 
 </body>
+
 </html>

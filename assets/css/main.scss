@@ -209,6 +209,18 @@ body.links-body {
   max-width: 320px;
 }
 
+// Text block (type: "text" in links.json)
+.lt-text-block {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lt-subtext);
+  padding: 0.25rem 0;
+}
+
 // Link buttons
 .lt-links {
   width: 100%;

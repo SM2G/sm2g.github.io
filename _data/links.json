@@ -5,7 +5,7 @@
         "icon": "fa-solid fa-file-lines",
         "color": "#00D9FF",
         "type": "link",
-        "order": 2
+        "order": 3
     },
     "linkedin": {
         "url": "https://linkedin.com/in/samygejz",
@@ -13,7 +13,7 @@
         "icon": "fa-brands fa-linkedin",
         "type": "link",
         "color": "#0A66C2",
-        "order": 4
+        "order": 1
     },
     "github": {
         "url": "https://github.com/sm2g",
@@ -21,7 +21,12 @@
         "title": "GitHub",
         "icon": "fa-brands fa-github",
         "color": "#6e40c9",
-        "order": 1
+        "order": 2
+    },
+    "separator": {
+        "type": "text",
+        "content": "Or just…",
+        "order": 5
     },
     "twitter": {
         "url": "https://twitter.com/sm2g",
@@ -37,7 +42,7 @@
         "title": "Credly Certifications",
         "icon": "fa-solid fa-certificate",
         "color": "#FF8C00",
-        "order": 7
+        "order": 4
     },
     "email": {
         "url": "mailto:samy.gejz@gmail.com",
