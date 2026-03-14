@@ -7,44 +7,262 @@
 <script src="{{ site.baseurl }}/assets/js/back-to-top.js"></script>
 <script src="{{ site.baseurl }}/assets/js/elegant-theme.js"></script>
 
-<!-- Custom JavaScript -->
+<!-- Modern JavaScript Enhancements -->
 <script>
-  // Initialize WOW.js for animations
-  new WOW().init();
-
-  // Add padding to body for fixed navbar and set CSS variable for navbar height
-  document.addEventListener('DOMContentLoaded', function () {
-    const navbar = document.querySelector('.navbar');
-    const navbarHeight = navbar.offsetHeight;
-    document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
-  });
-
-  // Add active class to current page in navbar
-  document.addEventListener('DOMContentLoaded', function () {
-    const currentLocation = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-    navLinks.forEach(link => {
-      const linkPath = link.getAttribute('href');
-      if (currentLocation === linkPath || (linkPath !== '/' && currentLocation.startsWith(linkPath))) {
-        link.parentElement.classList.add('active');
-      }
-    });
-  });
-  
-  // Add gold accent to strong elements
+  // Enhanced Theme Toggle with Smooth Transitions
   document.addEventListener('DOMContentLoaded', function() {
-    const strongElements = document.querySelectorAll('strong');
-    strongElements.forEach(element => {
-      element.style.color = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
-    });
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
     
-    // Add animation to card headers
-    const cardTitles = document.querySelectorAll('.card-title');
-    cardTitles.forEach(title => {
-      title.addEventListener('mouseenter', function() {
-        this.classList.add('animated');
+    if (!themeToggle || !themeIcon) {
+      console.warn('Theme toggle elements not found');
+      return;
+    }
+    
+    // Update icon with smooth animation
+    function updateThemeIcon() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      
+      // Add transition styles if not already present
+      if (!themeIcon.style.transition) {
+        themeIcon.style.transition = 'transform 0.3s ease, color 0.3s ease';
+      }
+      
+      themeIcon.style.transform = 'rotate(180deg) scale(0)';
+      
+      setTimeout(() => {
+        if (currentTheme === 'dark') {
+          themeIcon.className = 'bi bi-moon-stars-fill';
+        } else {
+          themeIcon.className = 'bi bi-sun-fill';
+        }
+        themeIcon.style.transform = 'rotate(0deg) scale(1)';
+      }, 150);
+    }
+    
+    // Initialize icon and theme indicator
+    updateThemeIcon();
+    
+    
+    // Theme toggle with enhanced animation
+    themeToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      console.log('Switching theme from', currentTheme, 'to', newTheme);
+      
+      // Add ripple effect (smaller for navbar button)
+      const ripple = document.createElement('div');
+      ripple.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(0, 217, 255, 0.3);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: -30px;
+        margin-top: -30px;
+        z-index: -1;
+      `;
+      
+      this.style.position = 'relative';
+      this.appendChild(ripple);
+      setTimeout(() => {
+        if (ripple.parentNode) {
+          ripple.remove();
+        }
+      }, 600);
+      
+      // Apply theme change
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon();
+    });
+  });
+
+  // Smooth Scrolling Navigation
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       });
     });
   });
+
+  // Enhanced Scroll Effects
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.elegant-nav');
+    let lastScrollY = window.scrollY;
+    
+    function updateNavbar() {
+      const currentScrollY = window.scrollY;
+      
+      if (navbar) {
+        if (currentScrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        // Hide/show navbar on scroll
+        if (currentScrollY > lastScrollY && currentScrollY > 200) {
+          navbar.style.transform = 'translateY(-100%)';
+        } else {
+          navbar.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollY = currentScrollY;
+      }
+    }
+    
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+  });
+
+  // Intersection Observer for Animations
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          
+          // Add stagger effect for multiple elements
+          const siblings = entry.target.parentElement.children;
+          Array.from(siblings).forEach((sibling, index) => {
+            if (sibling !== entry.target) {
+              setTimeout(() => {
+                sibling.style.opacity = '1';
+                sibling.style.transform = 'translateY(0)';
+              }, index * 100);
+            }
+          });
+        }
+      });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.article-card, .content-section, .hero-stats .stat-item');
+    animatedElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  });
+
+  // Enhanced Card Interactions
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.article-card, .project-card');
+    
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+        
+        // Add glow effect
+        this.style.boxShadow = '0 20px 40px rgba(0, 217, 255, 0.2)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = '';
+      });
+    });
+  });
+
+  // Typing Animation for Hero Title
+  document.addEventListener('DOMContentLoaded', function() {
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle && !heroTitle.dataset.animated) {
+      const text = heroTitle.textContent;
+      heroTitle.textContent = '';
+      heroTitle.dataset.animated = 'true';
+      
+      let i = 0;
+      const typeWriter = () => {
+        if (i < text.length) {
+          heroTitle.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      };
+      
+      // Start typing animation after a short delay
+      setTimeout(typeWriter, 500);
+    }
+  });
+
+  // Parallax Effect for Background Elements
+  document.addEventListener('DOMContentLoaded', function() {
+    const parallaxElements = document.querySelectorAll('.hero::before, .hero::after');
+    
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      
+      parallaxElements.forEach(element => {
+        element.style.transform = `translateY(${rate}px)`;
+      });
+    }
+    
+    window.addEventListener('scroll', updateParallax, { passive: true });
+  });
+
+  // Initialize WOW.js for animations
+  if (typeof WOW !== 'undefined') {
+    new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: true,
+      live: true
+    }).init();
+  }
+
+  // Add CSS for ripple animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    .hero-title {
+      overflow: hidden;
+    }
+    
+    .stat-item:hover {
+      animation: pulse 0.6s ease-in-out;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  `;
+  document.head.appendChild(style);
 </script>

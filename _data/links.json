@@ -1,0 +1,43 @@
+{
+    "cv": {
+        "url": "/cv",
+        "title": "Resume / CV",
+        "icon": "fa-solid fa-file-lines",
+        "color": "#00D9FF",
+        "order": 2
+    },
+    "linkedin": {
+        "url": "https://linkedin.com/in/samygejz",
+        "title": "LinkedIn",
+        "icon": "fa-brands fa-linkedin",
+        "color": "#0A66C2",
+        "order": 4
+    },
+    "github": {
+        "url": "https://github.com/sm2g",
+        "title": "GitHub",
+        "icon": "fa-brands fa-github",
+        "color": "#6e40c9",
+        "order": 1
+    },
+    "twitter": {
+        "url": "https://twitter.com/sm2g",
+        "title": "Twitter / X",
+        "icon": "fa-brands fa-x-twitter",
+        "color": "#000000",
+        "order": 6
+    },
+    "credly": {
+        "url": "https://www.credly.com/users/samygejz",
+        "title": "Credly Certifications",
+        "icon": "fa-solid fa-certificate",
+        "color": "#FF8C00",
+        "order": 7
+    },
+    "email": {
+        "url": "mailto:samy.gejz@gmail.com",
+        "title": "Email Me",
+        "icon": "fa-solid fa-envelope",
+        "color": "#00E676"
+    }
+}

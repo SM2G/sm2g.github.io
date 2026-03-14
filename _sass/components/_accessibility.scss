@@ -6,21 +6,6 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   outline-offset: 2px;
 }
 
-// Skip to content link
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: $primary-color;
-  color: $white;
-  padding: 8px;
-  z-index: 9999;
-  
-  &:focus {
-    top: 0;
-  }
-}
-
 // Improved link styles
 a {
   text-decoration: none;

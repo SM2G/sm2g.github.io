@@ -2,9 +2,19 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top elegant-nav">
   <div class="container">
     <a class="navbar-brand" href="/"> {{ site.title }}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
+    <div class="navbar-actions">
+      <!-- Theme Toggle Button -->
+      <button class="theme-toggle-nav" id="theme-toggle" aria-label="Toggle dark/light theme">
+        <i class="bi bi-sun-fill" id="theme-icon"></i>
+      </button>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         {% for link in site.navigation %}{% assign active = nil %}{% if page.url contains link.url %}{% assign active =

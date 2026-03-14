@@ -3,15 +3,102 @@
 
 {% include head.html %}
 
-<body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  {% include header.html %}
+<body class="linktree-body">
 
-  <main id="main-content">
-    {{ content }}
-  </main>
+  <div class="lt-wrapper">
 
-  {% include footer.html %}
-  {% include javascripts.html %}
+    <!-- Theme toggle -->
+    <button class="lt-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <i class="bi bi-sun-fill" id="theme-icon"></i>
+    </button>
+
+    <!-- Avatar + identity -->
+    <header class="lt-header">
+      <div class="lt-avatar-ring">
+        <div class="lt-avatar">
+          {% if site.author.avatar %}
+            <img src="{{ site.author.avatar }}"
+                 alt="{{ site.author.name }}"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
+          {% else %}
+            <span class="lt-avatar-fallback">{{ site.author.name | slice: 0 }}</span>
+          {% endif %}
+        </div>
+      </div>
+      <h1 class="lt-name">{{ site.author.name }}</h1>
+      <p class="lt-bio">{{ site.author.bio }}</p>
+    </header>
+
+    <!-- Link buttons — sorted by order, missing order falls to bottom -->
+    {% assign links_sorted = "" | split: "" %}
+    {% for item in site.data.links %}
+      {% assign links_sorted = links_sorted | push: item[1] %}
+    {% endfor %}
+    {% assign links_with_order    = links_sorted | where_exp: "l", "l.order" | sort: "order" %}
+    {% assign links_without_order = links_sorted | where_exp: "l", "l.order == nil" %}
+    {% assign links_sorted = links_with_order | concat: links_without_order %}
+    <nav class="lt-links" aria-label="Links">
+      {% for link in links_sorted %}
+        <a href="{{ link.url }}"
+           class="lt-btn"
+           style="--btn-color: {{ link.color }}"
+           {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          <span class="lt-btn-icon">
+            <i class="{{ link.icon }}"></i>
+          </span>
+          <span class="lt-btn-label">{{ link.title }}</span>
+          <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Social icon strip — external links only -->
+    <div class="lt-socials" aria-label="Social links">
+      {% for link in links_sorted %}
+        {% if link.url contains 'http' %}
+          <a href="{{ link.url }}"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="{{ link.title }}"
+             style="--btn-color: {{ link.color }}">
+            <i class="{{ link.icon }}"></i>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <footer class="lt-footer">
+      <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme toggle
+    (function () {
+      var btn  = document.getElementById('theme-toggle');
+      var icon = document.getElementById('theme-icon');
+
+      function syncIcon() {
+        var t = document.documentElement.getAttribute('data-theme');
+        icon.className = t === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+      }
+      syncIcon();
+
+      btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcon();
+      });
+    })();
+
+    // Stagger entrance animations
+    document.querySelectorAll('.lt-btn').forEach(function (el, i) {
+      el.style.animationDelay = (i * 0.07) + 's';
+    });
+  </script>
+
 </body>
 </html>

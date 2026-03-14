@@ -1,9 +1,6 @@
 // CSS Variables for JavaScript and global use
 :root {
-  --primary-color: #{$primary-color};
-  --secondary-color: #{$secondary-color};
-  --text-color: #{$text-color};
-  --background-gradient-start: #{$background-gradient-start};
-  --background-gradient-end: #{$background-gradient-end};
-  --navbar-height: 0px;
+  --navbar-height: 80px;
 }
+
+// Note: Color variables are now defined in _colors.scss to avoid conflicts

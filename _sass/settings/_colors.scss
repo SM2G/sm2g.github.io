@@ -1,24 +1,99 @@
-// Main Colors - Elegant Theme
-$primary-color: #54A9E1; // Blue for headings
-$secondary-color: #D4AF37; // Gold for accents
-$text-color: #333333; // Dark gray for text
-$light-grey: #f0f0f0;
-$medium-grey: #cccccc;
-$dark-grey: #666666;
+// Modern Tech-Inspired Color Palette
+$primary-color: #00D9FF; // Cyan - represents data flow
+$secondary-color: #FF6B35; // Coral - represents alerts/monitoring
+$accent-color: #7B68EE; // Purple - represents automation
+$success-color: #00E676; // Green - represents healthy systems
+$warning-color: #FFB74D; // Orange - represents warnings
 
-$white: #ffffff;
-$black: #333333;
-$background-gradient-start: #ffffff;
-$background-gradient-end: #f9f9f9;
+$text-color: #2D3748; // Dark slate
+$text-light: #718096; // Medium slate
+$light-grey: #F7FAFC;
+$medium-grey: #E2E8F0;
+$dark-grey: #4A5568;
+
+$white: #FFFFFF;
+$black: #1A202C;
+$background-gradient-start: #FFFFFF;
+$background-gradient-end: #F8FAFC;
+
+// Dark theme colors - Deep space aesthetic
+$dark-primary-color: #00F5FF; // Bright cyan
+$dark-secondary-color: #FF7043; // Warm coral
+$dark-accent-color: #9C88FF; // Bright purple
+$dark-success-color: #4AE54A; // Bright green
+$dark-warning-color: #FFD54F; // Bright yellow
+
+$dark-text-color: #E2E8F0;
+$dark-text-light: #A0AEC0;
+$dark-light-grey: #2D3748;
+$dark-medium-grey: #4A5568;
+$dark-dark-grey: #718096;
+
+$dark-white: #1A202C;
+$dark-black: #E2E8F0;
+$dark-background-gradient-start: #1A202C;
+$dark-background-gradient-end: #2D3748;
 
 // Accessibility contrast colors
 $link-color: #3a87c4;
 $link-hover: #2c6a9e;
+$dark-link-color: #6BB6FF;
+$dark-link-hover: #8CC8FF;
 $focus-outline: #D4AF37;
 
-// CSS Variables for JavaScript access
+// CSS Variables for JavaScript access and theme switching
 :root {
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --success-color: #{$success-color};
+  --warning-color: #{$warning-color};
   --text-color: #{$text-color};
+  --text-light: #{$text-light};
+  --light-grey: #{$light-grey};
+  --medium-grey: #{$medium-grey};
+  --dark-grey: #{$dark-grey};
+  --white: #{$white};
+  --black: #{$black};
+  --background-gradient-start: #{$background-gradient-start};
+  --background-gradient-end: #{$background-gradient-end};
+  --link-color: #{$primary-color};
+  --link-hover: #{$secondary-color};
+  --focus-outline: #{$accent-color};
+  
+  // Animation variables
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+  --primary-color: #{$dark-primary-color};
+  --secondary-color: #{$dark-secondary-color};
+  --accent-color: #{$dark-accent-color};
+  --success-color: #{$dark-success-color};
+  --warning-color: #{$dark-warning-color};
+  --text-color: #{$dark-text-color};
+  --text-light: #{$dark-text-light};
+  --light-grey: #{$dark-light-grey};
+  --medium-grey: #{$dark-medium-grey};
+  --dark-grey: #{$dark-dark-grey};
+  --white: #{$dark-white};
+  --black: #{$dark-black};
+  --background-gradient-start: #{$dark-background-gradient-start};
+  --background-gradient-end: #{$dark-background-gradient-end};
+  --link-color: #{$dark-primary-color};
+  --link-hover: #{$dark-secondary-color};
+  --focus-outline: #{$dark-accent-color};
+  
+  // Enhanced shadows for dark theme
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
