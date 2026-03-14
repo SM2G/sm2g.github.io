@@ -3,7 +3,8 @@
 
 {% include head.html %}
 
-<body class="linktree-body">
+<body class="links-body{% if site.data.base.background %} has-bg{% endif %}"
+  {% if site.data.base.background %}style="--lt-bg-image: url('{{ site.data.base.background }}')"{% endif %}>
 
   <div class="lt-wrapper">
 
@@ -16,8 +17,8 @@
     <header class="lt-header">
       <div class="lt-avatar-ring">
         <div class="lt-avatar">
-          {% if site.author.avatar %}
-            <img src="{{ site.author.avatar }}"
+          {% if site.data.base.avatar %}
+            <img src="{{ site.data.base.avatar }}"
                  alt="{{ site.author.name }}"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
@@ -53,26 +54,7 @@
       {% endfor %}
     </nav>
 
-    <!-- Social icon strip — external links only -->
-    <div class="lt-socials" aria-label="Social links">
-      {% for link in links_sorted %}
-        {% if link.url contains 'http' %}
-          <a href="{{ link.url }}"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="{{ link.title }}"
-             style="--btn-color: {{ link.color }}">
-            <i class="{{ link.icon }}"></i>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <footer class="lt-footer">
-      <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
-    </footer>
-
-  </div>
+{% include footer.html %}
 
   <script>
     // Theme toggle
