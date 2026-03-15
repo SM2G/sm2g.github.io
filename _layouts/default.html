@@ -3,15 +3,119 @@
 
 {% include head.html %}
 
-<body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  {% include header.html %}
+<body class="links-body{% if site.data.base.background %} has-bg{% endif %}" {% if site.data.base.background
+  %}style="--lt-bg-image: url('{{ site.data.base.background }}')" {% endif %}>
 
-  <main id="main-content">
-    {{ content }}
-  </main>
+  <div class="lt-wrapper">
 
-  {% include footer.html %}
-  {% include javascripts.html %}
+    <!-- Theme toggle -->
+    <button class="lt-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <i class="bi bi-sun-fill" id="theme-icon"></i>
+    </button>
+
+    {% include header.html %}
+
+
+    <!-- Link buttons — sorted by order, missing order falls to bottom -->
+    {% assign links_sorted = "" | split: "" %}
+    {% for item in site.data.links %}
+    {% assign links_sorted = links_sorted | push: item[1] %}
+    {% endfor %}
+    {% assign links_with_order = links_sorted | where_exp: "l", "l.order" | sort: "order" %}
+    {% assign links_without_order = links_sorted | where_exp: "l", "l.order == nil" %}
+    {% assign links_sorted = links_with_order | concat: links_without_order %}
+    <nav class="lt-links" aria-label="Links">
+      {% for link in links_sorted %}
+      {% if link.active == false %}{% continue %}{% endif %}
+      {% if link.type == "text" %}
+      <p class="lt-text-block">{{ link.content }}</p>
+      {% elsif link.type == "vcard" %}
+      <a href="/contact.vcf" download="contact.vcf" class="lt-btn" style="--btn-color: {{ link.color }}">
+        <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
+        <span class="lt-btn-label">{{ link.title }}</span>
+        <span class="lt-btn-arrow"><i class="fa-solid fa-download"></i></span>
+      </a>
+      {% else %}
+      <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}" {% if link.url contains 'http'
+        %}target="_blank" rel="noopener noreferrer" {% endif %}>
+        <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
+        <span class="lt-btn-label">{{ link.title }}</span>
+        <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+
+    {% include footer.html %}
+
+    <script>
+      // Theme toggle
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-icon');
+
+        function syncIcon() {
+          var t = document.documentElement.getAttribute('data-theme');
+          icon.className = t === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+        }
+        syncIcon();
+
+        btn.addEventListener('click', function () {
+          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          syncIcon();
+        });
+      })();
+
+      // Stagger entrance animations
+      document.querySelectorAll('.lt-btn').forEach(function (el, i) {
+        el.style.animationDelay = (i * 0.07) + 's';
+      });
+    </script>
+
+    <script>
+    // ── Subtle glitch effect on avatar ──────────────────────────────────────
+    (function () {
+      var ring = document.getElementById('avatar-ring');
+      var turb = document.getElementById('glitch-turb');
+      if (!ring) return;
+
+      function animateDistortion(duration) {
+        if (!turb) return;
+        var disp = turb.nextElementSibling; // feDisplacementMap
+        var start = null;
+        var peak = 18 + Math.random() * 14;
+
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / duration, 1);
+          // ramp up then down — triangle wave
+          var scale = p < 0.4 ? peak * (p / 0.4) : peak * (1 - (p - 0.4) / 0.6);
+          // randomise turbulence seed each frame for noise variety
+          turb.setAttribute('seed', Math.floor(Math.random() * 100));
+          turb.setAttribute('baseFrequency', (0.04 + Math.random() * 0.06) + ' ' + (0.06 + Math.random() * 0.08));
+          if (disp) disp.setAttribute('scale', scale.toFixed(1));
+          if (p < 1) requestAnimationFrame(step);
+          else if (disp) disp.setAttribute('scale', '0');
+        }
+        requestAnimationFrame(step);
+      }
+
+      function glitch() {
+        var duration = 300 + Math.random() * 300;
+        ring.classList.add('is-glitching');
+        animateDistortion(duration);
+        setTimeout(function () {
+          ring.classList.remove('is-glitching');
+        }, duration);
+        setTimeout(glitch, 3000 + Math.random() * 6000);
+      }
+
+      setTimeout(glitch, 2000);
+    })();
+    </script>
+
 </body>
+
 </html>

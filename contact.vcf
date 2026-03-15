@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /contact.vcf
+---
+{% assign v = site.data.links.vcard %}
+BEGIN:VCARD
+VERSION:3.0
+FN:{{ v.name }}
+N:{{ v.name | split: " " | last }};{{ v.name | split: " " | first }};;;
+EMAIL;TYPE=INTERNET:{{ v.email }}
+TEL;TYPE=CELL:{{ v.phone }}
+URL:{{ v.url }}
+END:VCARD

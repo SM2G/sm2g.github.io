@@ -1,36 +1,36 @@
 # Site Settings
-title:               "SM2G"
-tagline:             "Amat Victoria Curam"
-description:
-baseurl:            #""
-url:                #"https://sm2g.github.io"
-github:
-  url:               "https://sm2g.github.io"
+title:        "SM2G"
+tagline:      "Amat Victoria Curam"
+description:  "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
+baseurl:      ""
+url:          "https://sm2g.github.io"
+
 author:
-  name:              "Samy Gejzenblozen"
-  email:             "samy.gejz@gmail.com"
-  twitter:           "sm2g"
-  instagram:         "sm2g"
-  github:            "sm2g"
-  linkedin:          "samygejz"
-
-navigation:
-- title: CV
-  url: /cv
-- title: Projects
-  url: /projects
-
-donations:
-- code: BTC
-  symbol: "฿"
-  public_key: "36XvwAsrA63cETKN3rHvTqyyUE7Spvof9T"
-- code: ETH
-  symbol: "Ξ"
-  public_key: "0xf05080371075b00C6643B38aCd16De7F5948343E"
+  name:     "Samy Gejzenblozen"
+  email:    "samy.gejz@gmail.com"
+  twitter:  "sm2g"
+  instagram: "sm2g"
+  github:   "sm2g"
+  linkedin: "samygejz"
+  bio:      "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
 
 # Build settings
-markdown:            kramdown
-highlighter:         rouge
-paginate:            12
-permalink:           none
-plugins:             [jekyll-paginate]
+markdown:    kramdown
+highlighter: rouge
+permalink:   none
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO plugin
+twitter:
+  username: "sm2g"
+  card:     "summary"
+
+social:
+  name: "Samy Gejzenblozen"
+  links:
+    - "https://twitter.com/sm2g"
+    - "https://github.com/sm2g"
+    - "https://linkedin.com/in/samygejz"
+    - "https://instagram.com/sm2g"

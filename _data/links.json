@@ -1,0 +1,73 @@
+{
+    "github": {
+        "url": "https://github.com/sm2g",
+        "type": "link",
+        "title": "GitHub",
+        "icon": "fa-brands fa-github",
+        "color": "#6e40c9",
+        "order": 2,
+        "active": true
+    },
+    "linkedin": {
+        "url": "https://linkedin.com/in/samygejz",
+        "title": "LinkedIn",
+        "icon": "fa-brands fa-linkedin",
+        "type": "link",
+        "color": "#0A66C2",
+        "order": 1,
+        "active": true
+    },
+    "cv": {
+        "url": "/cv",
+        "title": "Resume / CV",
+        "icon": "fa-solid fa-file-lines",
+        "color": "#00D9FF",
+        "type": "link",
+        "order": 3,
+        "active": false
+    },
+    "credly": {
+        "url": "https://www.credly.com/users/samygejz",
+        "type": "link",
+        "title": "Credly Certifications",
+        "icon": "fa-solid fa-certificate",
+        "color": "#FF8C00",
+        "order": 4,
+        "active": true
+    },
+    "separator": {
+        "type": "text",
+        "content": "Or just…",
+        "order": 5,
+        "active": true
+    },
+    "twitter": {
+        "url": "https://twitter.com/",
+        "type": "link",
+        "title": "Twitter / X",
+        "icon": "fa-brands fa-x-twitter",
+        "color": "#000000",
+        "order": 6,
+        "active": false
+    },
+    "vcard": {
+        "type": "vcard",
+        "title": "Keep in touch",
+        "icon": "fa-solid fa-address-card",
+        "color": "#00E676",
+        "order": 7,
+        "active": true,
+        "name": "Samy Gejzenblozen",
+        "email": "samy.gejz@gmail.com",
+        "phone": "+33614848637",
+        "url": "https://sm2g.github.io"
+    },
+    "email": {
+        "url": "mailto:samy.gejz@gmail.com",
+        "type": "link",
+        "title": "Email Me",
+        "icon": "fa-solid fa-envelope",
+        "color": "#00E676",
+        "active": true
+    }
+}

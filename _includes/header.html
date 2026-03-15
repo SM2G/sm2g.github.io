@@ -1,20 +1,32 @@
-<!-- ======= Navbar Section ======= -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top elegant-nav">
-  <div class="container">
-    <a class="navbar-brand" href="/"> {{ site.title }}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        {% for link in site.navigation %}{% assign active = nil %}{% if page.url contains link.url %}{% assign active =
-        'active' %}{% endif %}
-        <li class="nav-item {% if forloop.first %}first{% endif %} {{ active }} {% if forloop.last %}last{% endif %}">
-          <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+<!-- Avatar + identity -->
+<header class="lt-header">
+
+  <!-- SVG displacement filter for glitch distortion -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="glitch-distort" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence id="glitch-turb" type="turbulence"
+          baseFrequency="0.05 0.08" numOctaves="3" seed="2"
+          result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise"
+          scale="0" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="lt-avatar-ring" id="avatar-ring">
+    <div class="lt-avatar">
+      {% if site.data.base.avatar %}
+      <img class="lt-avatar-img lt-avatar-img--main" src="{{ site.data.base.avatar }}" alt="{{ site.author.name }}"
+        onerror="this.style.display='none'">
+      <img class="lt-avatar-img lt-avatar-img--red"  src="{{ site.data.base.avatar }}" alt="" aria-hidden="true">
+      <img class="lt-avatar-img lt-avatar-img--cyan" src="{{ site.data.base.avatar }}" alt="" aria-hidden="true">
+      <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
+      {% else %}
+      <span class="lt-avatar-fallback">{{ site.author.name | slice: 0 }}</span>
+      {% endif %}
     </div>
   </div>
-</nav>
-<!-- End Navbar -->
+  <h1 class="lt-name">{{ site.author.name }}</h1>
+  <p class="lt-bio">{{ site.author.bio }}</p>
+</header>
