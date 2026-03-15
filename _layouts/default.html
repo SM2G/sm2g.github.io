@@ -26,16 +26,16 @@
     {% assign links_sorted = links_with_order | concat: links_without_order %}
     <nav class="lt-links" aria-label="Links">
       {% for link in links_sorted %}
-        {% if link.type == "text" %}
-          <p class="lt-text-block">{{ link.content }}</p>
-        {% else %}
-          <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}"
-            {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
-            <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
-            <span class="lt-btn-label">{{ link.title }}</span>
-            <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          </a>
-        {% endif %}
+      {% if link.type == "text" %}
+      <p class="lt-text-block">{{ link.content }}</p>
+      {% else %}
+      <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}" {% if link.url contains 'http'
+        %}target="_blank" rel="noopener noreferrer" {% endif %}>
+        <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
+        <span class="lt-btn-label">{{ link.title }}</span>
+        <span class="lt-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      {% endif %}
       {% endfor %}
     </nav>
 

@@ -1,17 +1,16 @@
-    <!-- Avatar + identity -->
-    <header class="lt-header">
-      <div class="lt-avatar-ring">
-        <div class="lt-avatar">
-          {% if site.data.base.avatar %}
-            <img src="{{ site.data.base.avatar }}"
-                 alt="{{ site.author.name }}"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
-          {% else %}
-            <span class="lt-avatar-fallback">{{ site.author.name | slice: 0 }}</span>
-          {% endif %}
-        </div>
-      </div>
-      <h1 class="lt-name">{{ site.author.name }}</h1>
-      <p class="lt-bio">{{ site.author.bio }}</p>
-    </header>
+<!-- Avatar + identity -->
+<header class="lt-header">
+  <div class="lt-avatar-ring">
+    <div class="lt-avatar">
+      {% if site.data.base.avatar %}
+      <img src="{{ site.data.base.avatar }}" alt="{{ site.author.name }}"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="lt-avatar-fallback" style="display:none">{{ site.author.name | slice: 0 }}</span>
+      {% else %}
+      <span class="lt-avatar-fallback">{{ site.author.name | slice: 0 }}</span>
+      {% endif %}
+    </div>
+  </div>
+  <h1 class="lt-name">{{ site.author.name }}</h1>
+  <p class="lt-bio">{{ site.author.bio }}</p>
+</header>

@@ -2,10 +2,6 @@
 
 A simple, minimalist personal blog. Mostly about **DevOps**, **Database administration** and a collection of small tricks that just saved my life at some point.
 
-## External Components
-
-* [FontAwesome](https://fontawesome.io/)
-
 ## Install
 
 Install procedure `sudo gem install jekyll bundler`
