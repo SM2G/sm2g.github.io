@@ -1,14 +1,13 @@
 <!-- ======= Footer Section ======= -->
 
-<!-- Social icon strip — external links only -->
+<!-- Social icon strip — external links only, max 3 -->
 <div class="lt-socials" aria-label="Social links">
-  {% for link in links_sorted %}
-  {% if link.url contains 'http' %}
+  {% assign external_links = links_sorted | where_exp: "l", "l.url contains 'http'" | where_exp: "l", "l.active != false" %}
+  {% for link in external_links limit:2 %}
   <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ link.title }}"
     style="--btn-color: {{ link.color }}">
     <i class="{{ link.icon }}"></i>
   </a>
-  {% endif %}
   {% endfor %}
 </div>
 
