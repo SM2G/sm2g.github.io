@@ -135,34 +135,6 @@ body.links-body {
   background: linear-gradient(135deg, #00D9FF, #7B68EE, #FF6B35);
   margin-bottom: 1rem;
   position: relative;
-
-  // Static noise overlay
-  &::after {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.7'/%3E%3C/svg%3E");
-    background-size: cover;
-    opacity: 0.8;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    animation: static-flicker 1.6s steps(1) infinite;
-  }
-}
-
-@keyframes static-flicker {
-  0%   { opacity: 0.75; transform: translate(0,    0   ); }
-  10%  { opacity: 0.95; transform: translate(-2px, 1px ); }
-  20%  { opacity: 0.60; transform: translate(2px,  -2px); }
-  30%  { opacity: 0.90; transform: translate(-1px, 2px ); }
-  40%  { opacity: 0.65; transform: translate(2px,  1px ); }
-  50%  { opacity: 1.00; transform: translate(-2px, -1px); }
-  60%  { opacity: 0.60; transform: translate(1px,  2px ); }
-  70%  { opacity: 0.85; transform: translate(-2px, 0   ); }
-  80%  { opacity: 0.70; transform: translate(2px,  -2px); }
-  90%  { opacity: 0.92; transform: translate(0,    2px ); }
-  100% { opacity: 0.75; transform: translate(0,    0   ); }
 }
 
 .lt-avatar {
@@ -175,12 +147,70 @@ body.links-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  filter: url(#glitch-distort);
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+// Stacked RGB split images
+.lt-avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.lt-avatar-img--red,
+.lt-avatar-img--cyan {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lt-avatar-img--red  { mix-blend-mode: screen; filter: saturate(3) hue-rotate(-30deg)  brightness(1.2); }
+.lt-avatar-img--cyan { mix-blend-mode: screen; filter: saturate(3) hue-rotate(160deg) brightness(1.2); }
+
+// Glitch state — toggled by JS
+.lt-avatar-ring.is-glitching .lt-avatar {
+  animation: glitch-clip 0.35s steps(1) forwards;
+}
+.lt-avatar-ring.is-glitching .lt-avatar-img--red {
+  animation: glitch-red  0.35s steps(1) forwards;
+}
+.lt-avatar-ring.is-glitching .lt-avatar-img--cyan {
+  animation: glitch-cyan 0.35s steps(1) forwards;
+}
+
+@keyframes glitch-clip {
+  0%   { clip-path: inset(0 0 85% 0);   transform: translate(-4px, 0); }
+  10%  { clip-path: inset(15% 0 70% 0); transform: translate( 5px, 0); }
+  20%  { clip-path: inset(30% 0 50% 0); transform: translate(-3px, 0); }
+  30%  { clip-path: inset(55% 0 25% 0); transform: translate( 6px, 0); }
+  40%  { clip-path: inset(60% 0 20% 0); transform: translate(-5px, 0); }
+  50%  { clip-path: inset(10% 0 70% 0); transform: translate( 4px, 0); }
+  60%  { clip-path: inset(75% 0  5% 0); transform: translate(-6px, 0); }
+  70%  { clip-path: inset(40% 0 35% 0); transform: translate( 3px, 0); }
+  80%  { clip-path: inset(50% 0 10% 0); transform: translate(-4px, 0); }
+  90%  { clip-path: inset( 5% 0 80% 0); transform: translate( 5px, 0); }
+  100% { clip-path: inset(0 0 0 0);     transform: translate(  0,  0); }
+}
+
+@keyframes glitch-red {
+  0%   { opacity: 0.65; transform: translate(-6px,  1px); }
+  20%  { opacity: 0.45; transform: translate( 5px, -2px); }
+  40%  { opacity: 0.70; transform: translate(-7px,  2px); }
+  60%  { opacity: 0.50; transform: translate( 4px, -1px); }
+  80%  { opacity: 0.60; transform: translate(-5px,  3px); }
+  100% { opacity: 0;    transform: translate(  0,   0  ); }
+}
+
+@keyframes glitch-cyan {
+  0%   { opacity: 0.65; transform: translate( 6px, -1px); }
+  20%  { opacity: 0.45; transform: translate(-5px,  2px); }
+  40%  { opacity: 0.70; transform: translate( 7px, -2px); }
+  60%  { opacity: 0.50; transform: translate(-4px,  1px); }
+  80%  { opacity: 0.60; transform: translate( 5px, -3px); }
+  100% { opacity: 0;    transform: translate(  0,   0  ); }
 }
 
 .lt-avatar-fallback {
