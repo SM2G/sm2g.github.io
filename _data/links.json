@@ -29,7 +29,7 @@
     "credly": {
         "url": "https://www.credly.com/users/samy-g",
         "type": "link",
-        "title": "Credly Certifications",
+        "title": "Certifications",
         "icon": "fa-solid fa-certificate",
         "color": "#FF8C00",
         "order": 4,
