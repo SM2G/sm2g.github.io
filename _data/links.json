@@ -2,7 +2,7 @@
     "github": {
         "url": "https://github.com/sm2g",
         "type": "link",
-        "title": "GitHub",
+        "title": "Projects",
         "icon": "fa-brands fa-github",
         "color": "#6e40c9",
         "order": 2,
@@ -10,7 +10,7 @@
     },
     "linkedin": {
         "url": "www.linkedin.com/in/samy-g",
-        "title": "LinkedIn",
+        "title": "Let's connect",
         "icon": "fa-brands fa-linkedin",
         "type": "link",
         "color": "#0A66C2",
@@ -38,7 +38,7 @@
     "separator": {
         "type": "text",
         "content": "Or just…",
-        "order": 5,
+        "order": 6,
         "active": true
     },
     "twitter": {
@@ -47,7 +47,7 @@
         "title": "Twitter / X",
         "icon": "fa-brands fa-x-twitter",
         "color": "#000000",
-        "order": 6,
+        "order": 7,
         "active": false
     },
     "vcard": {
@@ -55,7 +55,7 @@
         "title": "Keep in touch",
         "icon": "fa-solid fa-address-card",
         "color": "#309091",
-        "order": 7,
+        "order": 8,
         "active": true,
         "name": "Samy Gejzenblozen",
         "email": "samy.gejz@gmail.com",
@@ -65,6 +65,7 @@
     "email": {
         "url": "mailto:samy.gejz@gmail.com",
         "type": "link",
+        "order": 9,
         "title": "Email Me",
         "icon": "fa-solid fa-envelope",
         "color": "#309091",
