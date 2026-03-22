@@ -1,6 +1,5 @@
 <!-- ======= Footer Section ======= -->
 
-<!-- Social icon strip — external links only, max 3 -->
 <div class="lt-socials" aria-label="Social links">
   {% assign external_links = links_sorted | where_exp: "l", "l.url contains 'http'" | where_exp: "l", "l.active != false" %}
   {% for link in external_links limit:2 %}
