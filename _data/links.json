@@ -1,74 +1,101 @@
 {
+    "linkedin": {
+        "order": 1,
+        "active": true,
+        "type": "link",
+        "title": "Let's connect",
+        "icon": "fa-brands fa-linkedin",
+        "color": "#0A66C2",
+        "color2": "#0077B5",
+        "url": "https://www.linkedin.com/in/samy-g"
+    },
     "github": {
-        "url": "https://github.com/sm2g",
+        "order": 2,
+        "active": true,
         "type": "link",
         "title": "Projects",
         "icon": "fa-brands fa-github",
         "color": "#6e40c9",
-        "order": 2,
-        "active": true
-    },
-    "linkedin": {
-        "url": "www.linkedin.com/in/samy-g",
-        "title": "Let's connect",
-        "icon": "fa-brands fa-linkedin",
-        "type": "link",
-        "color": "#0A66C2",
-        "order": 1,
-        "active": true
-    },
-    "cv": {
-        "url": "/cv",
-        "title": "Resume / CV",
-        "icon": "fa-solid fa-file-lines",
-        "color": "#00D9FF",
-        "type": "link",
-        "order": 3,
-        "active": false
+        "color2": "#24292e",
+        "url": "https://github.com/sm2g"
     },
     "credly": {
-        "url": "https://www.credly.com/users/samy-g",
+        "order": 3,
+        "active": true,
         "type": "link",
         "title": "Certifications",
         "icon": "fa-solid fa-certificate",
         "color": "#FF8C00",
+        "color2": "#F44336",
+        "url": "https://www.credly.com/users/samy-g"
+    },
+    "instagram": {
         "order": 4,
-        "active": true
+        "active": true,
+        "type": "link",
+        "title": "Photos",
+        "icon": "fa-brands fa-instagram",
+        "color": "#E1306C",
+        "color2": "#F77737",
+        "url": "https://instagram.com/sm2g"
+    },
+    "x": {
+        "order": 5,
+        "active": true,
+        "type": "link",
+        "title": "X / Twitter",
+        "icon": "fa-brands fa-x-twitter",
+        "color": "#4a4a4a",
+        "color2": "#1a1a1a",
+        "url": "https://x.com/Guru_six"
     },
     "separator": {
-        "type": "text",
-        "content": "Or just…",
         "order": 6,
-        "active": true
-    },
-    "twitter": {
-        "url": "https://twitter.com/",
-        "type": "link",
-        "title": "Twitter / X",
-        "icon": "fa-brands fa-x-twitter",
-        "color": "#000000",
-        "order": 7,
-        "active": false
+        "active": true,
+        "type": "text",
+        "content": "Or just…"
     },
     "vcard": {
+        "order": 7,
+        "active": true,
         "type": "vcard",
         "title": "Keep in touch",
         "icon": "fa-solid fa-address-card",
         "color": "#309091",
-        "order": 8,
-        "active": true,
+        "color2": "#00D9FF",
         "name": "Samy Gejzenblozen",
         "email": "samy.gejz@gmail.com",
         "phone": "+33614848637",
         "url": "https://sm2g.github.io"
     },
     "email": {
-        "url": "mailto:samy.gejz@gmail.com",
+        "order": 8,
+        "active": true,
         "type": "link",
-        "order": 9,
         "title": "Email Me",
         "icon": "fa-solid fa-envelope",
         "color": "#309091",
-        "active": true
+        "color2": "#00E676",
+        "url": "mailto:samy.gejz@gmail.com"
+    },
+    "cv": {
+        "order": 9,
+        "active": false,
+        "type": "link",
+        "title": "Resume / CV",
+        "icon": "fa-solid fa-file-lines",
+        "color": "#00D9FF",
+        "color2": "#7B68EE",
+        "url": "/cv"
+    },
+    "twitter": {
+        "order": 10,
+        "active": false,
+        "type": "link",
+        "title": "Twitter / X",
+        "icon": "fa-brands fa-x-twitter",
+        "color": "#4a4a4a",
+        "color2": "#1a1a1a",
+        "url": "https://twitter.com/"
     }
 }

@@ -294,7 +294,7 @@ body.links-body {
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: var(--lt-btn-shadow-hover);
+    box-shadow: 0 6px 24px color-mix(in srgb, var(--btn-color, #00D9FF) 40%, transparent);
     border-color: var(--btn-color, #00D9FF);
     color: var(--lt-text);
     text-decoration: none;
@@ -303,7 +303,7 @@ body.links-body {
     &::before { width: 6px; }
 
     .lt-btn-icon {
-      background: var(--btn-color, #00D9FF);
+      background: linear-gradient(135deg, var(--btn-color, #00D9FF), var(--btn-color2, #7B68EE));
       color: #fff;
       transform: scale(1.1);
     }
@@ -318,8 +318,8 @@ body.links-body {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: color-mix(in srgb, var(--btn-color, #00D9FF) 15%, transparent);
-  color: var(--btn-color, #00D9FF);
+  background: linear-gradient(135deg, var(--btn-color, #00D9FF), var(--btn-color2, #7B68EE));
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

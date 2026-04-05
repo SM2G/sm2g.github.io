@@ -30,13 +30,13 @@
       {% if link.type == "text" %}
       <p class="lt-text-block">{{ link.content }}</p>
       {% elsif link.type == "vcard" %}
-      <a href="/contact.vcf" download="contact.vcf" class="lt-btn" style="--btn-color: {{ link.color }}">
+      <a href="/contact.vcf" download="contact.vcf" class="lt-btn" style="--btn-color: {{ link.color }}; --btn-color2: {{ link.color2 | default: link.color }}">
         <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
         <span class="lt-btn-label">{{ link.title }}</span>
         <span class="lt-btn-arrow"><i class="fa-solid fa-download"></i></span>
       </a>
       {% else %}
-      <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}" {% if link.url contains 'http'
+      <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}; --btn-color2: {{ link.color2 | default: link.color }}" {% if link.url contains 'http'
         %}target="_blank" rel="noopener noreferrer" {% endif %}>
         <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
         <span class="lt-btn-label">{{ link.title }}</span>
