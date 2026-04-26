@@ -3,7 +3,7 @@
         "order": 1,
         "active": true,
         "type": "link",
-        "title": "Let's connect",
+        "title": "LinkedIn",
         "icon": "fa-brands fa-linkedin",
         "color": "#0A66C2",
         "color2": "#0077B5",
@@ -13,7 +13,7 @@
         "order": 2,
         "active": true,
         "type": "link",
-        "title": "Projects",
+        "title": "Github",
         "icon": "fa-brands fa-github",
         "color": "#6e40c9",
         "color2": "#24292e",
@@ -41,7 +41,7 @@
     },
     "x": {
         "order": 5,
-        "active": true,
+        "active": false,
         "type": "link",
         "title": "X / Twitter",
         "icon": "fa-brands fa-x-twitter",
@@ -59,7 +59,7 @@
         "order": 7,
         "active": true,
         "type": "vcard",
-        "title": "Keep in touch",
+        "title": "Take my vCard",
         "icon": "fa-solid fa-address-card",
         "color": "#309091",
         "color2": "#00D9FF",
@@ -87,15 +87,5 @@
         "color": "#00D9FF",
         "color2": "#7B68EE",
         "url": "/cv"
-    },
-    "twitter": {
-        "order": 10,
-        "active": false,
-        "type": "link",
-        "title": "Twitter / X",
-        "icon": "fa-brands fa-x-twitter",
-        "color": "#4a4a4a",
-        "color2": "#1a1a1a",
-        "url": "https://twitter.com/"
     }
 }
