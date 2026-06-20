@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="graphite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33383f"/>
+      <stop offset="1" stop-color="#15171b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8D7A8"/>
+      <stop offset="0.55" stop-color="#C2A258"/>
+      <stop offset="1" stop-color="#A07E3E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#BF9F6A" stop-opacity="0.28"/>
+      <stop offset="0.6" stop-color="#BF9F6A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="url(#graphite)"/>
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="url(#glow)"/>
+  <rect x="14" y="14" width="484" height="484" rx="102" fill="none"
+        stroke="#BF9F6A" stroke-opacity="0.55" stroke-width="3"/>
+
+  <text x="256" y="372" text-anchor="middle"
+        font-family="Didot, 'Bodoni 72', Georgia, serif" font-weight="700"
+        font-size="372" fill="url(#gold)">S</text>
+</svg>
