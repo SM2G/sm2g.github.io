@@ -15,7 +15,6 @@
 
     {% include header.html %}
 
-
     <!-- Link buttons — sorted by order, missing order falls to bottom -->
     {% assign links_sorted = "" | split: "" %}
     {% for item in site.data.links %}
@@ -112,10 +111,12 @@
           setTimeout(glitch, 3000 + Math.random() * 6000);
         }
 
-        // Respect users who've asked for reduced motion — don't start the loop.
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          setTimeout(glitch, 2000);
-        }
+        // Glitch loop disabled for an understated, still portrait.
+        // To re-enable, uncomment (it already respects prefers-reduced-motion):
+        // if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        //   setTimeout(glitch, 2000);
+        // }
+        void glitch;
       })();
     </script>
 
