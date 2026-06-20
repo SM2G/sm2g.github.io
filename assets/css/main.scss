@@ -395,6 +395,14 @@ body.links-body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+// Honor the OS "reduce motion" setting — disable all animation/transition.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 // Mobile
 @media (max-width: 480px) {
   body.links-body { padding: 2rem 0.75rem 1.5rem; }

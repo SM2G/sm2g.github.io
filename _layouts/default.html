@@ -112,7 +112,10 @@
           setTimeout(glitch, 3000 + Math.random() * 6000);
         }
 
-        setTimeout(glitch, 2000);
+        // Respect users who've asked for reduced motion — don't start the loop.
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          setTimeout(glitch, 2000);
+        }
       })();
     </script>
 
