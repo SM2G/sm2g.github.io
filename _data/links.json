@@ -61,8 +61,8 @@
         "type": "vcard",
         "title": "Take my vCard",
         "icon": "fa-solid fa-address-card",
-        "color": "#309091",
-        "color2": "#00D9FF",
+        "color": "#5a616b",
+        "color2": "#23262b",
         "name": "Samy Gejzenblozen",
         "email": "samy.gejz@gmail.com",
         "phone": "+33614848637",
@@ -74,8 +74,8 @@
         "type": "link",
         "title": "Email Me",
         "icon": "fa-solid fa-envelope",
-        "color": "#309091",
-        "color2": "#00E676",
+        "color": "#BF9F6A",
+        "color2": "#A07E3E",
         "url": "mailto:samy.gejz@gmail.com"
     },
     "cv": {

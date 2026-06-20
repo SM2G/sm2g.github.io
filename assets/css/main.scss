@@ -8,11 +8,14 @@
   --lt-subtext:     #718096;
   --lt-border:      rgba(0,0,0,0.08);
   --lt-btn-bg:      #ffffff;
-  --lt-btn-hover:   #f7fafc;
   --lt-btn-shadow:  0 2px 12px rgba(0,0,0,0.08);
   --lt-btn-shadow-hover: 0 6px 24px rgba(0,0,0,0.14);
-  --lt-ring:        rgba(0,217,255,0.5);
   --lt-footer:      #a0aec0;
+  --lt-bg-glow:     rgba(191,159,106,0.16);
+  --lt-btn-glass:        rgba(255,255,255,0.55);
+  --lt-btn-glass-hover:  rgba(255,255,255,0.68);
+  --lt-btn-highlight:    rgba(255,255,255,0.65);
+  --lt-sheen:            rgba(255,255,255,0.45);
 }
 
 [data-theme="dark"] {
@@ -22,18 +25,24 @@
   --lt-subtext:     #718096;
   --lt-border:      rgba(255,255,255,0.08);
   --lt-btn-bg:      #1e2533;
-  --lt-btn-hover:   #252d3d;
   --lt-btn-shadow:  0 2px 12px rgba(0,0,0,0.4);
   --lt-btn-shadow-hover: 0 6px 24px rgba(0,245,255,0.12);
-  --lt-ring:        rgba(0,245,255,0.4);
   --lt-footer:      #4a5568;
+  --lt-bg-glow:     rgba(191,159,106,0.20);
+  --lt-btn-glass:        rgba(30,37,51,0.45);
+  --lt-btn-glass-hover:  rgba(37,45,61,0.58);
+  --lt-btn-highlight:    rgba(255,255,255,0.08);
+  --lt-sheen:            rgba(232,215,168,0.22);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body.links-body {
   font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--lt-bg);
+  background:
+    radial-gradient(120% 75% at 50% -8%, var(--lt-bg-glow) 0%, transparent 55%),
+    var(--lt-bg);
+  background-attachment: fixed;
   color: var(--lt-text);
   min-height: 100vh;
   display: flex;
@@ -129,12 +138,26 @@ body.links-body {
   text-align: center;
 }
 
+// Animatable angle for the ring's slow gold shimmer (progressive enhancement:
+// browsers without @property fall back to a static conic gradient).
+@property --ring-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 135deg;
+}
+
 .lt-avatar-ring {
   padding: 2px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #BF9F6A, #E8D7A8, #A07E3E);
+  background: conic-gradient(from var(--ring-angle),
+    #A07E3E, #E8D7A8, #BF9F6A, #E8D7A8, #A07E3E);
   margin-bottom: 1.1rem;
   position: relative;
+  animation: ring-shimmer 9s linear infinite;
+}
+
+@keyframes ring-shimmer {
+  to { --ring-angle: 495deg; }
 }
 
 .lt-avatar {
@@ -148,10 +171,8 @@ body.links-body {
   align-items: center;
   justify-content: center;
   position: relative;
-  filter: url(#glitch-distort);
 }
 
-// Stacked RGB split images
 .lt-avatar-img {
   position: absolute;
   inset: 0;
@@ -159,58 +180,6 @@ body.links-body {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-}
-
-.lt-avatar-img--red,
-.lt-avatar-img--cyan {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.lt-avatar-img--red  { mix-blend-mode: screen; filter: saturate(3) hue-rotate(-30deg)  brightness(1.2); }
-.lt-avatar-img--cyan { mix-blend-mode: screen; filter: saturate(3) hue-rotate(160deg) brightness(1.2); }
-
-// Glitch state — toggled by JS
-.lt-avatar-ring.is-glitching .lt-avatar {
-  animation: glitch-clip 0.35s steps(1) forwards;
-}
-.lt-avatar-ring.is-glitching .lt-avatar-img--red {
-  animation: glitch-red  0.35s steps(1) forwards;
-}
-.lt-avatar-ring.is-glitching .lt-avatar-img--cyan {
-  animation: glitch-cyan 0.35s steps(1) forwards;
-}
-
-@keyframes glitch-clip {
-  0%   { clip-path: inset(0 0 85% 0);   transform: translate(-4px, 0); }
-  10%  { clip-path: inset(15% 0 70% 0); transform: translate( 5px, 0); }
-  20%  { clip-path: inset(30% 0 50% 0); transform: translate(-3px, 0); }
-  30%  { clip-path: inset(55% 0 25% 0); transform: translate( 6px, 0); }
-  40%  { clip-path: inset(60% 0 20% 0); transform: translate(-5px, 0); }
-  50%  { clip-path: inset(10% 0 70% 0); transform: translate( 4px, 0); }
-  60%  { clip-path: inset(75% 0  5% 0); transform: translate(-6px, 0); }
-  70%  { clip-path: inset(40% 0 35% 0); transform: translate( 3px, 0); }
-  80%  { clip-path: inset(50% 0 10% 0); transform: translate(-4px, 0); }
-  90%  { clip-path: inset( 5% 0 80% 0); transform: translate( 5px, 0); }
-  100% { clip-path: inset(0 0 0 0);     transform: translate(  0,  0); }
-}
-
-@keyframes glitch-red {
-  0%   { opacity: 0.65; transform: translate(-6px,  1px); }
-  20%  { opacity: 0.45; transform: translate( 5px, -2px); }
-  40%  { opacity: 0.70; transform: translate(-7px,  2px); }
-  60%  { opacity: 0.50; transform: translate( 4px, -1px); }
-  80%  { opacity: 0.60; transform: translate(-5px,  3px); }
-  100% { opacity: 0;    transform: translate(  0,   0  ); }
-}
-
-@keyframes glitch-cyan {
-  0%   { opacity: 0.65; transform: translate( 6px, -1px); }
-  20%  { opacity: 0.45; transform: translate(-5px,  2px); }
-  40%  { opacity: 0.70; transform: translate( 7px, -2px); }
-  60%  { opacity: 0.50; transform: translate(-4px,  1px); }
-  80%  { opacity: 0.60; transform: translate( 5px, -3px); }
-  100% { opacity: 0;    transform: translate(  0,   0  ); }
 }
 
 .lt-avatar-fallback {
@@ -272,12 +241,14 @@ body.links-body {
   gap: 1rem;
   width: 100%;
   padding: 1rem 1.25rem;
-  background: var(--lt-btn-bg);
+  background: var(--lt-btn-glass);
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
   border: 1.5px solid var(--lt-border);
   border-radius: 14px;
   text-decoration: none;
   color: var(--lt-text);
-  box-shadow: var(--lt-btn-shadow);
+  box-shadow: var(--lt-btn-shadow), inset 0 1px 0 var(--lt-btn-highlight);
   transition: all 0.22s ease;
   position: relative;
   overflow: hidden;
@@ -293,25 +264,41 @@ body.links-body {
     top: 0;
     width: 4px;
     height: 100%;
-    background: var(--btn-color, #00D9FF);
+    background: var(--btn-color, #BF9F6A);
     border-radius: 14px 0 0 14px;
     transition: width 0.22s ease;
   }
 
+  // Specular sheen — glides across on hover, like light on a polished surface
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, var(--lt-sheen), transparent);
+    transform: skewX(-20deg);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 24px color-mix(in srgb, var(--btn-color, #00D9FF) 40%, transparent);
-    border-color: var(--btn-color, #00D9FF);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--btn-color, #BF9F6A) 26%, transparent),
+                inset 0 1px 0 var(--lt-btn-highlight);
+    border-color: var(--btn-color, #BF9F6A);
     color: var(--lt-text);
     text-decoration: none;
-    background: var(--lt-btn-hover);
+    background: var(--lt-btn-glass-hover);
 
     &::before { width: 6px; }
+    &::after { animation: sheen 0.75s ease; }
 
     .lt-btn-icon {
-      background: linear-gradient(135deg, var(--btn-color, #00D9FF), var(--btn-color2, #7B68EE));
+      background: linear-gradient(135deg, var(--btn-color, #BF9F6A), var(--btn-color2, #7B68EE));
       color: #fff;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     .lt-btn-arrow { opacity: 1; transform: translateX(0); }
@@ -386,19 +373,15 @@ body.links-body {
   text-align: center;
 }
 
-.lt-sa-badge {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-  z-index: 100;
-  &:hover { opacity: 1; }
-}
-
 // Animations
 @keyframes slide-in {
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sheen {
+  0%   { left: -75%; opacity: 0; }
+  15%  { opacity: 1; }
+  100% { left: 130%; opacity: 0; }
 }
 
 // Honor the OS "reduce motion" setting — disable all animation/transition.
