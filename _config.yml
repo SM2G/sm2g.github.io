@@ -11,6 +11,9 @@ author:
   twitter:  "sm2g"
   bio:      "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
 
+# Analytics
+google_analytics: "G-WT43BSC628"
+
 # Build settings
 markdown:    kramdown
 highlighter: rouge
