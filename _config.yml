@@ -8,7 +8,6 @@ url:          "https://sm2g.github.io"
 author:
   name:     "Samy Gejzenblozen"
   email:    "samy.gejz@gmail.com"
-  twitter:  "sm2g"
   bio:      "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
 
 # Analytics
@@ -22,15 +21,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# SEO plugin
-twitter:
-  username: "sm2g"
-  card:     "summary"
-
 social:
   name: "Samy Gejzenblozen"
   links:
-    - "https://twitter.com/sm2g"
     - "https://github.com/sm2g"
     - "https://linkedin.com/in/samygejz"
     - "https://instagram.com/sm2g"
