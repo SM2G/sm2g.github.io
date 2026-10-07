@@ -1,14 +1,23 @@
 # SM2G
 
-A simple, minimalist personal blog. Mostly about **DevOps**, **Database administration** and a collection of small tricks that just saved my life at some point.
+A personal minimalist webpage.
 
 ## Install
 
-Install procedure `sudo gem install jekyll bundler`
+Requires a recent Ruby (the macOS system Ruby is too old). On macOS:
+
+```sh
+brew install ruby
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+gem install bundler
+bundle install
+```
 
 ## Startup
 * Git clone
 * Serve with `jekyll serve --host 0.0.0.0`
+* Open http://localhost:4000
 
 ## Disclaimer
 

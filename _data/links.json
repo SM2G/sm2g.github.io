@@ -29,63 +29,31 @@
         "color2": "#F44336",
         "url": "https://www.credly.com/users/samy-g"
     },
-    "instagram": {
-        "order": 4,
-        "active": true,
-        "type": "link",
-        "title": "Photos",
-        "icon": "fa-brands fa-instagram",
-        "color": "#E1306C",
-        "color2": "#F77737",
-        "url": "https://instagram.com/sm2g"
-    },
-    "x": {
-        "order": 5,
-        "active": false,
-        "type": "link",
-        "title": "X / Twitter",
-        "icon": "fa-brands fa-x-twitter",
-        "color": "#4a4a4a",
-        "color2": "#1a1a1a",
-        "url": "https://x.com/Guru_six"
-    },
     "separator": {
         "order": 6,
         "active": true,
         "type": "text",
         "content": "Or just…"
     },
-    "vcard": {
+    "cv": {
         "order": 7,
         "active": true,
-        "type": "vcard",
-        "title": "Take my vCard",
-        "icon": "fa-solid fa-address-card",
-        "color": "#5a616b",
-        "color2": "#23262b",
-        "name": "Samy Gejzenblozen",
-        "email": "samy.gejz@gmail.com",
-        "phone": "+33614848637",
-        "url": "https://sm2g.github.io"
+        "type": "link",
+        "title": "Download Resume",
+        "icon": "fa-solid fa-file-arrow-down",
+        "arrow": "fa-solid fa-download",
+        "color": "#B08D57",
+        "color2": "#7A5C2E",
+        "url": "https://REPLACE_WITH_CLOUDFRONT_DOMAIN/resume"
     },
     "email": {
-        "order": 8,
+        "order": 9,
         "active": true,
         "type": "link",
         "title": "Email Me",
         "icon": "fa-solid fa-envelope",
-        "color": "#BF9F6A",
-        "color2": "#A07E3E",
+        "color": "#5a616b",
+        "color2": "#23262b",
         "url": "mailto:samy.gejz@gmail.com"
-    },
-    "cv": {
-        "order": 9,
-        "active": false,
-        "type": "link",
-        "title": "Resume / CV",
-        "icon": "fa-solid fa-file-lines",
-        "color": "#00D9FF",
-        "color2": "#7B68EE",
-        "url": "/cv"
     }
 }

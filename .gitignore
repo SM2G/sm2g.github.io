@@ -18,5 +18,3 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
-vendor/
-.bundle/
