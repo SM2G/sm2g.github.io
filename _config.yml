@@ -1,21 +1,19 @@
-# Site Settings
-title:        "SM2G"
-tagline:      "Amat Victoria Curam"
-description:  "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
+# Site settings (used for the page title, meta tags and sitemap).
+# The visible texts of the page are in _data/content.yml
+title:        "Samy Gejzenblozen"
+tagline:      "DevOps · SRE freelance"
+description:  "DevOps / SRE freelance · AWS & Azure certified"
 baseurl:      ""
 url:          "https://sm2g.github.io"
+lang:         "fr"
+
+# Start of your professional career (YYYY-MM-DD): drives the "years of experience" figure.
+career_start: 2010-07-01
 
 author:
   name:     "Samy Gejzenblozen"
-  email:    "samy.gejz@gmail.com"
-  bio:      "SRE Engineer · AWS & Azure Certified · DevOps · DBA"
-
-# Analytics
-google_analytics: "G-WT43BSC628"
 
 # Build settings
-markdown:    kramdown
-highlighter: rouge
 permalink:   none
 plugins:
   - jekyll-sitemap
@@ -25,5 +23,11 @@ social:
   name: "Samy Gejzenblozen"
   links:
     - "https://github.com/sm2g"
-    - "https://linkedin.com/in/samygejz"
-    - "https://instagram.com/sm2g"
+    - "https://www.linkedin.com/in/samy-g"
+
+exclude:
+  - infra
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

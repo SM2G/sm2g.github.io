@@ -1,72 +1,75 @@
+{%- assign c = site.data.content -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ c.languages[0].code }}" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<meta name="theme-color" content="#b08d57">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<script>
+  // Applied before paint to avoid a flash of the wrong theme / language
+  var LANGS = [{% for l in c.languages %}'{{ l.code }}'{% unless forloop.last %}, {% endunless %}{% endfor %}];
+  var RTL = [{% for l in c.languages %}{% if l.rtl %}'{{ l.code }}',{% endif %}{% endfor %}];
+  function setLang(l) { var d = document.documentElement; d.lang = l; d.dir = RTL.indexOf(l) < 0 ? 'ltr' : 'rtl'; }
+  (function () {
+    var s = {}, nav = (navigator.language || '').slice(0, 2).toLowerCase();
+    try { s = localStorage; } catch (e) {}
+    document.documentElement.dataset.theme = s.theme || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    setLang(LANGS.indexOf(s.lang) >= 0 ? s.lang : LANGS.indexOf(nav) >= 0 ? nav : 'en');
+  })();
+</script>
+<style>
+{% for l in c.languages %}html:not([lang="{{ l.code }}"]) [lang="{{ l.code }}"]{% unless forloop.last %}, {% endunless %}{% endfor %} { display: none; }
+{% for l in c.languages %}html[lang="{{ l.code }}"] [data-l="{{ l.code }}"]{% unless forloop.last %}, {% endunless %}{% endfor %} { color: var(--on-accent); background: var(--accent-fill); }
+{% include style.css %}
+</style>
+</head>
+<body>
+<div class="wrap">
 
-{% include head.html %}
+  <div class="bar">
+    <a class="mono" href="{{ '/' | relative_url }}" aria-label="{{ c.name }}">SG</a>
+    <div class="tools">
+      <div class="tool langs" role="group" aria-label="Language">
+        {% for l in c.languages %}<button data-l="{{ l.code }}">{{ l.label }}</button>{% endfor %}
+      </div>
+      <button class="tool" id="theme" aria-label="Light / dark theme">
+        <span class="sun">{% include icon.html name="sun" %}</span><span class="moon">{% include icon.html name="moon" %}</span>
+      </button>
+    </div>
+  </div>
 
-<body class="links-body{% if site.data.base.background %} has-bg{% endif %}" {% if site.data.base.background
-  %}style="--lt-bg-image: url('{{ site.data.base.background }}')" {% endif %}>
+  {{ content }}
 
-  <div class="lt-wrapper">
-
-    <!-- Theme toggle -->
-    <button class="lt-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-      <i class="bi bi-sun-fill" id="theme-icon"></i>
-    </button>
-
-    {% include header.html %}
-
-    <!-- Link buttons — sorted by order, missing order falls to bottom -->
-    {% assign links_sorted = "" | split: "" %}
-    {% for item in site.data.links %}
-    {% assign links_sorted = links_sorted | push: item[1] %}
-    {% endfor %}
-    {% assign links_with_order = links_sorted | where_exp: "l", "l.order" | sort: "order" %}
-    {% assign links_without_order = links_sorted | where_exp: "l", "l.order == nil" %}
-    {% assign links_sorted = links_with_order | concat: links_without_order %}
-    <nav class="lt-links" aria-label="Links">
-      {% for link in links_sorted %}
-      {% if link.active == false %}{% continue %}{% endif %}
-      {% if link.type == "text" %}
-      <p class="lt-text-block">{{ link.content }}</p>
-      {% else %}
-      <a href="{{ link.url }}" class="lt-btn" style="--btn-color: {{ link.color }}; --btn-color2: {{ link.color2 | default: link.color }}" {% if link.url contains 'http'
-        %}target="_blank" rel="noopener noreferrer" {% endif %}>
-        <span class="lt-btn-icon"><i class="{{ link.icon }}"></i></span>
-        <span class="lt-btn-label">{{ link.title }}</span>
-        <span class="lt-btn-arrow"><i class="{{ link.arrow | default: 'fa-solid fa-arrow-right' }}"></i></span>
-      </a>
-      {% endif %}
+  <footer>
+    <nav>
+      {% for link in c.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener">{% include icon.html name=link.icon %}{{ link.label }}</a>
       {% endfor %}
     </nav>
+    <p>© {{ site.time | date: '%Y' }} {{ c.name }}</p>
+  </footer>
 
-    {% include footer.html %}
-
-    <script>
-      // Theme toggle
-      (function () {
-        var btn = document.getElementById('theme-toggle');
-        var icon = document.getElementById('theme-icon');
-
-        function syncIcon() {
-          var t = document.documentElement.getAttribute('data-theme');
-          icon.className = t === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
-        }
-        syncIcon();
-
-        btn.addEventListener('click', function () {
-          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
-          syncIcon();
-        });
-      })();
-
-      // Stagger entrance animations
-      document.querySelectorAll('.lt-btn').forEach(function (el, i) {
-        el.style.animationDelay = (i * 0.07) + 's';
-      });
-    </script>
-
-  </div><!-- /.lt-wrapper -->
+</div>
+<script>
+  function save(k, v) { try { localStorage[k] = v; } catch (e) {} }
+  document.getElementById('theme').onclick = function () {
+    var d = document.documentElement;
+    save('theme', d.dataset.theme = d.dataset.theme === 'dark' ? 'light' : 'dark');
+  };
+  document.querySelectorAll('[data-l]').forEach(function (b) {
+    b.onclick = function () { setLang(b.dataset.l); save('lang', b.dataset.l); };
+  });
+  // Keep the "years of experience" figure current between site rebuilds
+  document.querySelectorAll('.years').forEach(function (el) {
+    var s = new Date(el.dataset.since), n = new Date(), y = n.getFullYear() - s.getFullYear();
+    if (n.getMonth() < s.getMonth() || (n.getMonth() === s.getMonth() && n.getDate() < s.getDate())) y--;
+    if (y >= 0) el.textContent = y;
+  });
+</script>
 </body>
 </html>

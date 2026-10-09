@@ -1,0 +1,2 @@
+{%- comment -%} Renders a translated text (inline Markdown): one <span lang="…"> per language. Usage: {% include t.html v=site.data.content.pitch %} {%- endcomment -%}
+{%- for l in site.data.content.languages -%}<span lang="{{ l.code }}">{{ include.v[l.code] | markdownify | remove: '<p>' | remove: '</p>' | strip | replace: '%years%', include.years }}</span>{%- endfor -%}

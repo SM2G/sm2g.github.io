@@ -1,0 +1,146 @@
+# All the texts of the site live here.
+# Each text has one entry per language (fr / en / he). Inline Markdown is allowed (**bold**, *italic*, [link](url)).
+# To add a language: add it to `languages`, then add its key under every text.
+
+languages:
+  - { code: fr, label: FR }
+  - { code: en, label: EN }
+  - { code: he, label: עב, rtl: true }
+
+name: Samy Gejzenblozen
+email: samy.gejz@gmail.com
+cv: /cv.pdf
+
+title:
+  fr: DevOps · SRE freelance
+  en: Freelance DevOps · SRE
+  he: DevOps · SRE פרילנסר
+
+pitch:
+  fr: J'aide les équipes à **fiabiliser, automatiser et faire évoluer** leur infrastructure cloud sur AWS et Azure.
+  en: I help teams make their cloud infrastructure **reliable, automated and scalable** on AWS and Azure.
+  he: אני עוזר לצוותים להפוך את תשתית הענן שלהם ל**אמינה, אוטומטית וסקיילבילית**, ב‑AWS וב‑Azure.
+
+availability:
+  fr: Disponible immédiatement · télétravail, horaires France (+1 h)
+  en: Available immediately · remote, French business hours (+1 h)
+  he: זמין/ה מיידית · ממוקם/ת בתל אביב
+
+contact:
+  fr: Me contacter
+  en: Get in touch
+  he: צרו קשר
+
+download_cv:
+  fr: Télécharger le CV
+  en: Download CV
+  he: הורדת קורות חיים
+
+services_title:
+  fr: Ce que je fais
+  en: What I do
+  he: מה אני עושה
+
+services:
+  - icon: cloud
+    title:
+      fr: Cloud AWS & Azure
+      en: Cloud AWS & Azure
+      he: ענן AWS ו‑Azure
+    text:
+      fr: Architecture, suivi de projet avec **Jira**, migration Cloud de solutions existantes. <br /><br />Maîtrise des coûts avec des règles de tagging, création de dashboards et optimisation de charge. 
+      en: Architecture, project tracking with **Jira**, and cloud migration of existing solutions.<br /><br />Cost control through tagging rules, dashboards and workload optimization.
+      he: ארכיטקטורה, מעקב פרויקטים עם **Jira**, והגירה לענן של פתרונות קיימים.<br /><br />בקרת עלויות באמצעות כללי תיוג (tagging), בניית דשבורדים ואופטימיזציית עומסים.
+  - icon: code
+    title:
+      fr: CI/CD & Infrastructure as Code
+      en: CI/CD & Infrastructure as Code
+      he: CI/CD ו‑Infrastructure as Code
+    text:
+      fr: Pipelines de déploiement et infrastructure versionnée avec **Terraform** ou **OpenTofu**.<br /><br />Automatisation de workflows via **GitHub Actions** ou **GitLab CI**.
+      en: Deployment pipelines and versioned infrastructure with **Terraform** or **OpenTofu**.<br /><br />Workflow automation via **GitHub Actions** or **GitLab CI**.
+      he: Pipelines של פריסה ותשתית מנוהלת בקוד עם **Terraform** או **OpenTofu**.<br /><br />אוטומציה של תהליכים באמצעות **GitHub Actions** או **GitLab CI**.
+  - icon: pulse
+    title:
+      fr: Fiabilité & observabilité
+      en: Reliability & observability
+      he: אמינות ו‑Observability
+    text:
+      fr: Supervision, alerting avec **Datadog**, **Grafana**.<br />Gestion d'incident avec CloudTrail, CloudWatch.<br />Définition de SLOs.
+      en: Monitoring and alerting with **Datadog** and **Grafana**.<br />Incident management with CloudTrail and CloudWatch.<br />Definition of SLOs.
+      he: ניטור והתראות עם **Datadog** ו‑**Grafana**.<br />ניהול אירועים עם CloudTrail ו‑CloudWatch.<br />הגדרת SLOs.
+  - icon: database
+    title:
+      fr: Bases de données
+      en: Databases
+      he: מסדי נתונים
+    text:
+      fr: Administration, performance, sauvegardes et haute disponibilité.<br /><br />6 ans d'expérience en tant que DBA sur Oracle, Postgres en production sur de fortes volumétries.<br />Secteur bancaire et e-commerce.
+      en: Administration, performance, backups and high availability.<br /><br />6 years of experience as a DBA on Oracle and Postgres in high-volume production environments.<br />Banking and e-commerce sectors.
+      he: ניהול, ביצועים, גיבויים וזמינות גבוהה.<br /><br />6 שנות ניסיון כ‑DBA על Oracle ו‑Postgres בסביבות ייצור עתירות נפח נתונים.<br />בתחומי הבנקאות והמסחר האלקטרוני.
+  - icon: shield
+    title:
+      fr: Sécurité
+      en: Security
+      he: אבטחה
+    text:
+      fr: DevSecOps, gestion des identités avec IAM et audit des accès. Durcissement automatisé des rôles IAM. Mise en place de services SSO.
+      en: DevSecOps, identity management with IAM and access auditing. Automated hardening of IAM roles. Implementation of SSO services.
+      he: DevSecOps, ניהול זהויות באמצעות IAM וביקורת גישות. הקשחה אוטומטית של תפקידי IAM. הטמעת שירותי SSO.
+  - icon: graduation
+    title:
+      fr: Formation
+      en: Training
+      he: הדרכה
+    text:
+      fr: 3 ans d'expérience en tant que Team Lead avec montée en charge jusqu'à **6 DevOps**. <br /><br />Mentorat et création de cursus pédagogiques.<br />Formateur en administration de bases de données Oracle pendant 3 ans, une année d'enseignement dispensée en Chine.<br /><br />Speaker lors de conférences Blockchain et Web3 entre 2017-2019. 
+      en: 3 years of experience as a Team Lead, scaling up to **6 DevOps engineers**.<br /><br />Mentoring and curriculum design.<br />Oracle database administration trainer for 3 years, including one year of teaching in China.<br /><br />Speaker at Blockchain and Web3 conferences between 2017 and 2019.
+      he: 3 שנות ניסיון כ‑Team Lead, עם הרחבת הצוות עד **6 אנשי DevOps**.<br /><br />חונכות ובניית תכניות לימוד.<br />מדריך בניהול מסדי נתונים Oracle במשך 3 שנים, מתוכן שנת הוראה אחת בסין.<br /><br />מרצה בכנסי Blockchain ו‑Web3 בין 2017 ל‑2019.
+
+credentials_title:
+  fr: Certifications
+  en: Credentials
+  he: הסמכות
+
+# Badge images live in assets/images/certs/
+certifications:
+  - name: AWS Certified Solutions Architect – Associate
+    image: aws-solutions-architect-associate.png
+    url: https://www.credly.com/badges/ec243a10-b906-4cae-9305-d9f2ecfc5f48
+  - name: AWS Certified AI Practitioner
+    image: aws-ai-practitioner.png
+    url: https://www.credly.com/badges/07a627d1-7f2b-4703-b8e7-9247f703f19a
+  - name: "Microsoft Certified: Azure Solutions Architect Expert"
+    image: azure-solutions-architect-expert.png
+    url: https://learn.microsoft.com/api/credentials/share/en-us/samy-g/CF9A24EF8ABEB93E?sharingId=7A252E81A803B148
+  - name: "Microsoft Certified: Azure Security Engineer Associate"
+    image: azure-security-engineer-associate.png
+    url: https://learn.microsoft.com/api/credentials/share/en-us/samy-g/F78EF4D3D5613557?sharingId=7A252E81A803B148
+
+# %years% is computed from `career_start` in _config.yml
+experience:
+  fr: "%years% ans d'expérience"
+  en: "%years% years of experience"
+  he: "%years% שנות ניסיון"
+
+all_certifications:
+  url: https://www.credly.com/users/samy-g
+  label:
+    fr: Voir les certifications →
+    en: View certifications →
+    he: לצפייה בהסמכות ←
+
+# icon: linkedin | github
+links:
+  - { label: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/samy-g" }
+  - { label: GitHub, icon: github, url: "https://github.com/sm2g" }
+
+not_found:
+  title:
+    fr: Page introuvable
+    en: Page not found
+    he: הדף לא נמצא
+  back:
+    fr: Retour à l'accueil
+    en: Back to home
+    he: חזרה לדף הבית

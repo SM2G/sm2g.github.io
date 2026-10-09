@@ -2,3 +2,56 @@
 layout: default
 permalink: index.html
 ---
+{%- assign c = site.data.content -%}
+{%- comment -%} Full years since career_start (build-time value; the page script refreshes it on load) {%- endcomment -%}
+{%- assign start_y = site.career_start | date: '%Y' | plus: 0 -%}
+{%- assign start_md = site.career_start | date: '%m%d' | plus: 0 -%}
+{%- assign now_y = site.time | date: '%Y' | plus: 0 -%}
+{%- assign now_md = site.time | date: '%m%d' | plus: 0 -%}
+{%- assign years = now_y | minus: start_y -%}
+{%- if now_md < start_md -%}{%- assign years = years | minus: 1 -%}{%- endif -%}
+{%- capture years_html -%}<span class="years" data-since="{{ site.career_start | date: '%Y-%m-%d' }}">{{ years }}</span>{%- endcapture -%}
+<header class="hero">
+  <div class="id">
+    <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="" width="64" height="64">
+    <div>
+      <p class="eyebrow">{% include t.html v=c.title %}</p>
+      <h1>{{ c.name }}</h1>
+    </div>
+  </div>
+
+  <p class="pitch">{% include t.html v=c.pitch %}</p>
+
+  <p class="avail"><i></i>{% include t.html v=c.availability %}</p>
+
+  <div class="cta">
+    <a class="btn primary" href="mailto:{{ c.email }}">{% include icon.html name="mail" %}{% include t.html v=c.contact %}</a>
+    <a class="btn" href="{{ c.cv | relative_url }}" download>{% include icon.html name="download" %}{% include t.html v=c.download_cv %}</a>
+  </div>
+</header>
+
+<section>
+  <h2>{% include t.html v=c.services_title %}</h2>
+  <div class="grid">
+    {% for s in c.services %}
+    <div class="card">
+      {% include icon.html name=s.icon %}
+      <h3>{% include t.html v=s.title %}</h3>
+      <p>{% include t.html v=s.text %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>{% include t.html v=c.credentials_title %}</h2>
+  <div class="badges">
+    {% for b in c.certifications %}
+    <a href="{{ b.url }}" target="_blank" rel="noopener" title="{{ b.name }}"><img src="{{ '/assets/images/certs/' | append: b.image | relative_url }}" alt="{{ b.name }}" width="88" height="88" loading="lazy"></a>
+    {% endfor %}
+  </div>
+  <ul class="proof">
+    <li>{% include t.html v=c.experience years=years_html %}</li>
+    <li><a href="{{ c.all_certifications.url }}" target="_blank" rel="noopener">{% include t.html v=c.all_certifications.label %}</a></li>
+  </ul>
+</section>

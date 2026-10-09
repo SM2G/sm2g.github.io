@@ -1,14 +1,12 @@
 ---
 layout: default
-title: "404: Page not found"
+title: "404"
 permalink: 404.html
 ---
-
-<div class="container">
-  </br>
-  <div class="jumbotron">
-    <h1 class="display-3">404: Page not found</h1>
-    <p class="lead">Sorry, this page cannot be found. Maybe we've misplaced that URL or it's pointing to something that doesn't exist anymore. </br>
-    You should <a href="{{ site.baseurl }}/">head back home</a> to try finding it again.</p>
-  </div>
+{%- assign c = site.data.content -%}
+<div class="notfound">
+  <p class="eyebrow">404</p>
+  <h1>{% include t.html v=c.not_found.title %}</h1>
+  <p></p>
+  <a class="btn" href="{{ '/' | relative_url }}">{% include t.html v=c.not_found.back %}</a>
 </div>
